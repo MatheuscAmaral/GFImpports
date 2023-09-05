@@ -10,80 +10,12 @@
     font-size: 100%;
 }
 
-
+.suplementos_creatina {
+  margin-left: 190px;
+}
   
-.produtos {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 6rem;
-  margin-bottom: 150px;
-}
-
-#produtosAp {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-#macbooksProdutos {
-  display: flex;
-  gap: 5rem;
-  align-items: center;
-  justify-content: center;
-  margin-top: 200px;
-}
-
-#macbooksProdutos img {
-  border-radius: 16px;
-}
-
-#macbooks img {
-  transition: 0.4s;
-}
-
-#macbooks img:hover {
-  transform: scale(1.1);
-}
-
-#productsMac {
-  display: flex;
-  gap: 4rem;
-}
-
-#productsIpad{
-  display: flex;
-  gap: 4rem;
-}
-
-#produtosAp2 {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-
-.botaoP {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  border: none;
-  border-radius: 50%;
-  background-color: #1c1b1b;
-
-}
-
 #search-container {
   position: relative;
-}
-
-#products {
-  display: flex;
-  gap: 4rem;
-  margin-bottom: 50px;
-  justify-content: center;
 }
 
 
@@ -122,7 +54,7 @@
   justify-content: center;
   background-color: white;
   padding-bottom: 10px;
-  margin-bottom: 50px;
+  margin-bottom: 500px;
   border-top: 1px solid rgb(255, 255, 255); 
 }
 
@@ -490,14 +422,51 @@ margin-bottom: 20px;
 
 
 /* Rodape cima*/
-footer {
-  margin-top: 150px;
+.footer {
+  padding-top: 5%;
+}
+/* Rodape cima*/
+.footer-cima {
+  padding: 50px;
+  display: flex;
+  background-color: lightgray;
+  color: rgb(0, 0, 0);
+  justify-content: space-around;
+}
+.footer-card {
+  font-size: 1em;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.footer-cima a {
+  color: rgb(0, 0, 0);
 }
 
 
 
+/* rodape baixo */
+.footer-baixo {
+  text-align: center;
+  background-color: lightgray;
+}
 
+#outros-links {
+  display: flex;
+  flex-direction: column;
+}
+#outros-links a {
+  text-decoration: none;
 
+}
+
+.contatos {
+  text-decoration: none;
+}
+.img_suplementos img {
+  width: 150%;
+  border-radius: 10px 10px 10px 10px;
+}
 
 .img_suplementos .card-content {
   padding-top: 15px;
@@ -568,70 +537,11 @@ footer {
   text-decoration: none;
 }
 
-#iphones {
-  display: flex;
-  gap: 10rem;
-}
-
-#iphonesProdutos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5.5rem;
-}
-
-#IpadsProdutos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5.5rem;
-  margin-top: 200px;
-}
-
-#produtosAp3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-}
-
-#ipads img{
-  border-radius: 16px;
-  transition: 0.4s;
-}
-
-#ipads img:hover{
-  transform: scale(1.1);
-}
-
-#iphones img{
-  border-radius: 16px;
-  transition: 0.4s;
-}
-
-#iphones img:hover{
-  transform: scale(1.1);
-}
-
-
 
 /* Media Querys */
 
 /* 0 -- 480 celular */
 @media (max-width: 450px) {
-  
-  .produtos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    margin-bottom: 150px;
-  }
-
-  #products {
-    display: flex;
-    flex-direction: column;
-  }
 
   #cabecalho {
     box-shadow: 0px 0px 0px 0px black;
