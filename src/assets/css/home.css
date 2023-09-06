@@ -22,7 +22,9 @@
   color: black;
 }
 
-
+#lowheader a:hover {
+  color: rgb(119, 119, 226);
+}
 
   
 .produtos {
