@@ -24,7 +24,8 @@ body {
     flex-direction: column;
     align-items: center;
     width: 350px;
-    gap: 2rem;
+    gap: 1.2rem;
+    margin-bottom: 20px;
 }
 
 #accounts {
@@ -35,9 +36,10 @@ body {
 
 
 
+
 #accounts a:hover {
     transform: scale(1.2);
-    background-color: rgb(45, 45, 243);
+    background-color: rgb(22, 22, 22);
     color: white;
 }
 
@@ -52,10 +54,9 @@ body {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    height: 430px;
+    height: 600px;
     text-align: center;
     box-shadow: 0px 0px 0px 1px rgb(187, 187, 187);
-    gap: 2rem;
     border-radius: 8px 0px 0px 8px;
 }
 
@@ -119,8 +120,8 @@ form a {
 #send input {
     width: 200px;
     padding: 10px;
-    border-color: blue;
-    color: blue;
+    border-color:  rgb(74, 74, 74);
+    color: rgb(0, 0, 0);
     border-radius: 24px;
     transition: 0.3s;
 }
@@ -128,7 +129,7 @@ form a {
 
 #send input:hover {
     transform: scale(1.1);
-    background-color: rgb(45, 45, 243);
+    background-color: rgb(22, 22, 22);
     color: white;
     border: none;
 }
@@ -137,11 +138,11 @@ form a {
 #register {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color:  rgb(22, 22, 22);
     color: white;
     text-align: center;
     padding: 50px;
-    height: 431px;
+    height: 601px;
     align-items: center;
     gap: 3rem;
     justify-content: center;
@@ -155,7 +156,7 @@ form a {
     border-color: rgb(255, 255, 255);
     color: white;
     border-radius: 24px;
-    background-color:  blue;
+    background-color:  rgb(22, 22, 22);
     color: white;
     transition: 0.3s;
 }
@@ -163,7 +164,7 @@ form a {
 #register button:hover {
     transform: scale(1.1);
     background-color: white;
-    color: rgb(45, 45, 243);
+    color: black;
     border: none;
 }
 
@@ -171,7 +172,7 @@ form a {
 #register1 {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    background-color:rgb(22, 22, 22);
     color: white;
     text-align: center;
     padding: 60px;
@@ -189,7 +190,7 @@ form a {
     border-color: rgb(255, 255, 255);
     color: white;
     border-radius: 24px;
-    background-color:  blue;
+    background-color:  rgb(22, 22, 22);
     color: white;
     transition: 0.3s;
 }
@@ -197,7 +198,7 @@ form a {
 #register1 button:hover {
     transform: scale(1.1);
     background-color: white;
-    color: rgb(45, 45, 243);
+    color: rgb(22, 22, 22);
     border: none;
 }
 

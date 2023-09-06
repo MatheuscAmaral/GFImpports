@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/src/assets/css/home.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="shortcut icon" href="/src/images/logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/src/images/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>GF Imports</title>
@@ -38,6 +38,14 @@
         <div class="cabecalho-barra">
           <div class="cabecalho-icons" id="icon"></div>
         </div>
+      </div>
+      <div id="lowheader">
+        <a href="#" id="">iPhone</a>
+        <a href="#" id="">MacBook</a>
+        <a href="#" id="">iPad</a>
+        <a href="#" id="">Apple Watch</a>
+        <a href="#" id="">AirPods</a>
+        <a href="#" id="">Ofertas</a>
       </div>
     </header> 
     <section class="carrosel">
@@ -76,7 +84,7 @@
 
        <div id="iphonesProdutos">
             <div id="iphones">
-              <img src="/src/images/iphones10.png" width="270px">
+              <img src="/src/images/iphones10.png" width="320px">
             </div>
             <div id="produtosAp">
               <button class="botaoP" id="bLeft" onclick="left()"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
@@ -95,12 +103,12 @@
               <button class="botaoP"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
           </div>
           <div id="macbooks">
-            <img src="/src/images/macbooksTela1.png" width="270px">
+            <img src="/src/images/macbooksTela1.png" width="320px">
           </div>
         </div>
         <div id="IpadsProdutos">
           <div id="ipads">
-            <img src="/src/images/ipadsTela.png" width="270px">
+            <img src="/src/images/ipadsTela.png" width="320px">
           </div>
           <div id="produtosAp3">
             <button class="botaoP"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
@@ -197,9 +205,9 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray.forEach(produto => {
               const cardHTML1 = `
-                <div class="card" style="width: 12rem;">
+                <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                  <div class="card-body">
+                  <div class="card-body" style="display: flex; flex-direction: column;">
                     <p class="card-text">${produto.title}</p>
                     <div class="preco">
                       ${produto.star}
@@ -220,20 +228,20 @@
             
             function right() {
                 // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-                const productsContainer = document.getElementById('products');
+                const productsContainer20 = document.getElementById('products');
 
                 // Limpa o conteúdo atual
-                productsContainer.innerHTML = '';
+                productsContainer20.innerHTML = '';
 
                 // Calcula o índice inicial e final dos produtos a serem exibidos
                 const startIndex = 3; // Onde 4 é o número de produtos por página
                 const endIndex = startIndex + 3; // Exibe 4 produtos de cada vez
 
                 // Obtém os próximos produtos do vetor products com base no índice
-                const produtosArray = iphones.slice(startIndex, endIndex);
+                const produtosArray10 = iphones.slice(startIndex, endIndex);
 
                 // Itera sobre os produtos e cria os cards na div productsContainer
-                produtosArray.forEach(produto => {
+                produtosArray10.forEach(produto => {
                   const cardHTML = `
                     <div class="card" style="width: 14rem;">
                       <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>

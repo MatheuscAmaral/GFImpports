@@ -10,6 +10,19 @@
     font-size: 100%;
 }
 
+#lowheader {
+  display: flex;
+  gap: 3rem;
+  margin-left: 100px;
+  padding: 13px;
+}
+
+#lowheader a {
+  text-decoration: none;
+  color: black;
+}
+
+
 
   
 .produtos {
@@ -84,8 +97,32 @@
   gap: 4rem;
   margin-bottom: 50px;
   justify-content: center;
+  transition: 0.4s;
 }
 
+#products img {
+  transition: 0.4s;
+}
+
+#products img:hover {
+  transform: scale(1.1);
+}
+
+#productsMac img {
+  transition: 0.4s;
+}
+
+#productsMac img:hover {
+  transform: scale(1.1);
+}
+
+#productsIpad img {
+  transition: 0.4s;
+}
+
+#productsIpad img:hover {
+  transform: scale(1.1);
+}
 
 .overlay {
   position: absolute;
@@ -119,10 +156,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: white;
   padding-bottom: 10px;
-  margin-bottom: 50px;
   border-top: 1px solid rgb(255, 255, 255); 
 }
 
@@ -130,7 +165,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   background-color: white;
   border-top: 1px solid rgb(255, 255, 255); 
 }
@@ -244,8 +279,7 @@
 
 .carrosel {
     box-shadow: 10px rgba(255, 255, 255, 0.2);  
-    width: 85%;
-    margin-left: 8%;
+    width: 100%;
     margin-bottom: 10%;
 }
 
@@ -455,6 +489,7 @@ margin-bottom: 20px;
 .preco {
   padding-top: 10px;
 }
+
 
 
 .review-count {

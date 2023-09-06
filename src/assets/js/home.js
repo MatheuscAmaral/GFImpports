@@ -58,8 +58,8 @@ else {
     const icon = document.getElementById("icon");
 
     icon.innerHTML = `
-      <a href="/assets/html/login.html"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
-      <a href="/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>`;
+      <a href="/src/assets/html/login.html"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+      <a href="/src/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>`;
 
     icon.style.display = "flex";
     icon.style.gap = ".6rem";
