@@ -15,7 +15,6 @@
   justify-content: center;
   gap: 3rem;
   margin-left: 100px;
-  padding: 13px;
 }
 
 #lowheader {
@@ -27,6 +26,7 @@
 #lowheader a {
   text-decoration: none;
   color: black;
+  padding: 10px;
  
 }
 
@@ -34,7 +34,6 @@
   color: rgb(53, 51, 51);
   transform: scale(1.1);
   text-decoration: underline;
-  ;
 }
 
   
