@@ -70,3 +70,179 @@ else {
     localStorage.removeItem("userLogado");
   }
 }
+
+
+function iphones() {
+    const navIphones = document.getElementById('navIphones');
+    const navbar = document.getElementById('navbarr');
+    
+    navbar.innerHTML =  `
+    <div class="navIp" style="display: flex; gap: 10rem;">
+          <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/iphone11128.png" width="115px" style="display: flex; flex-direction: column; gap: 3rem">
+              <p>Ver todos</p>
+          </div>
+          <div id="iphonesss" style="display: flex; gap: 3rem;">
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/iphone14.png" width="92px">
+              <p>Iphone 14</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/iphone-13.png" width="101px">
+              <p>Iphone 13</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/iphone1264gb.jpeg" width="120px">
+              <p>Iphone 12</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/iphone11.png" width="120px">
+              <p>Iphone 11</p>
+            </div>
+          </div>
+        </div>
+  `
+}
+
+function macbook() {
+  const navBook = document.getElementById('navBook');
+  const navbar = document.getElementById('navbarr');
+  
+  navbar.innerHTML =  `
+  <div class="navIp" style="display: flex; gap: 10rem;">
+          <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/macbooksa.png " width="180px">
+              <p>Ver todos</p>
+          </div>
+          <div id="macbookss" style="display: flex; gap: 3rem;">
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/m215p.png" width="120px">
+              <p>MacBook M2</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/m2256.png" width="120px">
+              <p>MacBook M1</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/m1256.png" width="120px">
+              <p>MacBook Pro</p>
+            </div>
+          </div>
+`
+}
+
+function iPad() {
+  const navPad = document.getElementById('navPad');
+  const navbar = document.getElementById('navbarr');
+  
+  navbar.innerHTML =  `
+  <div class="navIp" style="display: flex; gap: 10rem;">
+          <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/ipad10256.png" width="120px">
+              <p>Ver todos</p>
+          </div>
+          <div id="Ipadsss" style="display: flex; gap: 3rem;">
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/ipad9.png" width="120px">
+              <p>iPad 9</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/ipad10.png" width="120px">
+              <p>iPad 10</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/ipadair64gb.jpeg" width="120px">
+              <p>iPad Air</p>
+            </div>
+          </div>
+        </div>
+`
+}
+
+function AppleWatch() {
+  const navApple = document.getElementById('navApple');
+  const navbar = document.getElementById('navbarr');
+  
+  navbar.innerHTML =  `
+  <div class="navIp" style="display: flex; gap: 10rem;">
+          <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+              <img src="/src/images/applewatch.png" width="120px">
+              <p>Ver todos</p>
+          </div>
+          <div id="Ipadsss" style="display: flex; gap: 3rem;">
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/applewatch1.png" width="120px">
+              <p>Apple Watch S6</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/applewatch3.png" width="120px">
+              <p>Apple Watch S7</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/applewatch4.png" width="120px">
+              <p>Apple Watch S8</p>
+            </div>
+          </div>
+        </div>
+`
+}
+
+
+function airpods() {
+  const navPods = document.getElementById('navPods');
+  const navbar = document.getElementById('navbarr');
+  
+  navbar.innerHTML =  `
+  <div class="navIp" style="display: flex; gap: 10rem;">
+          <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+              <img src="/src/images/airpodssssss.png" width="158px">
+              <p>Ver todos</p>
+          </div>
+          <div id="airpods" style="display: flex; gap: 3rem;">
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/airpodspro.png" width="120px">
+              <p>Apple Watch S6</p>
+            </div>
+            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+              <img src="/src/images/airpods2.png" width="120px">
+              <p>Apple Watch S7</p>
+            </div>
+          </div>
+        </div>
+`
+}
+
+function ofertas() {
+  const navOf = document.getElementById('navOf');
+  const navbar = document.getElementById('navbarr');
+  
+  navbar.innerHTML =  `
+  <div class="navIp" style="display: flex; gap: 10rem;">
+  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
+      <img src="/src/images/ver todos.png" width="185px">
+      <p>Ver todos</p>
+  </div>
+  <div id="Ipadsss" style="display: flex; gap: 3rem;">
+    <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <img src="/src/images/sacolinha.png" width="120px" >
+      <p>Pronta Entrega</p>
+    </div>
+    <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <img src="/src/images/seminovo.png" width="120px">
+      <p>SemiNovos</p>
+    </div>
+    <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+      <img src="/src/images/importados.png" width="120px">
+      <p>Importados</p>
+    </div>
+  </div>
+</div>
+`
+}
+
+
+
+function restoreText() {
+  const navbar = document.getElementById('navbarr');
+  navbar.innerText = ''; // Restaurar o texto original
+}
