@@ -57,7 +57,6 @@
   gap: 5rem;
   align-items: center;
   justify-content: center;
-  margin-top: 200px;
 }
 
 #macbooksProdutos img {
@@ -632,7 +631,6 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 5.5rem;
-  margin-top: 200px;
 }
 
 #produtosAp3 {
@@ -762,6 +760,18 @@ footer {
     .footer-baixo {
     text-align: center;
     background-color: lightgray;
+  }
+
+  #iphImp  {
+    font-size: 18px;
+  }
+
+  #MacImp  {
+    font-size: 18px;
+  }
+
+  #IpadsImp  {
+    font-size: 18px;
   }
 
   .cabecalho-central {
@@ -952,6 +962,188 @@ footer {
 }
 
 
+/* 0 -- 480 celular */
+@media (max-width: 450px) {
+
+  #cabecalho {
+    box-shadow: 0px 0px 0px 0px black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: white;
+    margin-bottom: 15px;
+    border-top: 0px solid rgb(255, 255, 255); 
+    height: 170px;
+}
+
+#iphones img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+}
+
+#macbooks img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+}
+
+#produtosAp2 {
+  display: none;
+
+}
+
+#ipads img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+}
+
+#produtosAp3 {
+  display: none;
+}
+
+#produtosAp {
+  display: none;
+}
+
+#superior {
+  display: flex;
+  flex-direction: column;
+}
+
+#superiorTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#superior a {
+  margin-right: 40px;
+}
+
+#user {
+  margin-left: 40px;
+}
+
+  .carrosel {
+    box-shadow: 10px rgba(255, 255, 255, 0.2);  
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10%;
+}
+  .cabecalho-logo {
+    height: 95px;
+    padding-left: 0px;  
+}
+  .btn-lupa {
+    display: none;
+}
+  .search-input {
+  width: 150px;
+}
+
+ .footer {
+   margin-top: 30%;
+ }
+
+  .footer-cima {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-bottom: 5%;
+  }
+
+  .footer-card {
+    font-size: 1em;
+    width: 400px;
+    border-radius: 5px;
+  }
+
+    .footer-baixo {
+    text-align: center;
+    background-color: lightgray;
+  }
+
+
+  .produtos1 {
+   padding-right: 40%;
+
+  }
+  
+  .produtos2 {
+    padding-left: 15%;
+    padding-right: 35%;
+    margin-bottom: 15%;
+    width: 100%;
+  }
+
+  .produtos3 {
+   padding-right: 35%;
+    padding-left: 8%;
+  }
+
+  #superior {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: 4s;
+  }
+
+  #superiorTop {
+    border: .1px solid rgb(185, 185, 185);
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12px;
+
+  }
+
+
+  #enter {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    margin-left: 28px;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
+
+  #enter a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  #low {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobileCard {
+    padding: 20px;
+    background-color: rgb(99, 99, 99);
+  }
+
+  .mobileCard a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+
+ 
+  
+
+
+}
+
+
 
 @media (min-width: 900px) and (max-width: 1500px) {
   .cabecalho {
@@ -997,3 +1189,4 @@ footer {
     margin-left: 200px;
   }
 }
+
