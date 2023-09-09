@@ -422,11 +422,10 @@
 
         const productsContainerIpadss = document.getElementById('navbarr');
         productsContainerIpadss.innerHTML = `
-            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-right: 100px">
-                  <a href="/src/assets/html/iphones.html"><img src="/src/images/iphone11128.png" width="115px" style="display: flex; flex-direction: column; gap: 3rem"></a>
-                  <p>Ver todos</p>
-            </div>`
-
+          <div class="overlay-content todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-right: 100px">
+            <a href="/src/assets/html/iphones.html"><img src="/src/images/iphone11128.png" width="115px" style="display: flex; flex-direction: column; gap: 3rem"></a>
+            <p>Ver todos</p>
+          </div>`;
         // Obtém os três primeiros produtos do vetor products
         const produtosArrayIpadss = iphones.slice(0, 3);
 
