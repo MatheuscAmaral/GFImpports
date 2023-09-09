@@ -14,6 +14,27 @@
   <title>GF Imports</title>
 </head>
 <body>
+  <style>
+/* Adicione estilos de transição */
+#topnav a {
+            color: black;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Adicione estilos para a div de conteúdo */
+        #navbarr {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Estilo para quando a div de conteúdo está visível */
+        #navbarr.show {
+            display: flex;
+            opacity: 1;
+            transition: opacity 0.6s ease-in-out;
+        }
+</style>
   <div id="mobile" onclick="goBack()"></div>
   <main id="main">
     <header id="cabecalho">
@@ -41,20 +62,16 @@
       </div>
       <div id="lowheader">
         <div id="topnav" onmouseover="showNavbarr()" onmouseout="hideNavbarr()">
-          <a onmouseover="iphoness()">iPhone</a>
-          <a onmouseover="macbooks()">MacBook</a>
-          <a onmouseover="iPads()">iPad</a>
-          <a onmouseover="AppleWatchs()">Apple Watch</a>
-          <a onmouseover="airpodss()">AirPods</a>
-          <a onmouseover="ofertas()">Ofertas</a>
+          <a onmouseover="iphoness()" onmouseout="hideNavbarr()">iPhone</a>
+          <a onmouseover="macbooks()" onmouseout="hideNavbarr()">MacBook</a>
+          <a onmouseover="iPads()" onmouseout="hideNavbarr()">iPad</a>
+          <a onmouseover="AppleWatchs()" onmouseout="hideNavbarr()">Apple Watch</a>
+          <a onmouseover="airpodss()" onmouseout="hideNavbarr()">AirPods</a>
+          <a onmouseover="ofertas()" onmouseout="hideNavbarr()">Ofertas</a>
         </div>
-        <div id="navbarr" style="display: flex; align-items: center; gap: 2rem; margin-left: 100px;"onmouseover="showNavbarr()" onmouseout="hideNavbarr()">
-
+        <div id="navbarr" class="show-navbarr" style="display: flex; align-items: center; gap: 2rem; margin-left: 100px;"onmouseover="showNavbarr()" onmouseout="hideNavbarr()">
         </div>
-
-       
-    
-    </div>
+      </div>
     
     </header> 
     <section class="carrosel">
@@ -376,10 +393,32 @@
           productsContainerIpad.innerHTML += cardHTML3;
         });
 
+        let hideNavTimeout;
+        let navbarrHovered = false;
 
-        
+        function showNavbarr(callback) {
+            clearTimeout(hideNavTimeout); // Cancela o timeout anterior
+            // Adicione a classe para mostrar suavemente
+            const navbarr = document.getElementById('navbarr');
+            navbarr.classList.add('show');
+            navbarrHovered = true;
 
-      function iphoness() {
+            // Chame a função desejada
+            if (typeof callback === 'function') {
+                callback();
+            }
+        }
+
+        function hideNavbarr() {
+            if (!navbarrHovered) {
+                // Oculta a navbarr imediatamente se o mouse não estiver sobre ela
+                const navbarr = document.getElementById('navbarr');
+                navbarr.classList.remove('show');
+            }
+            navbarrHovered = false;
+        }
+
+        function iphoness() {
 
         const productsContainerIpadss = document.getElementById('navbarr');
         productsContainerIpadss.innerHTML = `
@@ -538,20 +577,20 @@
       navbar.innerHTML =  `
       <div class="navIp" style="display: flex; gap: 10rem;">
       <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem;">
-          <img src="/src/images/ver todos.png" width="185px">
+          <a href="/src/assets/html/todos.html"><img src="/src/images/ver todos.png" width="185px"></a>
           <p>Ver todos</p>
       </div>
       <div id="Ipadsss" style="display: flex; gap: 3rem;">
         <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-          <img src="/src/images/sacolinha.png" width="120px" >
+          <a href="/src/assets/html/prontaentrega.html"><img src="/src/images/sacolinha.png" width="120px"></a>
           <p>Pronta Entrega</p>
         </div>
         <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-          <img src="/src/images/seminovo.png" width="120px">
+          <a href="/src/assets/html/seminovos.html"><img src="/src/images/seminovo.png" width="120px"></a>
           <p>SemiNovos</p>
         </div>
         <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-          <img src="/src/images/importados.png" width="120px">
+          <a href="/src/assets/html/importados.html"> <img src="/src/images/importados.png" width="120px"></a>
           <p>Importados</p>
         </div>
       </div>

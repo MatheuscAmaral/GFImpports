@@ -40,6 +40,44 @@
       </div>
     </header> 
 
+    <div id="result">
+      <div id="p1">
+        <div id="produtos1">
+        
+        </div>
+        <div id="produtos2">
+          
+        </div>
+        <div id="produtos3">
+  
+        </div>
+        <div id="produtos4">
+      </div>
+        
+      </div>
+       <div id="p2">
+        <div id="produtos5">
+        
+        </div>
+        <div id="produtos6">
+  
+        </div>
+        <div id="produtos7">
+          
+        </div>
+        <div id="produtos8">
+  
+        </div>
+       </div>
+
+      <div id="botoes">
+        <input id="button1" type="button" value="<<" onclick="backLeft()">
+        <input id="button2" type="button" value="  1 " onclick="pageOne()">
+        <input id="button3" type="button" value=" 2 " onclick="pageTwo()">
+        <input id="button4" type="button" value=">>" onclick="backRight()">
+      </div>
+  
+  </div>
     
       <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
         <div class="row">
@@ -112,6 +150,308 @@
           </script>
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
+        <script>
+            if (width > 500) {
+
+        function pageOne() {
+          // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+         const productsContainer = document.getElementById('produtos1');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray = iphones.slice(0, 4);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer.innerHTML += cardHTML1;
+  productsContainer.style.display = 'flex';
+  productsContainer.style.gap = '2rem';
+  productsContainer.style.justifyContent = 'center';
+  productsContainer.style.marginTop = '100px';
+});
+ // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+ const productsContainer2 = document.getElementById('produtos2');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray2 = iphones.slice(4, 8);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray2.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer2.innerHTML += cardHTML1;
+  productsContainer2.style.display = 'flex';
+  productsContainer2.style.gap = '2rem';
+  productsContainer2.style.justifyContent = 'center';
+  productsContainer2.style.marginTop = '100px';
+});
+ // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+ const productsContainer3 = document.getElementById('produtos3');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray3 = iphones.slice(8, 12);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray3.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer3.innerHTML += cardHTML1;
+  productsContainer3.style.display = 'flex';
+  productsContainer3.style.gap = '2rem';
+  productsContainer3.style.justifyContent = 'center';
+  productsContainer3.style.marginTop = '100px';
+});
+ // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+ const productsContainer4 = document.getElementById('produtos4');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray4 = iphones.slice(12, 16);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray4.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer4.innerHTML += cardHTML1;
+  productsContainer4.style.display = 'flex';
+  productsContainer4.style.gap = '2rem';
+  productsContainer4.style.justifyContent = 'center';
+  productsContainer4.style.marginTop = '100px';
+});
+
+
+
+        }
+
+
+        function pageTwo() {
+          const p1 = document.getElementById('p1');
+          p1.style.display = 'none'
+
+           // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+         const productsContainer5 = document.getElementById('produtos5');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray5 = iphones.slice(16, 20);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray5.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer5.innerHTML += cardHTML1;
+  productsContainer5.style.display = 'flex';
+  productsContainer5.style.gap = '2rem';
+  productsContainer5.style.justifyContent = 'center';
+  productsContainer4.style.marginTop = '100px';
+});
+// Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+const productsContainer6 = document.getElementById('produtos6');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray6 = iphones.slice(20, 24);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray6.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer6.innerHTML += cardHTML1;
+  productsContainer6.style.display = 'flex';
+  productsContainer6.style.gap = '2rem';
+  productsContainer6.style.justifyContent = 'center';
+  productsContainer6.style.marginTop = '100px';
+});
+// Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+const productsContainer7 = document.getElementById('produtos7');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray7 = iphones.slice(24, 28);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray7.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer7.innerHTML += cardHTML1;
+  productsContainer7.style.display = 'flex';
+  productsContainer7.style.gap = '2rem';
+  productsContainer7.style.justifyContent = 'center';
+  productsContainer7.style.marginTop = '100px';
+});
+// Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+const productsContainer8 = document.getElementById('produtos8');
+
+// Obtém os três primeiros produtos do vetor products
+const produtosArray8 = iphones.slice(28, 32);
+
+// Itera sobre os produtos e cria os cards na div productsContainer
+produtosArray8.forEach(produto => {
+  const cardHTML1 = `
+    <div class="card" style="width: 14rem;">
+      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+      <div class="card-body" style="display: flex; flex-direction: column;">
+        <p class="card-text">${produto.title}</p>
+        <div class="preco">
+          ${produto.star}
+          <h5>R$${produto.price.toFixed(2)}</h5>
+          <p style="font-size: 14px">${produto.payment}</p> 
+        </div>
+        <!-- Adicione o ID do produto na URL do link -->
+        <a href="/src/assets/html/details.html?id=${produto.id}">
+          <p class="compras">COMPRAR</p>
+        </a>
+      </div>
+    </div>
+  `;
+
+  productsContainer8.innerHTML += cardHTML1;
+  productsContainer8.style.display = 'flex';
+  productsContainer8.style.gap = '2rem';
+  productsContainer8.style.justifyContent = 'center';
+  productsContainer8.style.marginTop = '100px';
+});
+
+     }
+      }
+
+    
+            else {
+              const proteinasMobile = document.getElementById('produtos');
+
+            const suplementosProteinasMobile = products.slice(0, 8);
+            suplementosProteinasMobile.forEach((products) => {
+              const cardmobileHTML = `<div class="menu-sessao-bloco-card">
+                          <div class="cardM" style="width: 24.3rem;">
+                            <a href="/assets/html/details.html?id=${products.id}"><img src=${products.poster} class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                            <a href="/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
+                              <div id="rating">
+                                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                              </div>
+                              <div class="preco">
+                                <h5><strong>R$ ${products.price}  </strong></h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>`
+              proteinasMobile.innerHTML += cardmobileHTML;
+            });
+            }
+        </script>
         
         
 </body>

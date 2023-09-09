@@ -30,6 +30,8 @@
  
 }
 
+
+
 #lowheader a:hover {
   color: rgb(53, 51, 51);
   transform: scale(1.1);
@@ -624,6 +626,23 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 5.5rem;
+}
+
+
+
+#botoes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 1rem;
+}
+
+#botoes input {
+  padding: 15px;
+  border-radius: 16px;
+  background-color: rgba(142, 141, 141, 0);
+  border: 1px solid black;
 }
 
 #IpadsProdutos {
