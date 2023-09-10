@@ -1322,7 +1322,7 @@ const ipad = [
         id: 3,
         title: 'iPad Pro 12.9 128GB M2',
         price: 4420.0,
-        poster:'/src/images/ipadair64gb.jpeg',
+        poster:'/src/images/ipadair64gb.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         condition: 'Novo',

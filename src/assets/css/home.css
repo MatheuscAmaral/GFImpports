@@ -30,6 +30,10 @@
  
 }
 
+#produtos {
+  display: none;  
+}
+
 
 
 
@@ -646,6 +650,22 @@ footer {
   border: 1px solid black;
 }
 
+
+#botoess {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 1rem;
+}
+
+#botoess input {
+  padding: 15px;
+  border-radius: 16px;
+  background-color: rgba(142, 141, 141, 0);
+  border: 1px solid black;
+}
+
 #IpadsProdutos {
   display: flex;
   align-items: center;
@@ -684,6 +704,12 @@ footer {
 
 /* 0 -- 480 celular */
 @media (max-width: 450px) {
+
+  #produtos {
+    display: flex;
+    flex-direction: column;  
+  }
+  
   
   .produtos {
     display: flex;

@@ -172,3 +172,56 @@ function hideNavbarr() {
 }
 
 
+
+ 
+function backLeft() {
+  pages1.style.display = 'flex';
+  pages1.style.flexDirection = 'column'
+  pages2.style.display = 'none'
+  botao2.style.backgroundColor = 'blue'
+  botao1.style.backgroundColor = ' rgba(128, 128, 128, 0.357)'
+
+  if (pages2.style.display = 'none') {
+    botao3.style.backgroundColor = 'transparent'
+    botao4.style.backgroundColor = 'transparent'
+  }
+}
+
+function pageOne() {
+  pages1.style.display = 'flex';
+  pages1.style.flexDirection = 'column'
+  pages2.style.display = 'none'
+  botao2.style.backgroundColor = 'blue'
+  botao1.style.backgroundColor = ' rgba(128, 128, 128, 0.357)'
+
+  if (pages2.style.display = 'none') {
+    botao3.style.backgroundColor = 'transparent'
+    botao4.style.backgroundColor = 'transparent'
+  }
+}
+
+function pageTwo() {
+  pages2.style.display = 'flex';
+  pages2.style.flexDirection = 'column'
+  pages1.style.display = 'none'
+  botao3.style.backgroundColor = 'blue'
+  botao4.style.backgroundColor = ' rgba(128, 128, 128, 0.357)'
+
+  if (pages1.style.display = 'none') {
+    botao2.style.backgroundColor = 'transparent'
+    botao1.style.backgroundColor = 'transparent'
+  }
+}
+
+function backRight() {
+  pages2.style.display = 'flex';
+  pages2.style.flexDirection = 'column'
+  pages1.style.display = 'none'
+  botao3.style.backgroundColor = 'blue'
+  botao4.style.backgroundColor = ' rgba(128, 128, 128, 0.357)'
+
+  if (pages1.style.display = 'none') {
+    botao2.style.backgroundColor = 'transparent'
+    botao1.style.backgroundColor = 'transparent'
+  }
+}
