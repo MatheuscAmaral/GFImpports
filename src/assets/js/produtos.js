@@ -1445,12 +1445,19 @@ renderCards();
 
 
 
+
 const cardsWrapper2 = document.getElementById("cardsWrapper2");
+const prevButton2 = document.getElementById("prevButton2");
+const nextButton2 = document.getElementById("nextButton2");
+
+const cardWidth2 = 320; // Largura de cada card
+const cardsPerPage2 = 3; // Quantidade de cards exibidos por página
+let currentPage2 = 0;
 
 function renderCards2() {
     cardsWrapper2.innerHTML = "";
-    const startIndex = currentPage * cardsPerPage;
-    const endIndex = startIndex + cardsPerPage;
+    const startIndex = currentPage2 * cardsPerPage2;
+    const endIndex = startIndex + cardsPerPage2;
 
     macbook.slice(startIndex, endIndex).forEach((product) => {
         const card = document.createElement("div");
@@ -1478,6 +1485,86 @@ function renderCards2() {
         cardsWrapper2.appendChild(card);
     });
 
-    prevButton.disabled = currentPage === 0;
-    nextButton.disabled = endIndex >= macbook.length;
+    prevButton2.disabled = currentPage2 === 0;
+    nextButton2.disabled = endIndex >= macbook.length;
 }
+
+prevButton2.addEventListener("click", () => {
+    if (currentPage2 > 0) {
+        currentPage2--;
+        renderCards2();
+    }
+});
+
+nextButton2.addEventListener("click", () => {
+    const startIndex = currentPage2 * cardsPerPage2;
+    if (startIndex + cardsPerPage2 < macbook.length) {
+        currentPage2++;
+        renderCards2();
+    }
+});
+
+// Inicialização
+renderCards2();
+
+
+const cardsWrapper3 = document.getElementById("cardsWrapper3");
+const prevButton3 = document.getElementById("prevButton3");
+const nextButton3 = document.getElementById("nextButton3");
+
+const cardWidth3 = 320; // Largura de cada card
+const cardsPerPage3 = 3; // Quantidade de cards exibidos por página
+let currentPage3 = 0;
+
+function renderCards3() {
+    cardsWrapper3.innerHTML = "";
+    const startIndex = currentPage3 * cardsPerPage3;
+    const endIndex = startIndex + cardsPerPage3;
+
+    ipad.slice(startIndex, endIndex).forEach((product) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardHTML = `
+        <div class="card" style="width: 14rem;">
+        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <p class="card-text">${product.title}</p>
+          <div class="preco">
+            ${product.star}
+            <h5>R$${product.price.toFixed(2)}</h5>
+            <p style="font-size: 14px">${product.payment}</p> 
+          </div>
+          <!-- Adicione o ID do produto na URL do link -->
+          <a href="/src/assets/html/details.html?id=${product.id}">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
+        `;
+
+        card.innerHTML = cardHTML;
+        cardsWrapper3.appendChild(card);
+    });
+
+    prevButton3.disabled = currentPage3 === 0;
+    nextButton3.disabled = endIndex >= ipad.length;
+}
+
+prevButton3.addEventListener("click", () => {
+    if (currentPage3 > 0) {
+        currentPage3--;
+        renderCards3();
+    }
+});
+
+nextButton3.addEventListener("click", () => {
+    const startIndex = currentPage3 * cardsPerPage3;
+    if (startIndex + cardsPerPage3 < ipad.length) {
+        currentPage3++;
+        renderCards3();
+    }
+});
+
+// Inicialização
+renderCards3();
