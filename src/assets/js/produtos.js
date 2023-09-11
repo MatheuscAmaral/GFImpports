@@ -1381,3 +1381,103 @@ const ipad = [
         payment: 'ou até 12x de R$ '
     },
 ]
+
+const cardsWrapper = document.getElementById("cardsWrapper");
+const prevButton = document.getElementById("prevButton");
+const nextButton = document.getElementById("nextButton");
+
+const cardWidth = 320; // Largura de cada card
+const cardsPerPage = 3; // Quantidade de cards exibidos por página
+let currentPage = 0;
+
+function renderCards() {
+    cardsWrapper.innerHTML = "";
+    const startIndex = currentPage * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+
+    iphones.slice(startIndex, endIndex).forEach((product) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardHTML = `
+        <div class="card" style="width: 14rem;">
+        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <p class="card-text">${product.title}</p>
+          <div class="preco">
+            ${product.star}
+            <h5>R$${product.price.toFixed(2)}</h5>
+            <p style="font-size: 14px">${product.payment}</p> 
+          </div>
+          <!-- Adicione o ID do produto na URL do link -->
+          <a href="/src/assets/html/details.html?id=${product.id}">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
+        `;
+
+        card.innerHTML = cardHTML;
+        cardsWrapper.appendChild(card);
+    });
+
+    prevButton.disabled = currentPage === 0;
+    nextButton.disabled = endIndex >= iphones.length;
+}
+
+prevButton.addEventListener("click", () => {
+    if (currentPage > 0) {
+        currentPage--;
+        renderCards();
+    }
+});
+
+nextButton.addEventListener("click", () => {
+    const startIndex = currentPage * cardsPerPage;
+    if (startIndex + cardsPerPage < iphones.length) {
+        currentPage++;
+        renderCards();
+    }
+});
+
+// Inicialização
+renderCards();
+
+
+
+const cardsWrapper2 = document.getElementById("cardsWrapper2");
+
+function renderCards2() {
+    cardsWrapper2.innerHTML = "";
+    const startIndex = currentPage * cardsPerPage;
+    const endIndex = startIndex + cardsPerPage;
+
+    macbook.slice(startIndex, endIndex).forEach((product) => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        const cardHTML = `
+        <div class="card" style="width: 14rem;">
+        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <p class="card-text">${product.title}</p>
+          <div class="preco">
+            ${product.star}
+            <h5>R$${product.price.toFixed(2)}</h5>
+            <p style="font-size: 14px">${product.payment}</p> 
+          </div>
+          <!-- Adicione o ID do produto na URL do link -->
+          <a href="/src/assets/html/details.html?id=${product.id}">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
+        `;
+
+        card.innerHTML = cardHTML;
+        cardsWrapper2.appendChild(card);
+    });
+
+    prevButton.disabled = currentPage === 0;
+    nextButton.disabled = endIndex >= macbook.length;
+}

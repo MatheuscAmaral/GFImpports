@@ -113,22 +113,24 @@
             <div id="iphones">
               <a href="/src/assets/html/iphones.html"><img src="/src/images/wallp1.png" width="320px"></a>
             </div>
-            <div id="produtosAp">
-              <button class="botaoP" id="bLeft" onclick="left()"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-              <div id="products">
-                
+              <button class="botaoP" id="prevButton"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+              <div class="slider-container">
+                <div class="cards-wrapper" id="cardsWrapper">
+
+                </div>
               </div>
-              <button class="botaoP" id="bRight" onclick="right()"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
-            </div>
+              <button class="botaoP" id="nextButton"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
        </div>
        <h3 id="MacImp" style="text-align: center; margin-bottom: 60px;">MacBooks Importados</h3>
         <div id="macbooksProdutos" style="margin-bottom: 100px;">
           <div id="produtosAp2">
-            <button class="botaoP"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-            <div id="productsMac">
-              
-            </div>
-              <button class="botaoP"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
+            <button class="botaoP" id="prevButton"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+              <div class="slider-container">
+                <div class="cards-wrapper" id="cardsWrapper2">
+
+                </div>
+              </div>
+              <button class="botaoP" id="nextButton"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
           </div>
           <div id="macbooks">
             <a href="/src/assets/html/macbooks.html"> <img src="/src/images/wallp2.png" width="320px"></a>
@@ -225,6 +227,8 @@
 
             const bLeft = document.getElementById('bLeft');
             const bRight = document.getElementById('bRight');
+            const carousel = document.querySelector(".carrrousel")
+
            // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
             const productsContainer = document.getElementById('products');
 
@@ -254,6 +258,12 @@
               productsContainer.innerHTML += cardHTML1;
               bLeft.style.backgroundColor = 'rgba(146, 146, 146, 0.716)'
             });
+
+
+            const dragging = (e) => {
+              carousel.scrollLeft = e.pageX
+            }
+            carousel.addEventListener("mousemove", dragging);
             
             function right() {
                 // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
