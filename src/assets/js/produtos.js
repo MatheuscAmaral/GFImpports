@@ -1,697 +1,6 @@
 const products = [
     {
         id: 1,
-        title: 'iPhone 11 64GB',
-        price: 1350.0,
-        poster: '/src/images/www.iplace.com-removebg-preview.jpeg',
-        link: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        color: '',
-        size: '64GB',
-        payment: 'ou até 12x de R$ '
-    },
-    
-    {
-        id: 2,
-        title: 'iPhone 11 128GB',
-        price: 1650.0,
-        poster: 'src/images/iphone11128.jpeg',
-        link: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 3,
-        title: 'iPhone 11 Pro 64GB',
-        price: 1700.0,
-        poster:'src/images/iphone11pro128.png',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '64GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 4,
-        title: 'iPhone 11 Pro 128GB',
-        price: 1800.0,
-        poster:'src/images/iphone11pro128.png',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128x GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 5,
-        title: 'iPhone 11 Pro Max 64GB',
-        price: 1870.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '64GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 6,
-        title: 'iPhone 11 Pro Max 256GB',
-        price: 1990.0,
-        poster:'/src/images/iphone14amarelo128gb.jpeg',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 7,
-        title: 'iPhone 12 Mini 64GB',
-        price: 1695.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '64GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 8,
-        title: 'iPhone 12 Mini 128GB',
-        price: 1485.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 9,
-        title: 'iPhone 12 64GB',
-        price: 1695.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '64GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 10,
-        title: 'iPhone 12 128GB',
-        price: 1800.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 11,
-        title: 'iPhone 12 Pro 128GB',
-        price: 2220.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 12,
-        title: 'iPhone 12 Pro 256GB',
-        price: 2320.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 13,
-        title: 'iPhone 12 Pro 512GB',
-        price: 2430.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '512GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 14,
-        title: 'iPhone 12 Pro Max 128GB',
-        price: 2680.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 15,
-        title: 'iPhone 13 Mini 128GB',
-        price: 2150.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 16,
-        title: 'iPhone 13 128GB',
-        price: 2465.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 17,
-        title: 'iPhone 13 256GB',
-        price: 2535.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 18,
-        title: 'iPhone 13 Pro 128GB',
-        price: 3095.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 19,
-        title: 'iPhone 13 Pro 256GB',
-        price: 3200.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 20,
-        title: 'iPhone 13 Pro Max 128GB',
-        price: 3410.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 21,
-        title: 'iPhone 14 128GB',
-        price: 2710.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 22,
-        title: 'iPhone 14 256GB',
-        price: 2850.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 23,
-        title: 'iPhone 14 Plus 128GB',
-        price: 3270.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 24,
-        title: 'iPhone 14 Plus 256GB',
-        price: 3420.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 25,
-        title: 'iPhone 14 Pro 128GB',
-        price: 4050.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 26,
-        title: 'iPhone 14 Pro Max 128GB',
-        price: 3850.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$'
-    },
-    { 
-        id: 27,
-        title: 'iPhone 14 Pro Max 256GB',
-        price: 4200.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$'
-    },
-    {
-        id: 28,
-        title: 'iPhone 13 128GB',
-        price: 2800.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
-    },
-    { 
-        id: 29,
-        title: 'iPhone 14 128GB',
-        price: 3350.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
-    },{
-        id: 30,
-        title: 'iPhone 14 Pro 256GB',
-        price: 4319.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
-    },
-    { 
-        id: 31,
-        title: 'iPhone 14 Pro Max 256GB',
-        price: 4850.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
-    },{
-        id: 32,
-        title: 'iPhone 14 Pro Max 128GB',
-        price: 4500.0,
-        poster: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        color: '',
-        size: '128GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
-    },
-    {
-        id: 33,
-        title: 'MacBook Air M1 256GB 8GB de ram',
-        price: 3510.0,
-        poster: '',
-        link: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        size: '256GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Lacrado',
-        shippingMethod: 'Importado',
-        payment: 'ou até 12x de R$ ',
-        ram: '8GB',
-        polegadas: '13P'
-    },
-    
-    {
-        id: 34,
-        title: 'MacBook Air M2 256GB 8Gb de ram',
-        price: 4683.0,
-        poster: '',
-        link: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        color: '',
-        size: '256GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Lacrado',
-        shippingMethod: 'Importado',
-        payment: 'ou até 12x de R$ ',
-        ram: '8GB',
-        inches: '13P'
-    },
-    {
-        id: 35,
-        title: 'MacBook Air M2 256GB 8GB de ram',
-        price: 5250.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '256GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        shippingMethod: 'Importado',
-        payment: 'ou até 12x de R$ ',
-        ram: '8GB',
-        polegadas: '15P',
-        year: '2023'
-    },
-    {
-        id: 36,
-        title: 'MacBook Air M1 1TB 16GB de ram',
-        price: 8220.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '1TB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        shippingMethod: 'Importado',
-        payment: 'ou até 12x de R$ ',
-        ram: '16GB',
-        polegadas: '14P',
-        year: '2021'
-    },
-    {
-        id: 36,
-        title: 'MacBook Air M1 1TB 16GB de ram',
-        price: 9200.0,
-        poster:'/src/images/iphone14amarelo128gb.jpeg',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '44mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        shippingMethod: 'Importado',
-        payment: 'ou até 12x de R$ ',
-        ram: '16GB',
-        polegadas: '14P',
-        year: '2021'
-    },
-    {
-        id: 37,
-        title: 'Apple Watch Série 6 40mm',
-        price: 1050.0,
-        poster: '',
-        link: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        size: '40mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    
-    {
-        id: 38,
-        title: 'Apple Watch Série 6 44mm',
-        price: 1100.0,
-        poster: '',
-        link: '',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        color: '',
-        size: '44mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 39,
-        title: 'Apple Watch Série 7 41mm',
-        price: 1200.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '41mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 40,
-        title: 'Apple Watch Série 7 45mm',
-        price: 1275.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '45mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 41,
-        title: 'Apple Watch Série S5 44mm',
-        price: 900.0,
-        poster:'/src/images/iphone14amarelo128gb.jpeg',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '44mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 42,
-        title: 'Apple Watch Série 8 41mm',
-        price: 1520.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '41mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 43,
-        title: 'Apple Watch Série 8 45mm',
-        price: 1720.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '45mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 44,
-        title: 'Apple Watch Série 8 45mm Midnight',
-        price: 1850.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '45mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 45,
-        title: 'Apple Watch Ultra 49mm',
-        price: 3360.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        size: '49mm',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 46,
-        title: 'Apple Pencil 2',
-        price: 500.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 47,
-        title: 'Apple Pencil 1',
-        price: 450.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 48,
-        title: 'Apple Pencil 1 C/Adaptador',
-        price: 495.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 49,
-        title: 'iPad 9 64GB',
-        price: 1380.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '64GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 50,
-        title: 'iPad 10 64GB',
-        price: 2010.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '64GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 51,
-        title: 'iPad 10 256GB',
-        price: 2465.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '256GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 52,
-        title: 'iPad 10 256GB Wi-Fi + Celular',
-        price: 3395.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '256GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 3,
-        title: 'iPad 11 Pro 128GB Wi-FI + Celular',
-        price: 4600.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '128GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 54,
-        title: 'iPad Pro 12.9 128GB M2',
-        price: 4420.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '128GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 55,
-        title: 'iPad Pro 12.9 256GB M2',
-        price: 4850.0,
-        poster:'',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '256GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
-    },
-    {
-        id: 56,
-        title: 'AirPods Pro',
-        price: 500.0,
-        poster:'/src/images/airpodspro.png',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '128GB',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ ',
-        title2: 'AirPods Pro'
-    },
-    {
-        id: 57,
-        title: 'AirPods 2ª geração',
-        price: 500.0,
-        poster:'/src/images/airpods2.png',
-        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
-        size: '',
-        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ ',
-        title2: 'AirPods 2ª geração'
-    },
-
-]
-
-
-const iphones = [
-    {
-        id: 1,
         title: 'iPhone 14 Pro 128GB',
         price: 2710.0,
         poster: '/src/images/iphone144.png',
@@ -1050,16 +359,8 @@ const iphones = [
         payment: 'ou até 12x de R$',
         condition: 'Lacrado'
     },
-    
-
-
-
-
-]
-
-const macbook = [
     {
-        id: 1,
+        id: 33,
         title: 'MacBook Air M1 256GB 8GB de ram 13P',
         price: 3510.0,
         poster: '/src/images/m1256.png',
@@ -1076,7 +377,7 @@ const macbook = [
     },
     
     {
-        id: 2,
+        id: 34,
         title: 'MacBook Air M2 256GB 8Gb de ram 13P',
         price: 4683.0,
         poster: '/src/images/m2256.png',
@@ -1093,7 +394,7 @@ const macbook = [
         title2: 'MacBook M2'
     },
     {
-        id: 3,
+        id: 35,
         title: 'MacBook Air M2 256GB 8GB de ram 15P',
         price: 5250.0,
         poster: '/src/images/m215p.png',
@@ -1110,7 +411,7 @@ const macbook = [
         title2: 'MacBook Pro'
     },
     {
-        id: 4,
+        id: 36,
         title: 'MacBook Air M1 1TB 16GB de ram',
         price: 8220.0,
         poster:'',
@@ -1126,7 +427,7 @@ const macbook = [
         year: '2021'
     },
     {
-        id: 5,
+        id: 37,
         title: 'MacBook Air M1 1TB 16GB de ram',
         price: 9200.0,
         poster:'/src/images/iphone14amarelo128gb.jpeg',
@@ -1141,11 +442,8 @@ const macbook = [
         polegadas: '14P',
         year: '2021'
     },
-]
-
-const appleWatch = [
     {
-        id: 1,
+        id: 38,
         title: 'Apple Watch Série 6 40mm',
         price: 1050.0,
         poster: '/src/images/applewatch1.png',
@@ -1158,7 +456,7 @@ const appleWatch = [
         title2: 'Apple Watch S6'
     },
     {
-        id: 2,
+        id: 39,
         title: 'Apple Watch Série 7 41mm',
         price: 1200.0,
         poster:'/src/images/applewatch3.png',
@@ -1171,7 +469,7 @@ const appleWatch = [
         title2: 'Apple Watch S7'
     },
     {
-        id: 3,
+        id: 40,
         title: 'Apple Watch Série 8 41mm',
         price: 1520.0,
         poster:'/src/images/applewatch4.png',
@@ -1184,7 +482,7 @@ const appleWatch = [
         title2: 'Apple Watch S8'
     },
     {
-        id: 4,
+        id: 41,
         title: 'Apple Watch Série 7 45mm',
         price: 1275.0,
         poster:'',
@@ -1196,7 +494,7 @@ const appleWatch = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 5,
+        id: 42,
         title: 'Apple Watch Série S5 44mm',
         price: 900.0,
         poster:'/src/images/iphone14amarelo128gb.jpeg',
@@ -1208,7 +506,7 @@ const appleWatch = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 6,
+        id: 43,
         title: 'Apple Watch Série 6 44mm',
         price: 1100.0,
         poster: '',
@@ -1221,7 +519,7 @@ const appleWatch = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 7,
+        id: 44,
         title: 'Apple Watch Série 8 45mm',
         price: 1720.0,
         poster:'',
@@ -1233,7 +531,7 @@ const appleWatch = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 8,
+        id: 45,
         title: 'Apple Watch Série 8 45mm Midnight',
         price: 1850.0,
         poster:'',
@@ -1245,7 +543,7 @@ const appleWatch = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 9,
+        id: 46,
         title: 'Apple Watch Ultra 49mm',
         price: 3360.0,
         poster:'',
@@ -1256,11 +554,8 @@ const appleWatch = [
         condition: 'Novo',
         payment: 'ou até 12x de R$ '
     },
-]
-
-const applePencil = [
     {
-        id: 1,
+        id: 47,
         title: 'Apple Pencil 2',
         price: 500.0,
         poster:'',
@@ -1270,7 +565,7 @@ const applePencil = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 2,
+        id: 48,
         title: 'Apple Pencil 1',
         price: 450.0,
         poster:'',
@@ -1280,7 +575,7 @@ const applePencil = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 3,
+        id: 49,
         title: 'Apple Pencil 1 C/Adaptador',
         price: 495.0,
         poster:'',
@@ -1289,11 +584,8 @@ const applePencil = [
         condition: 'Novo',
         payment: 'ou até 12x de R$ '
     },
-]
-
-const ipad = [
     {
-        id: 1,
+        id: 50,
         title: 'iPad 9 64GB',
         price: 1380.0,
         poster:'/src/images/ipad9.png',
@@ -1306,7 +598,7 @@ const ipad = [
         title2: 'iPad 9'
     },
     {
-        id: 2,
+        id: 51,
         title: 'iPad 10 64GB',
         price: 2010.0,
         poster:'/src/images/ipad10.png',
@@ -1319,7 +611,7 @@ const ipad = [
         title2: 'iPad 10'
     },
     {
-        id: 3,
+        id: 52,
         title: 'iPad Pro 12.9 128GB M2',
         price: 4420.0,
         poster:'/src/images/ipadair64gb.png',
@@ -1332,7 +624,7 @@ const ipad = [
         title2: 'iPad Pro'
     },
     {
-        id: 4,
+        id: 53,
         title: 'iPad 10 256GB Wi-Fi + Celular',
         price: 3395.0,
         poster:'',
@@ -1344,7 +636,7 @@ const ipad = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 5,
+        id: 54,
         title: 'iPad 11 Pro 128GB Wi-FI + Celular',
         price: 4600.0,
         poster:'',
@@ -1356,7 +648,7 @@ const ipad = [
         payment: 'ou até 12x de R$ '
     },
     {
-        id: 6,
+        id: 55,
         title: 'iPad 10 256GB',
         price: 2465.0,
         poster: '/src/images/ipad10256.png',
@@ -1369,7 +661,7 @@ const ipad = [
     },
     
     {
-        id: 7,
+        id: 56,
         title: 'iPad Pro 12.9 256GB M2',
         price: 4850.0,
         poster:'',
@@ -1380,7 +672,66 @@ const ipad = [
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ '
     },
+    {
+        id: 57,
+        title: 'AirPods Pro',
+        price: 500.0,
+        poster:'/src/images/airpodspro.png',
+        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
+        link: '',
+        condition: 'Novo',
+        size: '128GB',
+        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
+        payment: 'ou até 12x de R$ ',
+        title2: 'AirPods Pro'
+    },
+    {
+        id: 58,
+        title: 'AirPods 2ª geração',
+        price: 500.0,
+        poster:'/src/images/airpods2.png',
+        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
+        link: '',
+        condition: 'Novo',
+        size: '',
+        color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
+        payment: 'ou até 12x de R$ ',
+        title2: 'AirPods 2ª geração'
+    },
+    {
+        id: 59,
+        title: 'Apple Pencil 2',
+        price: 500.0,
+        poster:'',
+        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
+        link: '',
+        condition: 'Novo',
+        payment: 'ou até 12x de R$ '
+    },
+    {
+        id: 60,
+        title: 'Apple Pencil 1',
+        price: 450.0,
+        poster:'',
+        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
+        link: '',
+        condition: 'Novo',
+        payment: 'ou até 12x de R$ '
+    },
+    {
+        id: 61,
+        title: 'Apple Pencil 1 C/Adaptador',
+        price: 495.0,
+        poster:'',
+        star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
+        link: '',
+        condition: 'Novo',
+        payment: 'ou até 12x de R$ '
+    },
+
 ]
+
+
 
 const cardsWrapper = document.getElementById("cardsWrapper");
 const prevButton = document.getElementById("prevButton");
@@ -1395,7 +746,7 @@ function renderCards() {
     const startIndex = currentPage * cardsPerPage;
     const endIndex = startIndex + cardsPerPage;
 
-    iphones.slice(startIndex, endIndex).forEach((product) => {
+    products.slice(startIndex, endIndex).forEach((product) => {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -1422,7 +773,7 @@ function renderCards() {
     });
 
     prevButton.disabled = currentPage === 0;
-    nextButton.disabled = endIndex >= iphones.length;
+    nextButton.disabled = endIndex >= products.length;
 }
 
 prevButton.addEventListener("click", () => {
@@ -1434,7 +785,7 @@ prevButton.addEventListener("click", () => {
 
 nextButton.addEventListener("click", () => {
     const startIndex = currentPage * cardsPerPage;
-    if (startIndex + cardsPerPage < iphones.length) {
+    if (startIndex + cardsPerPage < products.length) {
         currentPage++;
         renderCards();
     }
@@ -1459,7 +810,7 @@ function renderCards2() {
     const startIndex = currentPage2 * cardsPerPage2;
     const endIndex = startIndex + cardsPerPage2;
 
-    macbook.slice(startIndex, endIndex).forEach((product) => {
+    products.slice(startIndex, endIndex).forEach((product) => {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -1486,7 +837,7 @@ function renderCards2() {
     });
 
     prevButton2.disabled = currentPage2 === 0;
-    nextButton2.disabled = endIndex >= macbook.length;
+    nextButton2.disabled = endIndex >= products.length;
 }
 
 prevButton2.addEventListener("click", () => {
@@ -1498,7 +849,7 @@ prevButton2.addEventListener("click", () => {
 
 nextButton2.addEventListener("click", () => {
     const startIndex = currentPage2 * cardsPerPage2;
-    if (startIndex + cardsPerPage2 < macbook.length) {
+    if (startIndex + cardsPerPage2 < products.length) {
         currentPage2++;
         renderCards2();
     }
@@ -1521,7 +872,7 @@ function renderCards3() {
     const startIndex = currentPage3 * cardsPerPage3;
     const endIndex = startIndex + cardsPerPage3;
 
-    ipad.slice(startIndex, endIndex).forEach((product) => {
+    products.slice(startIndex, endIndex).forEach((product) => {
         const card = document.createElement("div");
         card.classList.add("card");
 
@@ -1548,7 +899,7 @@ function renderCards3() {
     });
 
     prevButton3.disabled = currentPage3 === 0;
-    nextButton3.disabled = endIndex >= ipad.length;
+    nextButton3.disabled = endIndex >= products.length;
 }
 
 prevButton3.addEventListener("click", () => {
@@ -1560,7 +911,7 @@ prevButton3.addEventListener("click", () => {
 
 nextButton3.addEventListener("click", () => {
     const startIndex = currentPage3 * cardsPerPage3;
-    if (startIndex + cardsPerPage3 < ipad.length) {
+    if (startIndex + cardsPerPage3 < products.length) {
         currentPage3++;
         renderCards3();
     }

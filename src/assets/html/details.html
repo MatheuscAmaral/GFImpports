@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/src/assets/css/home.css">
+  <link rel="stylesheet" href="/src/assets/css/details.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="shortcut icon" href="/assets/ico/1-removebg-preview.ico" type="image/x-icon">
@@ -39,7 +39,9 @@
         </div>
       </div>
     </header> 
-    <div id="details"></div>
+    <div id="details">
+      
+    </div>
 
     
       <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
@@ -114,41 +116,176 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
-              // Função para encontrar o produto com base no ID
-    function findProductById(productId) {
-      return products.find(product => product.id === productId);
+          // Função para obter o ID do produto da URL da página
+      function getProductIdFromURL() {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        return parseInt(urlParams.get('id'));
+      }
+    
+      // Função para encontrar o produto com base no ID
+      function findProductById(productId) {
+        return products.find(product => product.id === productId);
+      }
+    
+      // Função para exibir os detalhes do produto na página
+      function showProductDetails(product) {
+        const productDetailsContainer = document.getElementById('details');
+    
+        // Construir o conteúdo HTML com os detalhes do produto
+        const htmlContent = `
+        <div class="Whey_Body_Action">
+                  <img id="product-image" src="${product.poster}" style="width: 300px; height: 350px;">
+                  <div class="preco">
+                    <div id="superior">
+                      <div class="t2">
+                        <h5 id="product-title">${product.title}</h5>
+                      </div>
+                      <div id="rating">
+                        <i class="fa-solid fa-star fa-lg" style="color: #e6d200;"></i>
+                        <i class="fa-solid fa-star fa-lg" style="color: #e6d200;"></i>
+                        <i class="fa-solid fa-star fa-lg" style="color: #e6d200;"></i>
+                        <i class="fa-solid fa-star fa-lg" style="color: #e6d200;"></i>
+                        <i class="fa-solid fa-star fa-lg" style="color: #e6d200 ;"></i>
+                      </div>
+                      <div class="t3">
+                        <h1 id="product-price">R$ ${product.price}</h1>
+                        <div class="t3">(Cada)</div>
+                      </div>
+                      <label for="size">Tamanho: <span id="product-size">${product.size}</span></label>
+                      <button id="size" style="background-color: black; padding: 10px"><strong>${product.size}</strong></button>
+                    </div>
+                    <div id="right">  
+                      <select id="quantidade">   
+                        <option value="" selected>Quantidade:</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10+">10+</option>
+                      </select>
+                      <div id="estoque">
+                        Item em estoque <br>
+                        <b>Comprar agora</b>
+                      </div>
+                      <a href="/src/assets/html/carrinho.html?id=${product.id}"><p class="comprass">ADICIONAR AO CARRINHO</p></a>
+                      <a href="/src/assets/html/carrinho.html?id=${product.id}"><p class="compras2"><i class="fa-solid fa-bag-shopping fa-lg" style="color: #000;"></i>  COMPRAR AGORA</p></a>
+                      <div id="frete">
+                        <i class="fa-solid fa-truck-fast fa-lg" style="color: #000;"></i>
+                        <div id="text">
+                          <div id="title">
+                            Frete
+                          </div>
+                          <a onclick="freteT()">Veja as opções de envio</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div> 
+                </div>
+        `;
+    
+        // Adicionar o conteúdo HTML ao contêiner na página
+        productDetailsContainer.innerHTML = htmlContent;
+      }
+    
+      
+      
+      function freteT() {
+        const body = document.getElementById('body');
+        const fretee = document.getElementById('fretee')
+            fretee.style.display = 'flex'
+            fretee.style.flexDirection = 'column'
+            fretee.innerHTML = `<div class="overlay" id="freteT">
+                                      <div id="titleF"> 
+                                        Opções de frete
+                                      </div>
+                                      <div id="cardFrete">
+                                        <div id="superiorT">
+                                          <div id="titleSup">
+                                            Entrega
+                                          </div>
+                                          <div id="close-icon">
+                                            <i class="fa-solid fa-x fa-sm" style="color: #000000;" onclick="closeOverlay()"></i> 
+                                          </div>
+                                        </div>
+                                        <div id="mid">
+                                          <i class="fa-solid fa-truck-fast fa-lg" style="color: #3456fe;"></i>
+                                          Insira o seu CEP
+                                        </div>
+                                          <div id="low">
+                                            <div id="inputCep">
+                                              <input type="text" id="cep" maxlength="8" placeholder="Digite o CEP">
+                                              <button type="button" onclick="consultarCEP()">Consultar</button>
+                                            </div>
+                                          <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t"> Não sei meu CEP</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  </div>`          
+            body.style.backgroundColor = ' #ccc'
+        }
+    
+        function closeOverlay() {
+          const fretee = document.getElementById('fretee')  
+          fretee.style.display = 'none';
+          const body = document.getElementById('body');
+          body.style.backgroundColor = 'transparent'
+    
+    
     }
-
-    // Função para exibir os detalhes do produto na página
-    function showProductDetails(product) {
-      const productDetailsContainer = document.getElementById('details');
-
-      // Construir o conteúdo HTML com os detalhes do produto
-      const htmlContent = `
-        <!-- Seu HTML para exibir os detalhes do produto aqui -->
-        <!-- Por exemplo: -->
-        <h1>${product.title}</h1>
-        <p>Preço: R$ ${product.price.toFixed(2)}</p>
-        <img src="${product.poster}" alt="${product.title}">
-        <p>Cor: ${product.color}</p>
-        <p>Tamanho: ${product.size}</p>
-      `;
-
-      // Adicionar o conteúdo HTML ao contêiner na página
-      productDetailsContainer.innerHTML = htmlContent;
-    }
-
-    // Quando a página carregar, encontre o ID do produto na URL e exiba os detalhes do produto
-    window.addEventListener('DOMContentLoaded', function () {
-      const productId = getProductIdFromURL();
-      if (!isNaN(productId)) {
+    
+      // Função principal para obter o ID do produto da URL, buscar o produto e exibir os detalhes
+      function loadProductDetails() {
+        const productId = getProductIdFromURL();
         const product = findProductById(productId);
+    
         if (product) {
           showProductDetails(product);
+        } else {
+          console.error('Produto não encontrado.');
         }
       }
-    });
+    
+      // Carregar os detalhes do produto quando a página for carregada
+      window.onload = loadProductDetails;
+    
+      function consultarCEP() {
+          const cepInput = document.getElementById('cep');
+          const cep = cepInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+    
+          if (cep.length !== 8) {
+            alert('O CEP deve conter 8 dígitos.');
+            return;
+          }
+    
+          fetch(`https://viacep.com.br/ws/${cep}/json/`)
+            .then(response => response.json())
+            .then(data => exibirResultado(data))
+            .catch(error => console.log(error));
+        }
+    
+        function exibirResultado(data) {
+          const resultDiv = document.getElementById('result');
+          if (data.erro) {
+            resultDiv.innerHTML = 'CEP não encontrado.';
+          } else {
+            resultDiv.innerHTML = `
+              <p><strong>CEP:</strong> ${data.cep}</p>
+              <p><strong>Logradouro:</strong> ${data.logradouro}</p>
+              <p><strong>Bairro:</strong> ${data.bairro}</p>
+              <p><strong>Cidade/UF:</strong> ${data.localidade}/${data.uf}</p>
+            `;
+          }
+        }
+    
+        
         </script>
+              
         
 </body>
 

@@ -225,185 +225,6 @@
         <script src="/src/assets/js/produtos.js"></script>
         <script>
 
-            const bLeft = document.getElementById('bLeft');
-            const bRight = document.getElementById('bRight');
-            const carousel = document.querySelector(".carrrousel")
-
-           // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-            const productsContainer = document.getElementById('products');
-
-            // Obtém os três primeiros produtos do vetor products
-            const produtosArray = iphones.slice(0, 3);
-
-            // Itera sobre os produtos e cria os cards na div productsContainer
-            produtosArray.forEach(produto => {
-              const cardHTML1 = `
-                <div class="card" style="width: 14rem;">
-                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                  <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${produto.id}">
-                      <p class="compras">COMPRAR</p>
-                    </a>
-                  </div>
-                </div>
-              `;
-
-              productsContainer.innerHTML += cardHTML1;
-              bLeft.style.backgroundColor = 'rgba(146, 146, 146, 0.716)'
-            });
-
-
-            const dragging = (e) => {
-              carousel.scrollLeft = e.pageX
-            }
-            carousel.addEventListener("mousemove", dragging);
-            
-            function right() {
-                // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-                const productsContainer20 = document.getElementById('products');
-
-                // Limpa o conteúdo atual
-                productsContainer20.innerHTML = '';
-
-                // Calcula o índice inicial e final dos produtos a serem exibidos
-                const startIndex = 3; // Onde 4 é o número de produtos por página
-                const endIndex = startIndex + 3; // Exibe 4 produtos de cada vez
-
-                // Obtém os próximos produtos do vetor products com base no índice
-                const produtosArray10 = iphones.slice(startIndex, endIndex);
-
-                // Itera sobre os produtos e cria os cards na div productsContainer
-                produtosArray10.forEach(produto => {
-                  const cardHTML = `
-                    <div class="card" style="width: 14rem;">
-                      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                      <div class="card-body">
-                        <p class="card-text">${produto.title}</p>
-                        <div class="preco">
-                          ${produto.star}
-                          <h5>R$${produto.price.toFixed(2)}</h5>
-                          ${produto.payment}
-                        </div>
-                        <!-- Adicione o ID do produto na URL do link -->
-                        <a href="/src/assets/html/details.html?id=${produto.id}">
-                          <p class="compras">COMPRAR</p>
-                        </a>
-                      </div>
-                    </div>
-                  `;
-
-                  productsContainer.innerHTML += cardHTML;
-                  bLeft.style.backgroundColor = 'black'
-                  bRight.style.backgroundColor = 'rgba(146, 146, 146, 0.716)'
-                });
-              }
-
-              function left() {
-              // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-              const productsContainer = document.getElementById('products');
-
-              // Limpa o conteúdo atual
-              productsContainer.innerHTML = '';
-
-              // Obtém o índice atual do primeiro produto exibido
-              const startIndex = 0; // Inicialmente, exibe os primeiros 4 produtos
-
-              // Calcula o índice final dos produtos a serem exibidos
-              const endIndex = startIndex + 3; // Exibe 4 produtos de cada vez
-
-              // Obtém os produtos anteriores do vetor products com base no índice
-              const produtosArray = iphones.slice(startIndex, endIndex);
-
-              // Itera sobre os produtos e cria os cards na div productsContainer
-              produtosArray.forEach(produto => {
-                const cardHTML = `
-                  <div class="card" style="width: 14rem;">
-                    <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                    <div class="card-body">
-                      <p class="card-text">${produto.title}</p>
-                      <div class="preco">
-                        ${produto.star}
-                        <h5>R$${produto.price.toFixed(2)}</h5>
-                        ${produto.payment}
-                      </div>
-                      <!-- Adicione o ID do produto na URL do link -->
-                      <a href="/src/assets/html/details.html?id=${produto.id}">
-                        <p class="compras">COMPRAR</p>
-                      </a>
-                    </div>
-                  </div>
-                `;
-
-                productsContainer.innerHTML += cardHTML;
-                bRight.style.backgroundColor = 'black'
-                bLeft.style.backgroundColor = 'black'
-              });
-}
-
-          const productsContainerMac = document.getElementById('productsMac');
-
-          // Obtém os três primeiros produtos do vetor products
-          const produtosArrayMac = macbook.slice(0, 3);
-
-          // Itera sobre os produtos e cria os cards na div productsContainer
-          produtosArrayMac.forEach(produto => {
-            const cardHTML2 = `
-              <div class="card" style="width: 14rem;">
-                <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body">
-                  <p class="card-text">${produto.title}</p>
-                  <div class="preco">
-                    ${produto.star}
-                    <h5>R$${produto.price.toFixed(2)}</h5>
-                    <p style="font-size: 14px">${produto.payment}</p> 
-                  </div>
-                  <!-- Adicione o ID do produto na URL do link -->
-                  <a href="/src/assets/html/details.html?id=${produto.id}">
-                    <p class="compras">COMPRAR</p>
-                  </a>
-                </div>
-              </div>
-            `;
-
-            productsContainerMac.innerHTML += cardHTML2;
-          });
-
-          const productsContainerIpad = document.getElementById('productsIpad');
-
-        // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpad = ipad.slice(0, 3);
-
-        // Itera sobre os produtos e cria os cards na div productsContainer
-        produtosArrayIpad
-        .forEach(produto => {
-          const cardHTML3 = `
-            <div class="card" style="width: 14rem;">
-              <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-              <div class="card-body">
-                <p class="card-text">${produto.title}</p>
-                <div class="preco">
-                  ${produto.star}
-                  <h5>R$${produto.price.toFixed(2)}</h5>
-                  <p style="font-size: 14px">${produto.payment}</p> 
-                </div>
-                <!-- Adicione o ID do produto na URL do link -->
-                <a href="/src/assets/html/details.html?id=${produto.id}">
-                  <p class="compras">COMPRAR</p>
-                </a>
-              </div>
-            </div>
-          `;
-
-          productsContainerIpad.innerHTML += cardHTML3;
-        });
-
         let hideNavTimeout;
         let navbarrHovered = false;
 
@@ -438,7 +259,7 @@
             <p>Ver todos</p>
           </div>`;
         // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = iphones.slice(0, 3);
+        const produtosArrayIpadss = products.slice(0, 3);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArrayIpadss
@@ -469,7 +290,7 @@
             </div>`
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = macbook.slice(0, 3);
+        const produtosArrayIpadss = products.slice(33, 36);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArrayIpadss
@@ -499,7 +320,7 @@
             </div>`
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = ipad.slice(0, 3);
+        const produtosArrayIpadss = products.slice(50, 52);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArrayIpadss
@@ -529,7 +350,7 @@
             </div>`
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = appleWatch.slice(0, 3);
+        const produtosArrayIpadss = products.slice(38, 41);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArrayIpadss
