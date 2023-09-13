@@ -5,11 +5,13 @@ const products = [
         price: 2710.0,
         poster: '/src/images/iphone144.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
         payment: 'ou até 12x de R$',
-        title2: 'iPhone 14'
+        title2: 'iPhone 14',
+        condition: '',
+        type: 'Importado'
+
     }, 
     {
         id: 2,
@@ -17,11 +19,12 @@ const products = [
         price: 2465.0,
         poster: '/src/images/iphone1333.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
         payment: 'ou até 12x de R$',
-        title2: 'iPhone 13'
+        title2: 'iPhone 13',
+        condition: '',
+        type: 'Importado'
     }, 
     {
         id: 3,
@@ -29,23 +32,25 @@ const products = [
         price: 1695.0,
         poster:'/src/images/iphone12.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '64GB',
         payment: 'ou até 12x de R$',
-        title2: 'iPhone 12'
+        title2: 'iPhone 12',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 4,
         title: 'iPhone 11 64GB',
         price: 1350.0,
         poster: '/src/images/iphone4.png',
-        link: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         color: '',
         size: '64GB',
         payment: 'ou até 12x de R$ ',
-        title2: 'Iphone 11'
+        title2: 'Iphone 11',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 5,
@@ -53,10 +58,11 @@ const products = [
         price: 1870.0,
         poster:'/src/images/11promax64gb.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '64GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 6,
@@ -64,10 +70,11 @@ const products = [
         price: 1990.0,
         poster:'/src/images/11promax256.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '256GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 7,
@@ -75,10 +82,11 @@ const products = [
         price: 1695.0,
         poster:'/src/images/iphone1264gb.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '64GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 8,
@@ -86,10 +94,11 @@ const products = [
         price: 1485.0,
         poster:'/src/images/iPhone12mini128.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 9,
@@ -97,10 +106,11 @@ const products = [
         price: 1700.0,
         poster:'/src/images/iphone11pro128.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '64GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 10,
@@ -108,10 +118,11 @@ const products = [
         price: 1800.0,
         poster:'/src/images/iphone12.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 11,
@@ -119,10 +130,11 @@ const products = [
         price: 2220.0,
         poster:'/src/images/iphone12pro.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 12,
@@ -130,10 +142,11 @@ const products = [
         price: 2320.0,
         poster:'/src/images/iphone12pro128.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '256GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 13,
@@ -141,10 +154,11 @@ const products = [
         price: 2430.0,
         poster:'/src/images/iphone12pro512gb.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '512GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 14,
@@ -152,10 +166,11 @@ const products = [
         price: 2680.0,
         poster:'/src/images/iphone12promax128.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 15,
@@ -163,21 +178,23 @@ const products = [
         price: 2150.0,
         poster: '/src/images/iphone13mini.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 16,
         title: 'iPhone 11 128GB',
         price: 1650.0,
         poster: '/src/images/iphone11128gb.png',
-        link: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         color: '',
         size: '128GB',
         payment: 'ou até 12x de R$ ',
+        condition: '',
+        type: 'Importado'
     },
     
     {
@@ -186,10 +203,11 @@ const products = [
         price: 2535.0,
         poster: '/src/images/iphone13256.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '256GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 18,
@@ -197,10 +215,11 @@ const products = [
         price: 3095.0,
         poster: '/src/images/iphone13pro.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 19,
@@ -208,10 +227,11 @@ const products = [
         price: 3200.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 20,
@@ -219,10 +239,11 @@ const products = [
         price: 3410.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 21,
@@ -230,10 +251,11 @@ const products = [
         price: 1800.0,
         poster:'/src/images/iphone11pro128.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '256GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 22,
@@ -241,10 +263,11 @@ const products = [
         price: 2850.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '256GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 23,
@@ -252,10 +275,11 @@ const products = [
         price: 3270.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 24,
@@ -263,10 +287,11 @@ const products = [
         price: 3420.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 25,
@@ -274,10 +299,11 @@ const products = [
         price: 4050.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 26,
@@ -285,10 +311,11 @@ const products = [
         price: 3850.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     { 
         id: 27,
@@ -296,10 +323,11 @@ const products = [
         price: 4200.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '256GB',
-        payment: 'ou até 12x de R$'
+        payment: 'ou até 12x de R$',
+        condition: '',
+        type: 'Importado'
     },
     {
         id: 28,
@@ -307,11 +335,11 @@ const products = [
         price: 2800.0,
         poster: '',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
         color: '',
         size: '128GB',
         payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     { 
         id: 29,
@@ -323,7 +351,8 @@ const products = [
         color: '',
         size: '128GB',
         payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
+        condition: 'Lacrado',
+        type: 'Importado'
     },{
         id: 30,
         title: 'iPhone 14 Pro 256GB',
@@ -334,7 +363,8 @@ const products = [
         color: '',
         size: '256GB',
         payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     { 
         id: 31,
@@ -346,7 +376,8 @@ const products = [
         color: '',
         size: '256GB',
         payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
+        condition: 'Lacrado',
+        type: 'Importado'
     },{
         id: 32,
         title: 'iPhone 14 Pro Max 128GB',
@@ -357,7 +388,8 @@ const products = [
         color: '',
         size: '128GB',
         payment: 'ou até 12x de R$',
-        condition: 'Lacrado'
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 33,
@@ -373,7 +405,10 @@ const products = [
         payment: 'ou até 12x de R$ ',
         ram: '8GB',
         polegadas: '13P',
-        title2: 'MacBook M1'
+        title2: 'MacBook M1',
+        type: 'Importado',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     
     {
@@ -391,7 +426,9 @@ const products = [
         payment: 'ou até 12x de R$ ',
         ram: '8GB',
         inches: '13P',
-        title2: 'MacBook M2'
+        title2: 'MacBook M2',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 35,
@@ -408,13 +445,15 @@ const products = [
         ram: '8GB',
         polegadas: '15P',
         year: '2023',
-        title2: 'MacBook Pro'
+        title2: 'MacBook Pro',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 36,
-        title: 'MacBook Air M1 1TB 16GB de ram',
+        title: 'MacBook Air M1 1TB 16GB de ram 14P',
         price: 8220.0,
-        poster:'',
+        poster:'/src/images/macm11tb.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         size: '1TB',
@@ -424,13 +463,15 @@ const products = [
         payment: 'ou até 12x de R$ ',
         ram: '16GB',
         polegadas: '14P',
-        year: '2021'
+        year: '2021',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 37,
-        title: 'MacBook Air M1 1TB 16GB de ram',
+        title: 'MacBook Air M1 1TB 16GB de ram 16P',
         price: 9200.0,
-        poster:'/src/images/iphone14amarelo128gb.jpeg',
+        poster:'/src/images/macm116.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         size: '44mm',
@@ -440,7 +481,9 @@ const products = [
         payment: 'ou até 12x de R$ ',
         ram: '16GB',
         polegadas: '14P',
-        year: '2021'
+        year: '2021',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 38,
@@ -453,7 +496,9 @@ const products = [
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Semi Novo',
         payment: 'ou até 12x de R$ ',
-        title2: 'Apple Watch S6'
+        title2: 'Apple Watch S6',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 39,
@@ -466,7 +511,9 @@ const products = [
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Semi Novo',
         payment: 'ou até 12x de R$ ',
-        title2: 'Apple Watch S7'
+        title2: 'Apple Watch S7',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 40,
@@ -479,7 +526,9 @@ const products = [
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Novo',
         payment: 'ou até 12x de R$ ',
-        title2: 'Apple Watch S8'
+        title2: 'Apple Watch S8',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 41,
@@ -491,7 +540,9 @@ const products = [
         size: '45mm',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 42,
@@ -503,7 +554,9 @@ const products = [
         size: '44mm',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 43,
@@ -516,7 +569,9 @@ const products = [
         size: '44mm',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Semi Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 44,
@@ -528,7 +583,9 @@ const products = [
         size: '45mm',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 45,
@@ -540,7 +597,9 @@ const products = [
         size: '45mm',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 46,
@@ -552,7 +611,9 @@ const products = [
         size: '49mm',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 47,
@@ -562,7 +623,9 @@ const products = [
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 48,
@@ -572,7 +635,9 @@ const products = [
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 49,
@@ -582,7 +647,9 @@ const products = [
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 50,
@@ -595,7 +662,9 @@ const products = [
         size: '64GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ ',
-        title2: 'iPad 9'
+        title2: 'iPad 9',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 51,
@@ -603,12 +672,12 @@ const products = [
         price: 2010.0,
         poster:'/src/images/ipad10.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '64GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ ',
-        title2: 'iPad 10'
+        title2: 'iPad 10',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 52,
@@ -616,36 +685,36 @@ const products = [
         price: 4420.0,
         poster:'/src/images/ipadair64gb.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '128GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ ',
-        title2: 'iPad Pro'
+        title2: 'iPad Pro',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 53,
         title: 'iPad 10 256GB Wi-Fi + Celular',
         price: 3395.0,
-        poster:'',
+        poster:'/src/images/iiPad10.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '256GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 54,
         title: 'iPad 11 Pro 128GB Wi-FI + Celular',
         price: 4600.0,
-        poster:'',
+        poster:'/src/images/iiPad11.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '128GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 55,
@@ -653,24 +722,24 @@ const products = [
         price: 2465.0,
         poster: '/src/images/ipad10256.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '256GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     
     {
         id: 56,
         title: 'iPad Pro 12.9 256GB M2',
         price: 4850.0,
-        poster:'',
+        poster:'/src/images/iiPad12.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '256GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 57,
@@ -678,12 +747,12 @@ const products = [
         price: 500.0,
         poster:'/src/images/airpodspro.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '128GB',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ ',
-        title2: 'AirPods Pro'
+        title2: 'AirPods Pro',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 58,
@@ -691,12 +760,12 @@ const products = [
         price: 500.0,
         poster:'/src/images/airpods2.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
-        link: '',
-        condition: 'Novo',
         size: '',
         color: ['Preto', 'Branco', 'Prateado', 'Dourado', 'Azul'],
         payment: 'ou até 12x de R$ ',
-        title2: 'AirPods 2ª geração'
+        title2: 'AirPods 2ª geração',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 59,
@@ -705,8 +774,9 @@ const products = [
         poster:'',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 60,
@@ -715,8 +785,9 @@ const products = [
         poster:'',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
     {
         id: 61,
@@ -725,12 +796,12 @@ const products = [
         poster:'',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
-        condition: 'Novo',
-        payment: 'ou até 12x de R$ '
+        payment: 'ou até 12x de R$ ',
+        condition: 'Lacrado',
+        type: 'Importado'
     },
 
 ]
-
 
 
 const cardsWrapper = document.getElementById("cardsWrapper");
@@ -741,39 +812,47 @@ const cardWidth = 320; // Largura de cada card
 const cardsPerPage = 3; // Quantidade de cards exibidos por página
 let currentPage = 0;
 
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1 = 0; // Índice do primeiro produto desejado
+const endProductIndex1 = 31;   // Índice do último produto desejado (excluído)
+
 function renderCards() {
     cardsWrapper.innerHTML = "";
-    const startIndex = currentPage * cardsPerPage;
-    const endIndex = startIndex + cardsPerPage;
 
-    products.slice(startIndex, endIndex).forEach((product) => {
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPage * cardsPerPage + startProductIndex1;
+    const endIndex = Math.min(startIndex + cardsPerPage, endProductIndex1 + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
         const card = document.createElement("div");
         card.classList.add("card");
 
         const cardHTML = `
-        <div class="card" style="width: 14rem;">
-        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-        <div class="card-body" style="display: flex; flex-direction: column;">
-          <p class="card-text">${product.title}</p>
-          <div class="preco">
-            ${product.star}
-            <h5>R$${product.price.toFixed(2)}</h5>
-            <p style="font-size: 14px">${product.payment}</p> 
-          </div>
-          <!-- Adicione o ID do produto na URL do link -->
-          <a href="/src/assets/html/details.html?id=${product.id}">
-            <p class="compras">COMPRAR</p>
-          </a>
-        </div>
-      </div>
+            <div class="card" style="width: 14rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <p class="card-text">${product.title}</p>
+                    <div class="preco">
+                        ${product.star}
+                        <h5>R$${product.price.toFixed(2)}</h5>
+                        <p style="font-size: 14px">${product.payment}</p> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
         `;
 
         card.innerHTML = cardHTML;
         cardsWrapper.appendChild(card);
-    });
+    }
 
     prevButton.disabled = currentPage === 0;
-    nextButton.disabled = endIndex >= products.length;
+    nextButton.disabled = endIndex >= endProductIndex1 + 1;
 }
 
 prevButton.addEventListener("click", () => {
@@ -784,8 +863,10 @@ prevButton.addEventListener("click", () => {
 });
 
 nextButton.addEventListener("click", () => {
-    const startIndex = currentPage * cardsPerPage;
-    if (startIndex + cardsPerPage < products.length) {
+    const startIndex = currentPage * cardsPerPage + startProductIndex1;
+    const endIndex = Math.min(startIndex + cardsPerPage, endProductIndex1 + 1);
+
+    if (endIndex < endProductIndex1 + 1) {
         currentPage++;
         renderCards();
     }
@@ -793,6 +874,7 @@ nextButton.addEventListener("click", () => {
 
 // Inicialização
 renderCards();
+
 
 
 
@@ -805,39 +887,47 @@ const cardWidth2 = 320; // Largura de cada card
 const cardsPerPage2 = 3; // Quantidade de cards exibidos por página
 let currentPage2 = 0;
 
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex = 32; // Índice do primeiro produto desejado
+const endProductIndex = 36;   // Índice do último produto desejado (excluído)
+
 function renderCards2() {
     cardsWrapper2.innerHTML = "";
-    const startIndex = currentPage2 * cardsPerPage2;
-    const endIndex = startIndex + cardsPerPage2;
 
-    products.slice(startIndex, endIndex).forEach((product) => {
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPage2 * cardsPerPage2 + startProductIndex;
+    const endIndex = Math.min(startIndex + cardsPerPage2, endProductIndex + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
         const card = document.createElement("div");
         card.classList.add("card");
 
         const cardHTML = `
-        <div class="card" style="width: 14rem;">
-        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-        <div class="card-body" style="display: flex; flex-direction: column;">
-          <p class="card-text">${product.title}</p>
-          <div class="preco">
-            ${product.star}
-            <h5>R$${product.price.toFixed(2)}</h5>
-            <p style="font-size: 14px">${product.payment}</p> 
-          </div>
-          <!-- Adicione o ID do produto na URL do link -->
-          <a href="/src/assets/html/details.html?id=${product.id}">
-            <p class="compras">COMPRAR</p>
-          </a>
-        </div>
-      </div>
+            <div class="card" style="width: 14rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <p class="card-text">${product.title}</p>
+                    <div class="preco">
+                        ${product.star}
+                        <h5>R$${product.price.toFixed(2)}</h5>
+                        <p style="font-size: 14px">${product.payment}</p> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
         `;
 
         card.innerHTML = cardHTML;
         cardsWrapper2.appendChild(card);
-    });
+    }
 
     prevButton2.disabled = currentPage2 === 0;
-    nextButton2.disabled = endIndex >= products.length;
+    nextButton2.disabled = endIndex >= endProductIndex + 1;
 }
 
 prevButton2.addEventListener("click", () => {
@@ -848,8 +938,10 @@ prevButton2.addEventListener("click", () => {
 });
 
 nextButton2.addEventListener("click", () => {
-    const startIndex = currentPage2 * cardsPerPage2;
-    if (startIndex + cardsPerPage2 < products.length) {
+    const startIndex = currentPage2 * cardsPerPage2 + startProductIndex;
+    const endIndex = Math.min(startIndex + cardsPerPage2, endProductIndex + 1);
+
+    if (endIndex < endProductIndex + 1) {
         currentPage2++;
         renderCards2();
     }
@@ -867,39 +959,47 @@ const cardWidth3 = 320; // Largura de cada card
 const cardsPerPage3 = 3; // Quantidade de cards exibidos por página
 let currentPage3 = 0;
 
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex3 = 49; // Índice do primeiro produto desejado
+const endProductIndex3 = 55;   // Índice do último produto desejado (excluído)
+
 function renderCards3() {
     cardsWrapper3.innerHTML = "";
-    const startIndex = currentPage3 * cardsPerPage3;
-    const endIndex = startIndex + cardsPerPage3;
 
-    products.slice(startIndex, endIndex).forEach((product) => {
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPage3 * cardsPerPage3 + startProductIndex3;
+    const endIndex = Math.min(startIndex + cardsPerPage3, endProductIndex3 + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
         const card = document.createElement("div");
         card.classList.add("card");
 
         const cardHTML = `
-        <div class="card" style="width: 14rem;">
-        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-        <div class="card-body" style="display: flex; flex-direction: column;">
-          <p class="card-text">${product.title}</p>
-          <div class="preco">
-            ${product.star}
-            <h5>R$${product.price.toFixed(2)}</h5>
-            <p style="font-size: 14px">${product.payment}</p> 
-          </div>
-          <!-- Adicione o ID do produto na URL do link -->
-          <a href="/src/assets/html/details.html?id=${product.id}">
-            <p class="compras">COMPRAR</p>
-          </a>
-        </div>
-      </div>
+            <div class="card" style="width: 14rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <p class="card-text">${product.title}</p>
+                    <div class="preco">
+                        ${product.star}
+                        <h5>R$${product.price.toFixed(2)}</h5>
+                        <p style="font-size: 14px">${product.payment}</p> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
         `;
 
         card.innerHTML = cardHTML;
         cardsWrapper3.appendChild(card);
-    });
+    }
 
     prevButton3.disabled = currentPage3 === 0;
-    nextButton3.disabled = endIndex >= products.length;
+    nextButton3.disabled = endIndex >= endProductIndex3 + 1;
 }
 
 prevButton3.addEventListener("click", () => {
@@ -910,8 +1010,10 @@ prevButton3.addEventListener("click", () => {
 });
 
 nextButton3.addEventListener("click", () => {
-    const startIndex = currentPage3 * cardsPerPage3;
-    if (startIndex + cardsPerPage3 < products.length) {
+    const startIndex = currentPage3 * cardsPerPage3 + startProductIndex3;
+    const endIndex = Math.min(startIndex + cardsPerPage3, endProductIndex3 + 1);
+
+    if (endIndex < endProductIndex3 + 1) {
         currentPage3++;
         renderCards3();
     }
@@ -919,3 +1021,4 @@ nextButton3.addEventListener("click", () => {
 
 // Inicialização
 renderCards3();
+
