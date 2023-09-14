@@ -804,6 +804,123 @@ const products = [
 ]
 
 
+function searchProducts(termo) {
+    termo = termo.toLowerCase();
+    return products.filter((products) => {
+        const tituloLowerCase = products.title.toLowerCase();
+        return tituloLowerCase.includes(termo);
+    });
+}
+
+function renderProducts(products) {
+    const containerResults = document.getElementById('result');
+    containerResults.innerHTML = `Foram encontrados ${products.length} produtos.`;
+    containerResults.style.display = 'flex';
+    containerResults.style.flexDirection = 'column';
+    containerResults.style.gap = '1rem';
+    containerResults.style.textAlign = 'center'
+    containerResults.style.marginTop = '50px'
+
+  
+    if (products.length === 0) {
+      const divmensagemNenhumResultado = document.createElement('div');
+      divmensagemNenhumResultado.innerHTML = `<img src="/src/images/no-results.png" style="width: 130px">
+        <p>Nenhum resultado encontrado</p>`
+  
+      divmensagemNenhumResultado.style.display = 'flex';
+      divmensagemNenhumResultado.style.flexDirection = 'column';
+      divmensagemNenhumResultado.style.alignItems = 'center';
+      divmensagemNenhumResultado.style.gap = '1rem'
+      divmensagemNenhumResultado.style.marginTop = '100px';
+      divmensagemNenhumResultado.style.marginBottom = '100px'
+      containerResults.appendChild(divmensagemNenhumResultado);
+  
+      return; // Encerra a função aqui, não precisa continuar o loop abaixo
+    }
+  
+    // Verifica a largura da tela
+    const width = window.innerWidth;
+  
+    // Cria um contêiner flexível para os cards
+    const cardsContainer = document.createElement('div');
+    cardsContainer.style.display = 'flex';
+    cardsContainer.style.flexWrap = 'wrap'; // Para que os cards fiquem em várias linhas se necessário
+    cardsContainer.style.justifyContent = 'center'; // Centralizar os cards horizontalmente
+    
+  
+    products.forEach((product) => {
+      const divProducts = document.createElement('div');
+  
+      if (width > 500) {
+        divProducts.style.display = 'flex';
+        divProducts.style.flexDirection = 'row';
+        divProducts.style.margin = '50px'; // Espaçamento entre os cards
+  
+        divProducts.innerHTML = `
+        <div class="card" style="width: 14rem;">
+        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+            <p class="card-text">${product.title}</p>
+            <div class="preco">
+                ${product.star}
+                <h5>R$${product.price.toFixed(2)}</h5>
+                <p style="font-size: 14px">${product.payment}</p> 
+            </div>
+            <!-- Adicione o ID do produto na URL do link -->
+            <a href="/src/assets/html/details.html?id=${product.id}">
+                <p class="compras">COMPRAR</p>
+            </a>
+        </div>
+    </div>`;
+      } 
+      
+      else {
+        divProducts.innerHTML = `<div class="menu-sessao-bloco-card">
+          <div class="cardM" style="width: 24.3rem; display: flex; box-shadow: 0px 0px 1.2px 0px rgb(182, 182, 182); align-items: center; gap:0rem">
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoratio: none; color: black"><img src=${product.poster} style="width: 110px; height: 110px" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+            <a href="/src/assets/html/details.html?id=${product.id}"><p><strong>${product.title}</strong></p></a>
+              <div id="rating">
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+              </div>
+              <div class="preco">
+                <h5><strong>R$ ${product.price}</strong></h5>
+              </div>
+            </div>
+          </div>
+      </div>`;
+  
+        divProducts.style.display = 'flex';
+        divProducts.style.marginBottom = '10px'; // Espaçamento entre os cards
+      }
+  
+      // Adiciona o card ao contêiner de cards
+      cardsContainer.appendChild(divProducts);
+      
+    });
+  
+    // Adiciona o contêiner de cards ao resultado final
+    containerResults.appendChild(cardsContainer);
+  }
+  
+
+function handleSearch() {
+    const itemSearch = document.getElementById('barraPesquisa').value;
+    const results = searchProducts(itemSearch);
+    renderProducts(results);
+
+}
+
+
+
+document.getElementById('barraPesquisa').addEventListener('keyup', handleSearch);
+
+
+
 const cardsWrapper = document.getElementById("cardsWrapper");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");

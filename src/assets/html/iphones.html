@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/assets/css/home.css">
+  <link rel="stylesheet" href="/src/assets/css/produtosgeral.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="shortcut icon" href="/assets/ico/1-removebg-preview.ico" type="image/x-icon">
@@ -30,6 +31,7 @@
                   </div>
                 </div>
               </div>
+              
             </div>
           </nav>
         </nav>
@@ -38,7 +40,8 @@
           <div class="cabecalho-icons" id="icon"></div>
         </div>
       </div>
-    </header>
+    
+    </header> 
 
     <div id="result">
       <div id="p1">
@@ -52,10 +55,8 @@
   
         </div>
         <div id="produtos4">
-      </div>
-        
-      </div>
-       <div id="p2">
+
+        </div>
         <div id="produtos5">
         
         </div>
@@ -69,30 +70,9 @@
   
         </div>
        </div>
+  </div>
+  <div id="produtos">
 
-       <div id="produtos">
-          <div id="firstP">
-            
-          </div>
-          <div id="secondP" style="display: none;" >
-                
-          </div>
-
-          <div id="botoes">
-            <input id="button1" type="button" value="<<" onclick="backLeft()">
-            <input id="button2" type="button" value="  1 " onclick="pageOne()">
-            <input id="button3" type="button" value=" 2 " onclick="pageTwo()">
-            <input id="button4" type="button" value=">>" onclick="backRight()">
-          </div>
-      </div>  
-
-      <div id="botoess">
-        <input id="button1" type="button" value="<<" onclick="backLeft()">
-        <input id="button2" type="button" value="  1 " onclick="pageOne()">
-        <input id="button3" type="button" value=" 2 " onclick="pageTwo()">
-        <input id="button4" type="button" value=">>" onclick="backRight()">
-      </div>
-  
   </div>
     
       <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
@@ -172,7 +152,7 @@
          const productsContainer = document.getElementById('produtos1');
 
             // Obtém os três primeiros produtos do vetor products
-            const produtosArray = iphones.slice(0, 4);
+            const produtosArray = products.slice(0, 4);
 
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray.forEach(produto => {
@@ -204,7 +184,7 @@
             const productsContainer2 = document.getElementById('produtos2');
 
             // Obtém os três primeiros produtos do vetor products
-            const produtosArray2 = iphones.slice(4, 8);
+            const produtosArray2 = products.slice(4, 8);
 
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray2.forEach(produto => {
@@ -236,7 +216,7 @@
             const productsContainer3 = document.getElementById('produtos3');
 
             // Obtém os três primeiros produtos do vetor products
-            const produtosArray3 = iphones.slice(8, 12);
+            const produtosArray3 = products.slice(8, 12);
 
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray3.forEach(produto => {
@@ -268,7 +248,7 @@
             const productsContainer4 = document.getElementById('produtos4');
 
             // Obtém os três primeiros produtos do vetor products
-            const produtosArray4 = iphones.slice(12, 16);
+            const produtosArray4 = products.slice(12, 16);
 
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray4.forEach(produto => {
@@ -297,16 +277,10 @@
               productsContainer4.style.marginTop = '100px';
             });
 
-
-        function pageTwo() {
-          const p1 = document.getElementById('p1');
-          p1.style.display = 'none'
-
-           // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-         const productsContainer5 = document.getElementById('produtos5');
+            const productsContainer5 = document.getElementById('produtos5');
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArray5 = iphones.slice(16, 20);
+        const produtosArray5 = products.slice(16, 20);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray5.forEach(produto => {
@@ -338,7 +312,7 @@
         const productsContainer6 = document.getElementById('produtos6');
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArray6 = iphones.slice(20, 24);
+        const produtosArray6 = products.slice(20, 24);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray6.forEach(produto => {
@@ -370,7 +344,7 @@
         const productsContainer7 = document.getElementById('produtos7');
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArray7 = iphones.slice(24, 28);
+        const produtosArray7 = products.slice(24, 28);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray7.forEach(produto => {
@@ -402,7 +376,7 @@
         const productsContainer8 = document.getElementById('produtos8');
 
         // Obtém os três primeiros produtos do vetor products
-        const produtosArray8 = iphones.slice(28, 32);
+        const produtosArray8 = products.slice(28, 32);
 
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray8.forEach(produto => {
@@ -430,8 +404,6 @@
           productsContainer8.style.justifyContent = 'center';
           productsContainer8.style.marginTop = '100px';
         });
-
-     }
     }
       
             else {
@@ -439,11 +411,11 @@
 
             const suplementosProteinasMobile = products.slice(0, 8);
             suplementosProteinasMobile.forEach((products) => {
-              const cardmobileHTML = `<div class="menu-sessao-bloco-card">
+              const cardmobileHTML = `<div class="menu-sessao-bloco-card" >
                           <div class="cardM" style="width: 24.3rem;">
-                            <a href="/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
+                            <a href="/src/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
                             <div class="card-body">
-                            <a href="/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
+                            <a href="/src/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
                               <div id="rating">
                                 ${products.star}
                               </div>
@@ -455,52 +427,6 @@
                         </div>`
               proteinasMobile.innerHTML += cardmobileHTML;
             });
-
-            const proteinasMobile1 = document.getElementById('firstP');
-
-          const suplementosProteinasMobile1 = iphones  .slice(0, 8);
-          suplementosProteinasMobile1.forEach((products) => {
-            const cardmobileHTML = `<div class="menu-sessao-bloco-card">
-                        <div class="cardM" style="width: 24.3rem;">
-                          <a href="/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
-                          <div class="card-body">
-                          <a href="/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
-                            <div id="rating">
-                              ${products.star}
-                            </div>
-                            <div class="preco">
-                              <h5><strong>R$ ${products.price}  </strong></h5>
-                            </div>
-                          </div>
-                        </div>
-                      </div>`
-            proteinasMobile1.innerHTML += cardmobileHTML;
-            proteinasMobile1.style.display = 'flex'
-          
-          });
-
-          const proteinasMobile2 = document.getElementById('secondP');
-
-          const suplementosProteinasMobile2 = iphones.slice(8, 16);
-          suplementosProteinasMobile2.forEach((products) => {
-            const cardmobileHTML2 = `<div class="menu-sessao-bloco-card">
-                        <div class="cardM" style="width: 24.3rem;">
-                          <a href="/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
-                          <div class="card-body">
-                          <a href="/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
-                            <div id="rating">
-                              ${products.star}
-                            </div>
-                            <div class="preco">
-                              <h5><strong>R$ ${products.price}  </strong></h5>
-                            </div>
-                          </div>
-                        </div>
-                      </div>`
-            proteinasMobile2.style.display = 'flex'
-            proteinasMobile2.innerHTML += cardmobileHTML2;
-          });
-
         }
         
 
