@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/assets/css/home.css">
+  <link rel="stylesheet" href="/src/assets/css/produtosgeral.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="shortcut icon" href="/assets/ico/1-removebg-preview.ico" type="image/x-icon">
@@ -15,6 +16,8 @@
 </head>
 <body>
   <div id="mobile" onclick="goBack()"></div>
+  <main id="main">
+    <div id="mobile" onclick="goBack()"></div>
   <main id="main">
     <header id="cabecalho">
       <div id="TopHeader">
@@ -30,6 +33,7 @@
                   </div>
                 </div>
               </div>
+              
             </div>
           </nav>
         </nav>
@@ -38,12 +42,25 @@
           <div class="cabecalho-icons" id="icon"></div>
         </div>
       </div>
+    
     </header> 
 
-<div id="result">
-      
-    </div>
+    <div id="result">
+      <div id="p1">
+        <div id="produtos1">
+        
+        </div>
+        <div id="produtos2">
+          
+        </div>
 
+  
+        </div>
+       </div>
+  </div>
+  <div id="produtos">
+
+  </div>
     
       <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
         <div class="row">
@@ -116,6 +133,69 @@
           </script>
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
+        <script> 
+        if (width > 500) {
+          // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+         const productsContainer = document.getElementById('produtos1');
+
+            // Obtém os três primeiros produtos do vetor products
+            const produtosArray = products.slice(56, 58);
+
+            // Itera sobre os produtos e cria os cards na div productsContainer
+            produtosArray.forEach(produto => {
+              const cardHTML1 = `
+                <div class="card" style="width: 14rem;">
+                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                  <div class="card-body" style="display: flex; flex-direction: column;">
+                    <p class="card-text">${produto.title}</p>
+                    <div class="preco">
+                      ${produto.star}
+                      <h5>R$${produto.price.toFixed(2)}</h5>
+                      <p style="font-size: 14px">${produto.payment}</p> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                      <p class="compras">COMPRAR</p>
+                    </a>
+                  </div>
+                </div>
+              `;
+
+              productsContainer.innerHTML += cardHTML1;
+              productsContainer.style.display = 'flex';
+              productsContainer.style.gap = '2rem';
+              productsContainer.style.justifyContent = 'center';
+              productsContainer.style.marginTop = '100px';
+            });
+            
+            // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+        
+    }
+      
+            else {
+              const proteinasMobile = document.getElementById('produtos');
+
+            const suplementosProteinasMobile = products.slice(56, 58);
+            suplementosProteinasMobile.forEach((products) => {
+              const cardmobileHTML = `<div class="menu-sessao-bloco-card" >
+                          <div class="cardM" style="width: 24.3rem;">
+                            <a href="/src/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                            <a href="/src/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
+                              <div id="rating">
+                                ${products.star}
+                              </div>
+                              <div class="preco">
+                                <h5><strong>R$ ${products.price}  </strong></h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>`
+              proteinasMobile.innerHTML += cardmobileHTML;
+            });
+        }
+        </script>
+
         
         
 </body>

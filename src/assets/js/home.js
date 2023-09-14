@@ -69,14 +69,14 @@ else {
 
     const icon = document.getElementById("icon");
     icon.innerHTML = `
-        <a href="/src/assets/html/meusPedidos.html"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
+        <a><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
         <div class="name_user">
           Olá, ${userLogado.nome}
         </div>
         <div class="deslogar">
           <a  href="home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
         </div>
-        <a href="/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>`;
+        <a href="/src/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>`;
 
     icon.style.display = "flex";
     icon.style.gap = "1rem";
@@ -112,7 +112,7 @@ function mobile() {
       </div>
       <div id="enter">
         <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000;"></i>
-        <a href="/assets/html/login.html">Entrar/Cadastrar</a>
+        <a href="/src/assets/html/login.html">Entrar/Cadastrar</a>
       </div>
     </div>
     <div id="low">
@@ -159,8 +159,6 @@ function mobile() {
               <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
         </div>
         <div id="enter">
-        <a href="/assets/html/meusPedidos.html"><i class="fa-solid fa-bag-shopping fa-xl" style="color: #000000;"></i> Meus Pedidos</a>
-        <a href="/assets/html/dadosPessoais.html"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i>Minha conta</a>
         </div>
       </div>
       <div id="low">
@@ -261,10 +259,7 @@ function mobile() {
               <input class="search_input" type="text" name="" placeholder="Qual suplemento você precisa?">
               <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
-        <div id="enter">
-        <a href="/assets/html/meusPedidos.html"><i class="fa-solid fa-bag-shopping fa-xl" style="color: #000000;"></i> Meus Pedidos</a>
-        <a href="/assets/html/dadosPessoais.html"><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i>Minha conta</a>
-        </div>
+        
       </div>
       <div id="low">
       <div class="mobileCard">
