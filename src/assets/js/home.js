@@ -9,7 +9,7 @@ if (width <= 500) {
   if (localStorage.getItem("token") == null) {
     cabecalho.innerHTML = `<header id="cabecalho">
     <a onclick="mobile()"><i class="fa-solid fa-bars-staggered fa-2xl" style="color: #000000;"></i></a>
-  <a href="/home.html"><img class="cabecalho-logo" src="/src/images/logo.png" alt=""></a>
+  <a href="/home.html"><img class="cabecalho-logo" src="/src/images/logo.png" style="margin-left: 0px"></a>
   <div class="deslogar">
           <a href="/src/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i></a>
   </div>
@@ -38,7 +38,7 @@ if (width <= 500) {
   else {
     cabecalho.innerHTML = `<header id="cabecalho">
       <a onclick="mobile()"><i class="fa-solid fa-bars-staggered fa-2xl" style="color: #000000;"></i></a>
-    <a href="/home.html"><img class="cabecalho-logo" src="/src/images/logo.png" alt=""></a>
+    <a href="/home.html"><img class="cabecalho-logo" src="/src/images/logo.png" style="margin-left: 0px"></a>
     <div class="deslogar">
             <a href="/src/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-xl" style="color: #000000;"></i></a>
     </div>
