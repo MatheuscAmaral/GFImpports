@@ -64,7 +64,7 @@
 
   </div>
     
-      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
+      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;margin-top: 1000px;">
         <div class="row">
           <div class="col-md-12">
           </div>
@@ -146,14 +146,21 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray.forEach(produto => {
               const cardHTML1 = `
-                <div class="card" style="width: 14rem;">
+              <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
                     <a href="/src/assets/html/details.html?id=${produto.id}">
@@ -178,14 +185,21 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray2.forEach(produto => {
               const cardHTML1 = `
-                <div class="card" style="width: 14rem;">
+              <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
                     <a href="/src/assets/html/details.html?id=${produto.id}">

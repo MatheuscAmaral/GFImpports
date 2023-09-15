@@ -1,3 +1,8 @@
+#botoes {
+  display: none;
+}
+
+
 @media (max-width: 500px) {
     #cabecalho {
         box-shadow: 0px 0px 0px 0px black;
@@ -261,6 +266,11 @@
     #produtos a {
       display: flex;
     }
+    
+    #botoes {
+      display: flex;
+    }
+    
   }
   
   

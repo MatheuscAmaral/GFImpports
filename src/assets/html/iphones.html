@@ -54,7 +54,7 @@
         <div id="produtos3">
   
         </div>
-        <div id="produtos4">
+        <div id="produtos4" style="margin-bottom: 100px;">
 
         </div>
         <div id="produtos5">
@@ -72,10 +72,24 @@
        </div>
   </div>
   <div id="produtos">
-
-  </div>
+    <div id="ptest">
+      <div id="firstP">
+      
+      </div>
+      <div id="secondP" style="display: none;" >
+            
+      </div>
+      
+    </div>
+  </div>  
+      <div id="botoes">
+        <input id="button1" type="button" value="<<" onclick="backLeft()">
+        <input id="button2" type="button" value=" 1  " onclick="pageOne()">
+        <input id="button3" type="button" value=" 2 " onclick="pageTwo()">
+        <input id="button4" type="button" value=">>" onclick="backRight()">
+      </div>
     
-      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
+      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;margin-top: 100px;">
         <div class="row">
           <div class="col-md-12">
           </div>
@@ -160,11 +174,18 @@
                 <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
                     <a href="/src/assets/html/details.html?id=${produto.id}">
@@ -189,14 +210,21 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray2.forEach(produto => {
               const cardHTML1 = `
-                <div class="card" style="width: 14rem;">
+              <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
                     <a href="/src/assets/html/details.html?id=${produto.id}">
@@ -221,14 +249,21 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray3.forEach(produto => {
               const cardHTML1 = `
-                <div class="card" style="width: 14rem;">
+              <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
                     <a href="/src/assets/html/details.html?id=${produto.id}">
@@ -253,14 +288,21 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray4.forEach(produto => {
               const cardHTML1 = `
-                <div class="card" style="width: 14rem;">
+              <div class="card" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${produto.title}</p>
-                    <div class="preco">
-                      ${produto.star}
-                      <h5>R$${produto.price.toFixed(2)}</h5>
-                      <p style="font-size: 14px">${produto.payment}</p> 
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
                     <a href="/src/assets/html/details.html?id=${produto.id}">
@@ -285,21 +327,28 @@
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray5.forEach(produto => {
           const cardHTML1 = `
-            <div class="card" style="width: 14rem;">
-              <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-              <div class="card-body" style="display: flex; flex-direction: column;">
-                <p class="card-text">${produto.title}</p>
-                <div class="preco">
-                  ${produto.star}
-                  <h5>R$${produto.price.toFixed(2)}</h5>
-                  <p style="font-size: 14px">${produto.payment}</p> 
+          <div class="card" style="width: 14rem;">
+                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                  <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                      <p class="compras">COMPRAR</p>
+                    </a>
+                  </div>
                 </div>
-                <!-- Adicione o ID do produto na URL do link -->
-                <a href="/src/assets/html/details.html?id=${produto.id}">
-                  <p class="compras">COMPRAR</p>
-                </a>
-              </div>
-            </div>
           `;
 
           productsContainer5.innerHTML += cardHTML1;
@@ -317,21 +366,28 @@
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray6.forEach(produto => {
           const cardHTML1 = `
-            <div class="card" style="width: 14rem;">
-              <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-              <div class="card-body" style="display: flex; flex-direction: column;">
-                <p class="card-text">${produto.title}</p>
-                <div class="preco">
-                  ${produto.star}
-                  <h5>R$${produto.price.toFixed(2)}</h5>
-                  <p style="font-size: 14px">${produto.payment}</p> 
+          <div class="card" style="width: 14rem;">
+                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                  <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                      <p class="compras">COMPRAR</p>
+                    </a>
+                  </div>
                 </div>
-                <!-- Adicione o ID do produto na URL do link -->
-                <a href="/src/assets/html/details.html?id=${produto.id}">
-                  <p class="compras">COMPRAR</p>
-                </a>
-              </div>
-            </div>
           `;
 
           productsContainer6.innerHTML += cardHTML1;
@@ -349,21 +405,28 @@
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray7.forEach(produto => {
           const cardHTML1 = `
-            <div class="card" style="width: 14rem;">
-              <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-              <div class="card-body" style="display: flex; flex-direction: column;">
-                <p class="card-text">${produto.title}</p>
-                <div class="preco">
-                  ${produto.star}
-                  <h5>R$${produto.price.toFixed(2)}</h5>
-                  <p style="font-size: 14px">${produto.payment}</p> 
+          <div class="card" style="width: 14rem;">
+                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                  <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                      <p class="compras">COMPRAR</p>
+                    </a>
+                  </div>
                 </div>
-                <!-- Adicione o ID do produto na URL do link -->
-                <a href="/src/assets/html/details.html?id=${produto.id}">
-                  <p class="compras">COMPRAR</p>
-                </a>
-              </div>
-            </div>
           `;
 
           productsContainer7.innerHTML += cardHTML1;
@@ -381,21 +444,28 @@
         // Itera sobre os produtos e cria os cards na div productsContainer
         produtosArray8.forEach(produto => {
           const cardHTML1 = `
-            <div class="card" style="width: 14rem;">
-              <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-              <div class="card-body" style="display: flex; flex-direction: column;">
-                <p class="card-text">${produto.title}</p>
-                <div class="preco">
-                  ${produto.star}
-                  <h5>R$${produto.price.toFixed(2)}</h5>
-                  <p style="font-size: 14px">${produto.payment}</p> 
+          <div class="card" style="width: 14rem;">
+                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                  <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${produto.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                      <div style="display: flex; gap: .3rem">
+                        ${produto.star}
+                      </div>
+                      <div style="display: flex; flex-direction: column; ">
+                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                        <span>R$${produto.price.toFixed(2)}</span>
+                      </div>
+                      </div>
+                      <span style="font-size: 14px">${produto.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                      <p class="compras">COMPRAR</p>
+                    </a>
+                  </div>
                 </div>
-                <!-- Adicione o ID do produto na URL do link -->
-                <a href="/src/assets/html/details.html?id=${produto.id}">
-                  <p class="compras">COMPRAR</p>
-                </a>
-              </div>
-            </div>
           `;
 
           productsContainer8.innerHTML += cardHTML1;
@@ -407,16 +477,17 @@
     }
       
             else {
-              const proteinasMobile = document.getElementById('produtos');
+          
+            const proteinasMobile10 = document.getElementById('firstP');
 
-            const suplementosProteinasMobile = products.slice(0, 8);
-            suplementosProteinasMobile.forEach((products) => {
+            const suplementosProteinasMobile10 = products.slice(0, 16);
+            suplementosProteinasMobile10.forEach((products) => {
               const cardmobileHTML = `<div class="menu-sessao-bloco-card" >
                           <div class="cardM" style="width: 24.3rem;">
                             <a href="/src/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
                             <div class="card-body">
                             <a href="/src/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
-                              <div id="rating">
+                              <div id="rating" style="font-size="16px">
                                 ${products.star}
                               </div>
                               <div class="preco">
@@ -425,8 +496,32 @@
                             </div>
                           </div>
                         </div>`
-              proteinasMobile.innerHTML += cardmobileHTML;
+              proteinasMobile10.innerHTML += cardmobileHTML;
             });
+
+
+            const proteinasMobile2 = document.getElementById('secondP');
+
+            const suplementosProteinasMobile2 = products.slice(16, 32);
+            suplementosProteinasMobile2.forEach((products) => {
+              const cardmobileHTML = `<div class="menu-sessao-bloco-card" >
+                          <div class="cardM" style="width: 24.3rem;">
+                            <a href="/src/assets/html/details.html?id=${products.id}"><img src=${products.poster} width="100px class="card-img-top" alt="..."></a>
+                            <div class="card-body">
+                            <a href="/src/assets/html/details.html?id=${products.id}"><p><strong>${products.title}</strong></p></a>
+                              <div id="rating" style="font-size="16px">
+                                ${products.star}
+                              </div>
+                              <div class="preco">
+                                <h5><strong>R$ ${products.price}  </strong></h5>
+                              </div>
+                            </div>
+                          </div>
+                        </div>`
+              proteinasMobile2.innerHTML += cardmobileHTML;
+            });
+
+            
         }
         
 

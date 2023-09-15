@@ -34,7 +34,13 @@ body {
     transition: 0.3s;
 }
 
+#entrar:hover {
+    transform: scale(1.03);
+}
 
+#cadastrar:hover {
+    transform: scale(1.03);
+}
 
 
 #accounts a:hover {

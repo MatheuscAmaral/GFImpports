@@ -71,8 +71,6 @@
           <a onmouseover="iPads()" onmouseout="hideNavbarr()">iPad</a>
           <a onmouseover="AppleWatchs()" onmouseout="hideNavbarr()">Apple Watch</a>
           <a onmouseover="airpodss()" onmouseout="hideNavbarr()">AirPods</a>
-          <a onmouseover="ofertas()" onmouseout="hideNavbarr()">Ofertas</a>
-
         </div>
         <div id="navbarr" class="show-navbarr" style="display: flex; align-items: center; gap: 2rem; margin-left: 100px;"onmouseover="showNavbarr()" onmouseout="hideNavbarr()">
         </div>
@@ -82,7 +80,7 @@
     <div id="result">
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <section class="carrosel">
+    <section class="carrosel" id="carross">
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -91,10 +89,12 @@
             aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
             aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 4"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="/src/images/wallpaper1.webp" class="d-block w-100" alt="...">
+            <img src="/src/images/walpaper1.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
             <img src="/src/images/wallpaper3.webp" class="d-block w-100" alt="...">
@@ -116,24 +116,24 @@
       </div>
     </section>
     <h3 id="iphImp" style="text-align: center; margin-bottom: 60px;">iPhones Importados</h3>
-       <div id="iphonesProdutos" style="margin-bottom: 80px;">
+       <div id="iphonesProdutos" style="margin-bottom: 250px;">
             <div id="iphones">
               <a href="/src/assets/html/iphones.html"><img src="/src/images/wallp1.png" width="320px"></a>
             </div>
               <button class="botaoP" id="prevButton"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
               <div class="slider-container">
-                <div class="cards-wrapper" id="cardsWrapper" style="display: flex; gap: 2rem;">
+                <div class="cards-wrappr" id="cardsWrapper" style="display: flex; gap: 2rem;">
 
                 </div>
               </div>
               <button class="botaoP" id="nextButton"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
        </div>
        <h3 id="MacImp" style="text-align: center; margin-bottom: 60px;">MacBooks Importados</h3>
-        <div id="macbooksProdutos" style="margin-bottom: 100px;">
+        <div id="macbooksProdutos" style="margin-bottom: 250px;">
           <div id="produtosAp2">
             <button class="botaoP" id="prevButton2"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
               <div class="slider-container">
-                <div class="cards-wrapper" id="cardsWrapper2"  style="display: flex; gap: 2rem;">
+                <div class="cards-wrappr" id="cardsWrapper2"  style="display: flex; gap: 2rem;">
 
                 </div>
               </div>
@@ -144,21 +144,21 @@
           </div>
         </div>
         <h3 id="IpadsImp" style="text-align: center; margin-bottom: 60px;">Ipads Importados</h3>
-        <div id="IpadsProdutos">
+        <div id="IpadsProdutos" style="margin-bottom: 200px;">
           <div id="ipads">
             <a href="/src/assets/html/ipads.html"><img src="/src/images/wallp3.png" width="320px"></a>
           </div>
           <button class="botaoP" id="prevButton3"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
           <div class="slider-container">
-            <div class="cards-wrapper" id="cardsWrapper3"  style="display: flex; gap: 2rem;">
+            <div class="cards-wrappr" id="cardsWrapper3"  style="display: flex; gap: 2rem;">
 
             </div>
           </div>
           <button class="botaoP" id="nextButton3"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
         </div>
-        </div>
+    </div>
     
-      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
+      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray; margin-top: 1000px;">
         <div class="row">
           <div class="col-md-12">
           </div>
@@ -230,6 +230,7 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
+         
 
         let hideNavTimeout;
         let navbarrHovered = false;

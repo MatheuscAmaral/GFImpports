@@ -256,11 +256,13 @@ button {
   justify-content: space-between;
   background-color: white;
   border-top: 1px solid rgb(255, 255, 255); 
+
+  
 }
 
 
 .cabecalho-logo {
-    height: 125px;
+    height: 115px;
     margin-left: 30%;
 }
 
@@ -1089,7 +1091,7 @@ footer {
     justify-content: center;
     gap: 2rem;
     background-color: white;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
     border-top: 0px solid rgb(255, 255, 255); 
     height: 170px;
 }
@@ -1153,6 +1155,12 @@ footer {
     margin-left: 0;
     margin-bottom: 10%;
 }
+
+.carrosel img {
+  height: 110px;
+}
+
+
   .cabecalho-logo {
     height: 95px;
     padding-left: 0px;  
