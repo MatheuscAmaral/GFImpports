@@ -18,7 +18,6 @@
   <div id="mobile" onclick="goBack()"></div>
   <main id="main">
     <div id="mobile" onclick="goBack()"></div>
-  <main id="main">
     <header id="cabecalho">
       <div id="TopHeader">
           <a href="/home.html"><img class="cabecalho-logo" src="/src/images/logo.png" alt=""></a>
@@ -45,6 +44,19 @@
     
     </header> 
 
+    <div id="all" style=" padding-bottom: 100px;">
+    <div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 470px;">
+      <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
+        <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/ipads.html" style="text-decoration: none; color: gray">iPads</a> > <a href="/src/assets/html/ipads.html" style="text-decoration: none; color: gray">Ver Todos</a>
+      </div>
+      <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
+        <b style="color: gray; font-size: 24px;">iPads</b>
+        <hr></hr>
+        <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">7</b> produtos</span>
+        <hr size="10px"></hr>
+        <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
+      </div>
+    </div>
     <div id="result">
       <div id="p1">
         <div id="produtos1">
@@ -61,8 +73,9 @@
   <div id="produtos">
 
   </div>
+</div>
     
-      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;margin-top: 1000px;">
+      <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
         <div class="row">
           <div class="col-md-12">
           </div>
@@ -144,7 +157,7 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray.forEach(produto => {
               const cardHTML1 = `
-              <div class="card" style="width: 14rem;">
+              <div class="cards" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${produto.title}</h6>
@@ -161,7 +174,7 @@
                       <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                    <a href="/src/assets/html/details.html?id=${produto.id}" style="text-decoration: none">
                       <p class="compras">COMPRAR</p>
                     </a>
                   </div>
@@ -170,9 +183,9 @@
 
               productsContainer.innerHTML += cardHTML1;
               productsContainer.style.display = 'flex';
-              productsContainer.style.gap = '2rem';
+              productsContainer.style.gap = '.5rem';
               productsContainer.style.justifyContent = 'center';
-              productsContainer.style.marginTop = '100px';
+              productsContainer.style.marginTop = '10px';
             });
             // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
             const productsContainer2 = document.getElementById('produtos2');
@@ -183,7 +196,7 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray2.forEach(produto => {
               const cardHTML1 = `
-              <div class="card" style="width: 14rem;">
+              <div class="cards" style="width: 14rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${produto.title}</h6>
@@ -200,7 +213,7 @@
                       <span style="font-size: 14px">${produto.payment}</span> 
                     </div>
                     <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${produto.id}">
+                    <a href="/src/assets/html/details.html?id=${produto.id}" style="text-decoration: none">
                       <p class="compras">COMPRAR</p>
                     </a>
                   </div>
@@ -209,9 +222,9 @@
 
               productsContainer2.innerHTML += cardHTML1;
               productsContainer2.style.display = 'flex';
-              productsContainer2.style.gap = '2rem';
-              productsContainer2.style.marginLeft = '455px';
-              productsContainer2.style.marginTop = '100px';
+              productsContainer2.style.gap = '.5rem';
+              productsContainer2.style.marginLeft = '472px';
+              productsContainer2.style.marginTop = '10px';
             });
             // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
         

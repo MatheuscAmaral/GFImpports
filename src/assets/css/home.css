@@ -64,47 +64,9 @@ button {
   display: none;  
 }
 
-
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Espaço entre os cards */
-}
-
-.card {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  max-width: 14rem; /* Largura máxima desejada para os cards */
-  border: 1px solid #ccc;
-  margin-right: 0px;
-  border-radius: 5px;
-  padding: 0px;
-  display: flex;
-  transition: transform 0.3s ease-in-out; /* Adicione a transição de transform */
-  transform: translateX(0); /* Comece com um valor inicial de translação */
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  transition: 0.4s;
-}
-
-.card img:hover {
-  transform: scale(1.1);
-}
-
-.card-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.card h5 {
-  margin: 0;
+.cards {
+  border-radius: 8px;
+  background-color: white;
 }
 
 #lowheader a:hover {
@@ -377,7 +339,7 @@ button {
     margin-top: 10px;
     cursor: pointer;
     text-align: center;
-    padding: 10px;
+    padding: 7px;
     border: 1px solid black;
     border-radius: 10px;
     background-color:#ddd;
@@ -615,9 +577,7 @@ margin-bottom: 20px;
 
 
 /* Rodape cima*/
-footer {
-  margin-top: 150px;
-}
+
 
 
 
@@ -857,28 +817,7 @@ footer {
   width: 150px;
 }
 
- .footer {
-   margin-top: 30%;
- }
-
-  .footer-cima {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding-bottom: 5%;
-  }
-
-  .footer-card {
-    font-size: 1em;
-    width: 400px;
-    border-radius: 5px;
-  }
-
-
-    .footer-baixo {
-    text-align: center;
-    background-color: lightgray;
-  }
+ 
 
   #iphImp  {
     font-size: 18px;
@@ -1172,27 +1111,7 @@ footer {
   width: 150px;
 }
 
- .footer {
-   margin-top: 30%;
- }
 
-  .footer-cima {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    padding-bottom: 5%;
-  }
-
-  .footer-card {
-    font-size: 1em;
-    width: 400px;
-    border-radius: 5px;
-  }
-
-    .footer-baixo {
-    text-align: center;
-    background-color: lightgray;
-  }
 
 
   .produtos1 {

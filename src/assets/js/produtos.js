@@ -43,7 +43,7 @@ const products = [
     {
         id: 3,
         title: 'iPhone 12 64GB',
-        price: 1695.0,
+        price: 1995.0,
         poster:'/src/images/iphone12.png',
         poster2: '/src/images/12image2.png',
         poster3 : '/src/images/12image3.png',
@@ -59,7 +59,7 @@ const products = [
     {
         id: 4,
         title: 'iPhone 11 64GB',
-        price: 1350.0,
+        price: 1650.0,
         poster: '/src/images/iphone4.png',
         poster2: '/src/images/11image2.png',
         poster3 : '/src/images/11image3.png',
@@ -951,7 +951,7 @@ const products = [
 ]
 
 
-function searchProducts(termo) {
+  function searchProducts(termo) {
     termo = termo.toLowerCase();
     return products.filter((products) => {
         const tituloLowerCase = products.title.toLowerCase();
@@ -960,31 +960,44 @@ function searchProducts(termo) {
 }
 
 function renderProducts(products) {
-    const ptest = document.getElementById('ptest');
-    const botoes = document.getElementById('botoes')
     const containerResults = document.getElementById('result');
-    containerResults.innerHTML = `Foram encontrados ${products.length} produtos.`;
+    containerResults.innerHTML = ``;
     containerResults.style.display = 'flex';
     containerResults.style.flexDirection = 'column';
     containerResults.style.gap = '1rem';
     containerResults.style.textAlign = 'center'
-    containerResults.style.marginTop = '10px'
-    ptest.innerHTML = '';
-    botoes.innerHTML = '';
+    const justPc = document.getElementById('justPc');
+    justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem;  justify-content: center;">
+    <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
+      <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/airpods.html" style="text-decoration: none; color: gray">Ver Todos</a> > Pesquisa
+    </div>
+    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
+      <b style="color: gray; font-size: 24px;">Ver Todos</b>
+      <hr></hr>
+      <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">${products.length}</b> produtos</span>
+      <hr size="10px"></hr>
+      <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
+    </div>
+  </div>`
+
+
+
 
   
     if (products.length === 0) {
       const divmensagemNenhumResultado = document.createElement('div');
-      divmensagemNenhumResultado.innerHTML = `<img src="/src/images/no-results.png" style="width: 100px">
+      divmensagemNenhumResultado.innerHTML = `<img src="/src/images/no-results.png" style="width: 90px">
         <p>Nenhum resultado encontrado</p>`
   
       divmensagemNenhumResultado.style.display = 'flex';
       divmensagemNenhumResultado.style.flexDirection = 'column';
       divmensagemNenhumResultado.style.alignItems = 'center';
       divmensagemNenhumResultado.style.gap = '1rem'
-      divmensagemNenhumResultado.style.marginTop = '40px';
+      divmensagemNenhumResultado.style.marginTop = '100px';
       divmensagemNenhumResultado.style.marginBottom = '100px'
       containerResults.appendChild(divmensagemNenhumResultado);
+
+  
       return; // Encerra a função aqui, não precisa continuar o loop abaixo
     }
   
@@ -994,54 +1007,74 @@ function renderProducts(products) {
     // Cria um contêiner flexível para os cards
     const cardsContainer = document.createElement('div');
     cardsContainer.style.display = 'flex';
-    cardsContainer.style.flexWrap = 'wrap'; // Para que os cards fiquem em várias linhas se necessário
-    cardsContainer.style.justifyContent = 'center'; // Centralizar os cards horizontalmente
+    cardsContainer.style.flexWrap = 'wrap';
+    cardsContainer.style.paddingLeft = '400px';
+    cardsContainer.style.paddingRight = '400px';
+    cardsContainer.style.marginLeft = '70px';
+
+
+    // Para que os cards fiquem em várias linhas se necessário
+ // Centralizar os cards horizontalmente
     
   
     products.forEach((product) => {
       const divProducts = document.createElement('div');
   
       if (width > 500) {
+
         divProducts.style.display = 'flex';
-        divProducts.style.flexDirection = 'row';
-        divProducts.style.margin = '50px'; // Espaçamento entre os cards
+        divProducts.style.justifyContent = 'center';
+        divProducts.style.marginTop = '10px';  
+        divProducts.style.marginRight = '.5rem'
+
   
         divProducts.innerHTML = `
-        <div class="card" style="width: 14rem;">
+        <div class="cards" style="width: 14rem;">
         <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
         <div class="card-body" style="display: flex; flex-direction: column;">
-            <p class="card-text">${product.title}</p>
-            <div class="preco">
-                ${product.star}
-                <h5>R$${product.price.toFixed(2)}</h5>
-                <p style="font-size: 14px">${product.payment}</p> 
+          <h6 class="card-text">${product.title}</h6>
+          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+           <div style="display: flex; flex-direction: column; gap: 1rem"> 
+            <div style="display: flex; gap: .3rem">
+              ${product.star}
             </div>
-            <!-- Adicione o ID do produto na URL do link -->
-            <a href="/src/assets/html/details.html?id=${product.id}">
-                <p class="compras">COMPRAR</p>
-            </a>
+            <div style="display: flex; flex-direction: column; ">
+              <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+              <span>R$${product.price.toFixed(2)}</span>
+            </div>
+            </div>
+            <span style="font-size: 14px">${product.payment}</span> 
+          </div>
+          <!-- Adicione o ID do produto na URL do link -->
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+            <p class="compras">COMPRAR</p>
+          </a>
         </div>
-    </div>`;
+      </div>`;
       } 
       
       else {
-        divProducts.innerHTML = `<div class="menu-sessao-bloco-card" >
-        <div class="cardM" style="width: 24.3rem; display: flex; gap: 0rem">
-          <a href="/src/assets/html/details.html?id=${product.id}"><img src=${product.poster} width="100px class="card-img-top" alt="..."></a>
-          <div class="card-body">
-          <a href="/src/assets/html/details.html?id=${product.id}"><p><strong>${product.title}</strong></p></a>
-            <div id="rating" style="font-size: 16px">
-              ${product.star}
-            </div>
-            <div class="preco">
-              <h5><strong>R$ ${product.price}  </strong></h5>
+        divProducts.innerHTML = `<div class="menu-sessao-bloco-card">
+          <div class="cardM" style="width: 24.3rem; display: flex; box-shadow: 0px 0px 1.2px 0px rgb(182, 182, 182); align-items: center; gap:0rem">
+          <a href="/assets/html/details.html?id=${product.id}" style="text-decoratio: none; color: black"><img src=${product.poster} style="width: 110px; height: 110px" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+            <a href="/assets/html/details.html?id=${product.id}"><p><strong>${product.title}</strong></p></a>
+              <div id="rating">
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+                <i class="fa-solid fa-star fa-lg" style="color: #005eff;"></i>
+              </div>
+              <div class="preco">
+                <h5><strong>R$ ${product.price}</strong></h5>
+              </div>
             </div>
           </div>
-        </div>
       </div>`;
   
         divProducts.style.display = 'flex';
-        divProducts.style.marginBottom = '0px'; // Espaçamento entre os cards
+        divProducts.style.marginBottom = '10px'; // Espaçamento entre os cards
       }
   
       // Adiciona o card ao contêiner de cards
@@ -1064,6 +1097,8 @@ function handleSearch() {
 
 
 document.getElementById('barraPesquisa').addEventListener('keyup', handleSearch);
+
+
 
 
 
@@ -1351,7 +1386,3 @@ function backLeft() {
     }
   }
   
-  
-  
-
-
