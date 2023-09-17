@@ -967,19 +967,23 @@ function renderProducts(products) {
     containerResults.style.gap = '1rem';
     containerResults.style.textAlign = 'center'
     const justPc = document.getElementById('justPc');
-    justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem;  justify-content: center;">
+
+        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 465px;">
     <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
-      <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/airpods.html" style="text-decoration: none; color: gray">Ver Todos</a> > Pesquisa
+      <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray"></a> > Pesquisa
     </div>
-    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
+    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 95%; border-radius: 8px; padding: 30px; background-color: #f1f1f1;">
       <b style="color: gray; font-size: 24px;">Ver Todos</b>
       <hr></hr>
-      <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">${products.length}</b> produtos</span>
+      <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">58</b> produtos</span>
       <hr size="10px"></hr>
       <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
-    </div>
   </div>`
+    
 
+
+  const ptest = document.getElementById('ptest')
+  ptest.innerHTML = ''
 
 
 
@@ -1014,7 +1018,7 @@ function renderProducts(products) {
 
 
     // Para que os cards fiquem em várias linhas se necessário
- // Centralizar os cards horizontalmente
+ // Centralizar o s cards horizontalmente
     
   
     products.forEach((product) => {
@@ -1128,21 +1132,28 @@ function renderCards() {
         card.classList.add("card");
 
         const cardHTML = `
-            <div class="card" style="width: 14rem;">
-                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${product.title}</p>
-                    <div class="preco">
-                        ${product.star}
-                        <h5>R$${product.price.toFixed(2)}</h5>
-                        <p style="font-size: 14px">${product.payment}</p> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}">
-                        <p class="compras">COMPRAR</p>
-                    </a>
-                </div>
+        <div class="cards" style="width: 14rem;">
+        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <h6 class="card-text">${product.title}</h6>
+          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+           <div style="display: flex; flex-direction: column; gap: 1rem"> 
+            <div style="display: flex; gap: .3rem">
+              ${product.star}
             </div>
+            <div style="display: flex; flex-direction: column; ">
+              <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+              <span>R$${product.price.toFixed(2)}</span>
+            </div>
+            </div>
+            <span style="font-size: 14px">${product.payment}</span> 
+          </div>
+          <!-- Adicione o ID do produto na URL do link -->
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
         `;
 
         card.innerHTML = cardHTML;
@@ -1203,21 +1214,28 @@ function renderCards2() {
         card.classList.add("card");
 
         const cardHTML = `
-            <div class="card" style="width: 14rem;">
-                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${product.title}</p>
-                    <div class="preco">
-                        ${product.star}
-                        <h5>R$${product.price.toFixed(2)}</h5>
-                        <p style="font-size: 14px">${product.payment}</p> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}">
-                        <p class="compras">COMPRAR</p>
-                    </a>
-                </div>
+        <div class="cards" style="width: 14rem;">
+        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <h6 class="card-text">${product.title}</h6>
+          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+           <div style="display: flex; flex-direction: column; gap: 1rem"> 
+            <div style="display: flex; gap: .3rem">
+              ${product.star}
             </div>
+            <div style="display: flex; flex-direction: column; ">
+              <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+              <span>R$${product.price.toFixed(2)}</span>
+            </div>
+            </div>
+            <span style="font-size: 14px">${product.payment}</span> 
+          </div>
+          <!-- Adicione o ID do produto na URL do link -->
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
         `;
 
         card.innerHTML = cardHTML;
@@ -1353,7 +1371,7 @@ function backLeft() {
       botao3.style.backgroundColor = 'transparent'
       botao4.style.backgroundColor = 'transparent'
     }
-  }
+      }
   
   function pageTwo() {
     pages2.style.display = 'flex';

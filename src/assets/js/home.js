@@ -120,7 +120,7 @@ function mobile() {
     <a href="/src/assets/html/iphones.html">iPhones</a>
     </div>
     <div class="mobileCard">
-      <a href="/src/assets/html/macbook.html">MacBooks</a>
+      <a href="/src/assets/html/macbooks  .html">MacBooks</a>
     </div>
     <div class="mobileCard">
       <a href="/src/assets/html/ipads.html">iPads</a>
@@ -130,12 +130,6 @@ function mobile() {
     </div>
     <div class="mobileCard">
     <a href="/src/assets/html/airpods.html">AirPods</a>
-    </div>
-    <div class="mobileCard">
-    <a href="/src/assets/html/importados.html">Importados</a>
-    </div>
-    <div class="mobileCard">
-    <a href="/src/assets/html/seminovos.html">SemiNovos</a>
     </div>
     <div class="mobileCard">
     <a href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
@@ -166,7 +160,7 @@ function mobile() {
       <a href="/src/assets/html/iphones.html">iPhones</a>
       </div>
       <div class="mobileCard">
-        <a href="/src/assets/html/macbook.html">MacBooks</a>
+        <a href="/src/assets/html/macbooks.html">MacBooks</a>
       </div>
       <div class="mobileCard">
         <a href="/src/assets/html/ipads.html">iPads</a>
@@ -178,11 +172,6 @@ function mobile() {
       <a href="/src/assets/html/airpods.html">AirPods</a>
       </div>
       <div class="mobileCard">
-      <a href="/src/assets/html/importados.html">Importados</a>
-      </div>
-      <div class="mobileCard">
-      <a href="/src/assets/html/seminovos.html">SemiNovos</a>
-      </div>
       <div class="mobileCard">
       <a href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
       </div>
@@ -220,7 +209,7 @@ function mobile() {
     <a href="/src/assets/html/iphones.html">iPhones</a>
   </div>
   <div class="mobileCard">
-    <a href="/src/assets/html/macbook.html">MacBooks</a>
+    <a href="/src/assets/html/macbooks.html">MacBooks</a>
   </div>
   <div class="mobileCard">
     <a href="/src/assets/html/ipads.html">iPads</a>
@@ -230,12 +219,6 @@ function mobile() {
   </div>
   <div class="mobileCard">
    <a href="/src/assets/html/airpods.html">AirPods</a>
-  </div>
-  <div class="mobileCard">
-   <a href="/src/assets/html/importados.html">Importados</a>
-  </div>
-  <div class="mobileCard">
-   <a href="/src/assets/html/seminovos.html">SemiNovos</a>
   </div>
   <div class="mobileCard">
    <a href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
@@ -266,7 +249,7 @@ function mobile() {
       <a href="/src/assets/html/iphones.html">iPhones</a>
     </div>
     <div class="mobileCard">
-      <a href="/src/assets/html/macbook.html">MacBooks</a>
+      <a href="/src/assets/html/macbooks.html">MacBooks</a>
     </div>
     <div class="mobileCard">
       <a href="/src/assets/html/ipads.html">iPads</a>
@@ -276,12 +259,6 @@ function mobile() {
     </div>
     <div class="mobileCard">
      <a href="/src/assets/html/airpods.html">AirPods</a>
-    </div>
-    <div class="mobileCard">
-     <a href="/src/assets/html/importados.html">Importados</a>
-    </div>
-    <div class="mobileCard">
-     <a href="/src/assets/html/seminovos.html">SemiNovos</a>
     </div>
     <div class="mobileCard">
      <a href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
@@ -311,4 +288,9 @@ if (width <= 500) {
   IpadsProdutos.innerHTML = `<div id="ipads">
   <a href="/src/assets/html/ipads.html"><img src="/src/images/wallp3.png" width="320px"></a>
 </div>`
+}
+
+
+function searchh() {
+  window.location.href = '/src/assets/html/search.html'
 }
