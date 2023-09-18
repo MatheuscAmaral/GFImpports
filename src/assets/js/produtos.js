@@ -1103,7 +1103,271 @@ function handleSearch() {
 document.getElementById('barraPesquisa').addEventListener('keyup', handleSearch);
 
 
+const cardsWrapperMobile = document.getElementById("cardsWrapperMobile");
+const prevButtonMobile = document.getElementById("prevButtonMobile");
+const nextButtonMobile = document.getElementById("nextButtonMobile");
 
+const cardWidthMobile = 320; // Largura de cada card
+const cardsPerPageMobile = 2; // Quantidade de cartões exibidos por página
+let currentPageMobile = 0;
+
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1Mobile = 0; // Índice do primeiro produto desejado
+const endProductIndex1Mobile = 31;   // Índice do último produto desejado (excluído)
+
+function renderCardsMobile() {
+    cardsWrapperMobile.innerHTML = "";
+
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPageMobile * cardsPerPageMobile + startProductIndex1Mobile;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile, endProductIndex1Mobile + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
+
+
+            const cardHTML = `
+            <div class="cards" style="width: 10rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
+        `;
+        const width = innerWidth
+
+        
+        card.innerHTML = cardHTML;
+        cardsWrapperMobile.appendChild(card);
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
+    }
+
+    prevButtonMobile.disabled = currentPageMobile === 0;
+    nextButtonMobile.disabled = endIndex >= endProductIndex1Mobile + 1;
+}
+
+prevButtonMobile.addEventListener("click", () => {
+    if (currentPageMobile > 0) {
+        currentPageMobile--;
+        renderCardsMobile();
+    }
+});
+
+nextButtonMobile.addEventListener("click", () => {
+    const startIndex = currentPageMobile * cardsPerPageMobile + startProductIndex1Mobile;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile, endProductIndex1Mobile + 1);
+
+    if (endIndex < endProductIndex1Mobile + 1) {
+        currentPageMobile++;
+        renderCardsMobile();
+    }
+});
+
+// Inicialização
+renderCardsMobile();
+
+
+
+
+const cardsWrapperMobile2 = document.getElementById("cardsWrapperMobile2");
+const prevButtonMobile2 = document.getElementById("prevButtonMobile2");
+const nextButtonMobile2 = document.getElementById("nextButtonMobile2");
+
+const cardWidthMobile2 = 320; // Largura de cada card
+const cardsPerPageMobile2 = 2; // Quantidade de cartões exibidos por página
+let currentPageMobile2 = 0;
+
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1Mobile2 = 32; // Índice do primeiro produto desejado
+const endProductIndex1Mobile2 = 36;   // Índice do último produto desejado (excluído)
+
+function renderCardsMobile2() {
+    cardsWrapperMobile2.innerHTML = "";
+
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPageMobile2 * cardsPerPageMobile2 + startProductIndex1Mobile2;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile2, endProductIndex1Mobile2 + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
+
+
+            const cardHTML = `
+            <div class="cards" style="width: 10rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
+        `;
+        const width = innerWidth
+
+        
+        card.innerHTML = cardHTML;
+        cardsWrapperMobile2.appendChild(card);
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
+    }
+
+    prevButtonMobile2.disabled = currentPageMobile2 === 0;
+    nextButtonMobile2.disabled = endIndex >= endProductIndex1Mobile2 + 1;
+}
+
+prevButtonMobile2.addEventListener("click", () => {
+    if (currentPageMobile2 > 0) {
+        currentPageMobile2--;
+        renderCardsMobile2();
+    }
+});
+
+nextButtonMobile2.addEventListener("click", () => {
+    const startIndex = currentPageMobile2 * cardsPerPageMobile2 + startProductIndex1Mobile2;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile2, endProductIndex1Mobile2 + 1);
+
+    if (endIndex < endProductIndex1Mobile2 + 1) {
+        currentPageMobile2++;
+        renderCardsMobile2();
+    }
+});
+
+// Inicialização
+renderCardsMobile2();
+
+
+const cardsWrapperMobile3 = document.getElementById("cardsWrapperMobile3");
+const prevButtonMobile3 = document.getElementById("prevButtonMobile3");
+const nextButtonMobile3 = document.getElementById("nextButtonMobile3");
+
+const cardWidthMobile3 = 320; // Largura de cada card
+const cardsPerPageMobile3 = 2; // Quantidade de cartões exibidos por página
+let currentPageMobile3 = 0;
+
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1Mobile3 = 49; // Índice do primeiro produto desejado
+const endProductIndex1Mobile3 = 55;   // Índice do último produto desejado (excluído)
+
+function renderCardsMobile3() {
+    cardsWrapperMobile3.innerHTML = "";
+
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPageMobile3 * cardsPerPageMobile3 + startProductIndex1Mobile3;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile3, endProductIndex1Mobile3 + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
+
+
+            const cardHTML = `
+            <div class="cards" style="width: 10rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
+        `;
+        const width = innerWidth
+
+        
+        card.innerHTML = cardHTML;
+        cardsWrapperMobile3.appendChild(card);
+        
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
+    }
+
+    prevButtonMobile3.disabled = currentPageMobile3 === 0;
+    nextButtonMobile3.disabled = endIndex >= endProductIndex1Mobile3 + 1;
+}
+
+prevButtonMobile3.addEventListener("click", () => {
+    if (currentPageMobile3 > 0) {
+        currentPageMobile3--;
+        renderCardsMobile3();
+    }
+});
+
+nextButtonMobile3.addEventListener("click", () => {
+    const startIndex = currentPageMobile3 * cardsPerPageMobile3 + startProductIndex1Mobile3;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile3, endProductIndex1Mobile3 + 1);
+
+    if (endIndex < endProductIndex1Mobile3 + 1) {
+        currentPageMobile3++;
+        renderCardsMobile3();
+    }
+});
+
+// Inicialização
+renderCardsMobile3();
 
 
 const cardsWrapper = document.getElementById("cardsWrapper");
@@ -1111,7 +1375,7 @@ const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 
 const cardWidth = 320; // Largura de cada card
-const cardsPerPage = 3; // Quantidade de cards exibidos por página
+const cardsPerPage = 3; // Quantidade de cartões exibidos por página
 let currentPage = 0;
 
 // Escolha os índices dos produtos que você deseja exibir
@@ -1130,34 +1394,61 @@ function renderCards() {
 
         const card = document.createElement("div");
         card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
 
-        const cardHTML = `
-        <div class="cards" style="width: 14rem;">
-        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-        <div class="card-body" style="display: flex; flex-direction: column;">
-          <h6 class="card-text">${product.title}</h6>
-          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
-           <div style="display: flex; flex-direction: column; gap: 1rem"> 
-            <div style="display: flex; gap: .3rem">
-              ${product.star}
+
+            const cardHTML = `
+            <div class="cards" style="width: 14rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
             </div>
-            <div style="display: flex; flex-direction: column; ">
-              <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-              <span>R$${product.price.toFixed(2)}</span>
-            </div>
-            </div>
-            <span style="font-size: 14px">${product.payment}</span> 
-          </div>
-          <!-- Adicione o ID do produto na URL do link -->
-          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
-            <p class="compras">COMPRAR</p>
-          </a>
-        </div>
-      </div>
         `;
+        const width = innerWidth
 
+        if (width <= 500) {
+          const iphones = document.getElementById('iphones')
+          iphones.innerHTML = ''
+          
+          const macbookss = document.getElementById('macbooks')
+          macbookss.innerHTML = ''
+          
+          const ipadss = document.getElementById('ipads')
+          ipadss.innerHTML = ''
+          
+          const produtosAp2 = document.getElementById('produtosAp2')
+          produtosAp2.innerHTML = ''
+
+        }
+
+
+       
+        
+        
         card.innerHTML = cardHTML;
         cardsWrapper.appendChild(card);
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
     }
 
     prevButton.disabled = currentPage === 0;
@@ -1183,6 +1474,7 @@ nextButton.addEventListener("click", () => {
 
 // Inicialização
 renderCards();
+
 
 
 
@@ -1240,6 +1532,21 @@ function renderCards2() {
 
         card.innerHTML = cardHTML;
         cardsWrapper2.appendChild(card);
+
+        if (width <= 500) {
+            const iphones = document.getElementById('iphones')
+            iphones.innerHTML = ''
+            
+            const macbookss = document.getElementById('macbooks')
+            macbookss.innerHTML = ''
+            
+            const ipadss = document.getElementById('ipads')
+            ipadss.innerHTML = ''
+            
+            const produtosAp2 = document.getElementById('produtosAp22')
+            produtosAp2.innerHTML = ''
+  
+          }
     }
 
     prevButton2.disabled = currentPage2 === 0;
@@ -1312,6 +1619,21 @@ function renderCards3() {
 
         card.innerHTML = cardHTML;
         cardsWrapper3.appendChild(card);
+
+        if (width <= 500) {
+            const iphones = document.getElementById('iphones')
+            iphones.innerHTML = ''
+            
+            const macbookss = document.getElementById('macbooks')
+            macbookss.innerHTML = ''
+            
+            const ipadss = document.getElementById('ipads')
+            ipadss.innerHTML = ''
+            
+            const produtosAp2 = document.getElementById('produtosAp23')
+            produtosAp2.innerHTML = ''
+  
+          }
     }
 
     prevButton3.disabled = currentPage3 === 0;

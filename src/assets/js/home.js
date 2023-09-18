@@ -276,19 +276,6 @@ function goBack() {
 }
 
 
-if (width <= 500) {
-  const iphonesProdutos = document.getElementById('iphonesProdutos')
-
-  iphonesProdutos.innerHTML = `<div id="iphones">
-  <a href="/src/assets/html/iphones.html"><img src="/src/images/wallp1.png" width="320px"></a>
-  </div>`
-
-  const IpadsProdutos = document.getElementById('IpadsProdutos')
-
-  IpadsProdutos.innerHTML = `<div id="ipads">
-  <a href="/src/assets/html/ipads.html"><img src="/src/images/wallp3.png" width="320px"></a>
-</div>`
-}
 
 
 function searchh() {
