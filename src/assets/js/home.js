@@ -24,10 +24,7 @@ if (width <= 500) {
     </nav>
 </nav>
 </header>
-<div id="searchbar">
-  <input class="search_input"  id="barraPesquisa" type="text" name="" placeholder="Qual suplemento você precisa?">
-  <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
-  </div>`;
+`;
     cabecalho.style.display = "flex";
     cabecalho.style.flexDirection = "column";
     cabecalho.style.gap = '0rem'
@@ -54,7 +51,7 @@ if (width <= 500) {
   </nav>
   </header>
   <div id="searchbar">
-    <input class="search_input"  id="barraPesquisa" type="text" name="" placeholder="Qual suplemento você precisa?">
+    <input class="search_input"  id="barraPesquisa" onclick="searchh()" type="text" name="" placeholder="Qual dispositivo apple você precisa?">
     <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
     </div>`;
       cabecalho.style.display = "flex";
@@ -63,6 +60,7 @@ if (width <= 500) {
       cabecalho.style.padding = '20px'
   }
 } 
+
 else {
   if (localStorage.getItem("token") != null) {
     const userLogado = JSON.parse(localStorage.getItem("userLogado"));
@@ -107,7 +105,8 @@ function mobile() {
     </div>
     <div id="superiorMid">
       <div class="searchbar">
-            <input class="search_input"  id="barraPesquisa" type="text" name="" placeholder="Qual suplemento você precisa?">
+            <input class="search_input" onclick="searchh()"
+             id="barraPesquisa" type="text" name="" placeholder="Qual dispositivo você precisa?">
             <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
       </div>
       <div id="enter">
@@ -149,7 +148,7 @@ function mobile() {
       </div>
       <div id="superiorMid">
         <div class="searchbar">
-              <input class="search_input"  id="barraPesquisa" type="text" name="" placeholder="Qual suplemento você precisa?">
+              <input class="search_input"  onclick="searchh()" id="barraPesquisa" type="text" name="" placeholder="Qual dispositivo você precisa?">
               <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
         </div>
         <div id="enter">
@@ -196,7 +195,7 @@ function mobile() {
     </div>
     <div id="superiorMid">
       <div class="searchbar">
-            <input class="search_input" type="text" name="" placeholder="Qual suplemento você precisa?">
+            <input class="search_input" onclick="searchh()" type="text" name="" placeholder="Qual dispositivo você precisa?">
             <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
       </div>
       <div id="enter">
@@ -239,7 +238,7 @@ function mobile() {
       </div>
       <div id="superiorMid">
         <div class="searchbar">
-              <input class="search_input" type="text" name="" placeholder="Qual suplemento você precisa?">
+              <input class="search_input" type="text" onclick="searchh()" name="" placeholder="Qual dispositivo você precisa?">
               <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
         

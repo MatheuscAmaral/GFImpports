@@ -139,7 +139,7 @@
               <div class="container h-100">
                 <div class="d-flex justify-content-center h-100">
                   <div class="searchbar">
-                    <input class="search_input"  id="barraPesquisa" type="text" name="" placeholder="Qual dispositivo apple você precisa?">
+                    <input class="search_input"  id="barraPesquisa" onclick="searchh()" type="text" name="" placeholder="Qual dispositivo apple você precisa?">
                     <a class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
                   </div>
                 </div>
@@ -353,13 +353,13 @@ renderCards10();
                       <div id="left" style="display: flex">
                         <div style="display: flex; flex-direction: column; gap: 1rem">
                           <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px; display: flex; justify-content: center; ">
-                             <img  src="${product.poster}" onclick="foto1()" style="width: 45px; height: 50px; ">
+                             <img class="poster" src="${product.poster}" onclick="foto1()" style="width: 45px; height: 50px; ">
                            </div>
                            <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px; display: flex; justify-content: center; ">
-                             <img  src="${product.poster2}" onclick="foto2()" style="width: 25px; height: 50px; ">
+                             <img class="poster" src="${product.poster2}" onclick="foto2()" style="width: 50px; height: 50px; ">
                            </div>
                            <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px;">
-                            <img  src="${product.poster3}" onclick="foto3()" style="width: 50px; height: 60px;">
+                            <img class="poster" src="${product.poster3}" onclick="foto3()" style="width: 50px; height: 60px;">
                            </div>
                         </div>
                         <img id="product-image" src="${product.poster}" onclick="foto1()" style="width: 320px; height: 320px;">

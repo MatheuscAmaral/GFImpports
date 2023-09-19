@@ -29,6 +29,7 @@ body {
 }
 
 
+
 button {
   margin-top: 10px;
   cursor: pointer;
@@ -134,9 +135,22 @@ button {
   padding-right: 15px;
   border: none;
   border-radius: 50%;
-  background-color: #1c1b1b;
-
+  transition: .3s;
+  background-color: black;
 }
+
+.botaoPMobile {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 50%;
+  transition: .3s;
+  background-color: transparent;
+}
+
+
 
 #search-container {
   position: relative;
@@ -1013,7 +1027,7 @@ margin-bottom: 20px;
   .titulo3 h2 {
     font-size: 20px;
   }
-  
+
 
 
 }

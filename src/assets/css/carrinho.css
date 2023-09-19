@@ -148,7 +148,7 @@ body {
     color: var(--cor-secundaria);
 }
 
-.carrinho #pagar {
+.carrinho #comprar {
     font: 500 1rem 'Poppins';
     color: white;
     cursor: pointer;
@@ -161,7 +161,7 @@ body {
 
 }
 
-.carrinho .pagar:hover {
+.carrinho .comprar:hover {
     background-color: #2a2f43f1;
 }
 /* cabecalho */

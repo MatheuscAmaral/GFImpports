@@ -22,7 +22,7 @@ function goBack() {
     
     const productDetailsContainer = document.getElementById('itens-carrinho');
     
-    const preco = document.getElementById('pagar')
+    const preco = document.getElementById('comprar')
     // Função para exibir os detalhes do produto na página
     function showProductDetails(product) {
     
@@ -49,28 +49,12 @@ function goBack() {
         </div>
       </li>
     `;
-    enviarMensagemNoWhatsApp();
 
  
-    function enviarMensagemNoWhatsApp() {
-        const userLogado = JSON.parse(localStorage.getItem("userLogado"));
-      // Número de telefone para o qual você deseja enviar a mensagem
-      const numeroDeTelefone = "5531997066818";
-  
-      // Texto da mensagem, incluindo o título do produto
-      const mensagem = `Ola%20GF%20Impports, Meu nome é ${userLogado.nome}, %20dei%20uma%20olhada%20nos%20produtos%20do%20site%20e%20me%20interessei%20pelo%20produto,%20${product.title}, no valor de ${product.price} reais, ${product.type}!`;
-  
-      // Construa o URL do link do WhatsApp
-      const urlDoWhatsApp = `https://api.whatsapp.com/send?phone=${numeroDeTelefone}&text=${mensagem}`;
-  
-      // Redirecione o navegador para o link do WhatsApp
-      window.location.href = urlDoWhatsApp;
-  }
+    
   
   // Exemplo de uso: Chame essa função com o título do produto desejado
 
-  
-    
     // Adicionar o conteúdo HTML ao contêiner na página
     productDetailsContainer.innerHTML = htmlContent;
     
@@ -98,8 +82,29 @@ function goBack() {
       })
 
       preco.innerHTML = `Pagar R$${product.price}`
+      
 
+      const comprarButton = document.getElementById('comprar');
+      comprarButton.addEventListener('click', enviarMensagemNoWhatsApp);
+      
+          
+
+      function enviarMensagemNoWhatsApp() {
+        const userLogado = JSON.parse(localStorage.getItem("userLogado"));
+      // Número de telefone para o qual você deseja enviar a mensagem
+      const numeroDeTelefone = "5531997066818";
+
+      // Texto da mensagem, incluindo o título do produto
+      const mensagem = `Ola%20GF%20Impports, Meu nome é ${userLogado.nome}, %20dei%20uma%20olhada%20nos%20produtos%20do%20site%20e%20me%20interessei%20pelo%20produto,%20${product.title}, no valor de ${product.price} reais, ${product.type}!`;
+
+      // Construa o URL do link do WhatsApp
+      const urlDoWhatsApp = `https://api.whatsapp.com/send?phone=${numeroDeTelefone}&text=${mensagem}`;
+
+      // Redirecione o navegador para o link do WhatsApp
+      window.location.href = urlDoWhatsApp;
+      }
     }
+
     
     function deleteP() {
       productDetailsContainer.innerHTML = `<div id="semProdutos" style="display: flex; flex-direction: column; gap: 1rem; align-items: center; margin-top: 30px; text-align: center; border: 1px solid rgb(179, 179, 179); padding: 20px;">
