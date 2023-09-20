@@ -127,32 +127,8 @@
       </div>
     </section>
 
-    <h4 style="text-align: center; text-decoration: underline; margin-bottom: 30px;">Categorias</h4>
-    <div id="categories" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 30px;">
-      <div style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 50px;">
-        <a href="/src/assets/html/iphones.html">
-          <button style="padding-top: 20px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px; border-radius: 50%; border: none;"><i class="fa-solid fa-mobile-screen-button fa-xl" style="color: #000000;"></i></button>
-        </a>
-        <span style="font-size: 13px;">Celulares</span>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <a href="/src/assets/html/macbooks.html">
-          <button style="padding-top: 20px; padding-bottom: 20px; padding-left: 20px; padding-right: 20px; border-radius: 50%; border: none;"><i class="fa-solid fa-laptop fa-xl" style="color: #000000;"></i></button>
-        </a>
-        <span style="font-size: 13px;">Notebooks</span>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <a href="/src/assets/html/ipads.html">
-          <button style="padding-top: 20px; padding-bottom: 20px; padding-left: 25px; padding-right: 25px; border-radius: 50%; border: none;"><i class="fa-solid fa-tablet-screen-button fa-xl" style="color: #000000;"></i></button>
-        </a>
-        <span style="font-size: 13px;">Tablets</span>
-      </div>
-      <div style="display: flex; flex-direction: column; align-items: center;">
-        <a href="/src/assets/html/applewatch.html">
-          <button style="padding-top: 20px; padding-bottom: 20px; padding-left: 23px; padding-right: 23px; border-radius: 50%; border: none;"><img src="/src/images/watch-smart.png" alt=""></button>
-        </a>
-        <span style="font-size: 13px;">Relogios</span>
-      </div>  
+    <div id="categoriasss">
+      
     </div>
 
     <h3 id="iphImp" style="text-align: center; margin-bottom: 60px;">iPhones Importados</h3>
@@ -319,6 +295,7 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
+          const categoriasss = document.getElementById('categoriasss')
 
 
           if (width <= 500) {
@@ -328,6 +305,65 @@
             produtosAp2Mobile.style.display = 'flex'
             const produtosAp2Mobile3 = document.getElementById('produtosAp2Mobile3')
             produtosAp2Mobile3.style.display = 'flex'
+
+            categoriasss.innerHTML = `<h4 style="text-align: center; text-decoration: underline; margin-bottom: 30px;">Categorias</h4>
+                                        <div id="categories" style="display: flex; justify-content: center; gap: 1rem; margin-bottom: 30px;">
+                                          <div style="display: flex; flex-direction: column; align-items: center;  margin-bottom: 50px;">
+                                            <a href="/src/assets/html/iphones.html">
+                                              <button style="padding-top: 15px; padding-bottom: 15px; padding-left: 20px; padding-right: 20px; border-radius: 50%; border: none;"><img src="/src//images/iphoIcon.png"  width="30px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Celulares</span>
+                                          </div>
+                                          <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <a href="/src/assets/html/macbooks.html">
+                                              <button style="padding-top: 15px; padding-bottom: 15px; padding-left: 14px; padding-right: 14px; border-radius: 50%; border: none;"><img src="/src//images/macbIcon.png"  width="40px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Notebooks</span>
+                                          </div>
+                                          <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <a href="/src/assets/html/ipads.html">
+                                              <button style="padding-top: 15px; padding-bottom: 15px; padding-left: 16px; padding-right: 16px; border-radius: 50%; border: none;"><img src="/src/images/ipadIcon.png" width="40px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Tablets</span>
+                                          </div>
+                                          <div style="display: flex; flex-direction: column; align-items: center;">
+                                            <a href="/src/assets/html/applewatch.html">
+                                              <button style="padding-top: 15px; padding-bottom: 15px; padding-left: 16px; padding-right: 16px; border-radius: 50%; border: none;"><img src="/src/images/watchIcon.png" width="40px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Relogios</span>
+                                          </div>  
+                                        </div>`
+          }
+
+          else {
+            categoriasss.innerHTML = `<h4 style="text-align: center; text-decoration: underline; margin-bottom: 30px;">Categorias</h4>
+                                        <div id="categories" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 30px;">
+                                          <div style="display: flex; flex-direction: column; align-items: center; gap: .5rem;  margin-bottom: 50px;">
+                                            <a href="/src/assets/html/iphones.html">
+                                              <button style="padding-top: 20px; padding-bottom: 20px; padding-left: 27px; padding-right: 27px; border-radius: 50%; border: none;"><img src="/src//images/iphoIcon.png"  width="40px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Celulares</span>
+                                          </div>
+                                          <div style="display: flex; flex-direction: column;gap: .5rem; align-items: center;">
+                                            <a href="/src/assets/html/macbooks.html">
+                                              <button style="padding-top: 22px; padding-bottom: 22px; padding-left: 22px; padding-right: 22px; border-radius: 50%; border: none;"><img src="/src//images/macbIcon.png"  width="50px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Notebooks</span>
+                                          </div>
+                                          <div style="display: flex; flex-direction: column;gap: .5rem; align-items: center;">
+                                            <a href="/src/assets/html/ipads.html">
+                                              <button style="padding-top: 22px; padding-bottom: 22px; padding-left: 22px; padding-right: 22px; border-radius: 50%; border: none;"><img src="/src/images/ipadIcon.png" width="50px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Tablets</span>
+                                          </div>
+                                          <div style="display: flex; flex-direction: column; gap: .5rem;  align-items: center;">
+                                            <a href="/src/assets/html/applewatch.html">
+                                              <button style="padding-top: 22px; padding-bottom: 22px; padding-left: 22px; padding-right: 22px; border-radius: 50%; border: none;"><img src="/src/images/watchIcon.png" width="50px"></button>
+                                            </a>
+                                            <span style="font-size: 13px;">Relogios</span>
+                                          </div>  
+                                        </div>`
+              categoriasss.style.marginBottom = '80px'
           }
 
         let hideNavTimeout;
