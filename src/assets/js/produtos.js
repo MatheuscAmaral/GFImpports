@@ -1026,7 +1026,7 @@ function renderProducts(products) {
   
         divProducts.innerHTML = `
         <div class="cards" style="width: 14rem;">
-        <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+        <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
         <div class="card-body" style="display: flex; flex-direction: column;">
           <h6 class="card-text">${product.title}</h6>
           <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; align-items: center;">
