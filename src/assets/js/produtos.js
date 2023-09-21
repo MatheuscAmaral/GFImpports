@@ -1149,10 +1149,10 @@ function renderCardsMobile() {
 
             const cardHTML = `
             <div class="cards" style="width: 9.5rem;">
-                <a href="#"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
+                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
                 <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
                         <div style="display: flex; flex-direction: column; gap: 1rem"> 
                             <div style="display: flex; gap: .3rem; font-size: 14px">
                                 ${product.star}
@@ -1164,10 +1164,6 @@ function renderCardsMobile() {
                         </div>
                         <span style="font-size: 12px">${product.payment}</span> 
                     </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
-                        <p class="compras">COMPRAR</p>
-                    </a>
                 </div>
             </div>
         `;
@@ -1239,10 +1235,10 @@ function renderCardsMobile2() {
 
             const cardHTML = `
             <div class="cards" style="width: 9.5rem;">
-                <a href="#"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
+                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
                 <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
                         <div style="display: flex; flex-direction: column; gap: 1rem"> 
                             <div style="display: flex; gap: .3rem; font-size: 14px">
                                 ${product.star}
@@ -1254,10 +1250,6 @@ function renderCardsMobile2() {
                         </div>
                         <span style="font-size: 12px">${product.payment}</span> 
                     </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
-                        <p class="compras">COMPRAR</p>
-                    </a>
                 </div>
             </div>
         `;
@@ -1327,10 +1319,10 @@ function renderCardsMobile3() {
 
             const cardHTML = `
             <div class="cards" style="width: 9.5rem;">
-                <a href="#"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
+                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
                 <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
                         <div style="display: flex; flex-direction: column; gap: 1rem"> 
                             <div style="display: flex; gap: .3rem; font-size: 14px">
                                 ${product.star}
@@ -1342,10 +1334,6 @@ function renderCardsMobile3() {
                         </div>
                         <span style="font-size: 12px">${product.payment}</span> 
                     </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
-                        <p class="compras">COMPRAR</p>
-                    </a>
                 </div>
             </div>
         `;

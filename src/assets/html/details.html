@@ -159,6 +159,16 @@
 
     <div id="result" style="display: flex; flex-direction: column; margin-top: 100px; align-items: center; gap: 2rem;">
       <h5>Mais Vendidos</h5>
+      <div id="maisVendidosMobile" style="margin-bottom: 250px; display: flex; gap: 0rem; align-items: center;">
+        <button class="botaoPMobile" id="prevButton10Mobile"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
+        <div class="slider-container">
+          <div  id="cardsWrapper10Mobile" style="display: flex; gap: .5rem;">
+
+          </div>
+        </div>
+        <button class="botaoPMobile" id="nextButton10Mobile"><i class="fa-solid fa-angle-right fa-lg" style="color: #040404;"></i></button>
+    </div>
+
       <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
           <button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
           <div class="slider-container">
@@ -168,6 +178,7 @@
           </div>
           <button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
       </div>
+
     </div>
 </div>
       <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
@@ -270,6 +281,7 @@ function renderCards10() {
         const card = document.createElement("div");
         card.classList.add("cards");
 
+
         const card1HTML = `
         <div class="cards" style="width: 14rem;">
         <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
@@ -323,6 +335,9 @@ nextButton10.addEventListener("click", () => {
 renderCards10();
 
 
+const maisVendidosMobile = document.getElementById('maisVendidosMobile')
+
+
 
           // Função para obter o ID do produto da URL da página
       function getProductIdFromURL() {
@@ -343,6 +358,8 @@ renderCards10();
         const width = innerWidth;
 
         if(width > 500) {
+
+          maisVendidosMobile.innerHTML = ''
           // Construir o conteúdo HTML com os detalhes do produto
         const htmlContent = `
                   <div id="detaislProd" style="display: flex; flex-direction: column; gap: 1rem">
@@ -412,43 +429,142 @@ renderCards10();
         
 
         else {
+
+                      
+          const cardsWrapper10 = document.getElementById("cardsWrapper10Mobile");
+          const prevButton10 = document.getElementById("prevButton10Mobile");
+          const nextButton10 = document.getElementById("nextButton10Mobile");
+
+          const cardWidth10Mobile = 320; // Largura de cada card
+          const cardsPerPage10Mobile = 2; // Quantidade de cards exibidos por página
+          let currentPage10Mobile = 0;
+
+          // Escolha os índices dos produtos que você deseja exibir
+          const startProductIndex10Mobile = 30; // Índice do primeiro produto desejado
+          const endProductIndex10Mobile = 45;   // Índice do último produto desejado (excluído)
+          const iphonesProdutos = document.getElementById('iphonesProdutos')
+          iphonesProdutos.innerHTML = ''
+
+
+          function renderCards10Mobile() {
+              cardsWrapper10Mobile.innerHTML = "";
+
+              // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+              const startIndex = currentPage10Mobile * cardsPerPage10Mobile + startProductIndex10Mobile;
+              const endIndex = Math.min(startIndex + cardsPerPage10Mobile, endProductIndex10Mobile + 1);
+
+              for (let i = startIndex; i < endIndex; i++) {
+                  const product = products[i];
+
+                  const card = document.createElement("div");
+                  card.classList.add("cards");
+
+
+                  const card1HTML = `
+                  <div class="cards" style="width: 9.5rem;">
+                          <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
+                          <div class="card-body" style="display: flex; flex-direction: column;">
+                              <h6 class="card-text">${product.title}</h6>
+                              <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
+                                  <div style="display: flex; flex-direction: column; gap: 0rem"> 
+                                      <div style="display: flex; gap: .3rem; font-size: 14px; margin-bottom: 10px">
+                                          ${product.star}
+                                      </div>
+                                      <div style="display: flex; flex-direction: column; ">
+                                          <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                          <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
+                                      </div>
+                                  </div>
+                                  <span style="font-size: 12px">${product.payment}</span> 
+                              </div>
+                          </div>
+                      </div>
+                  `;
+
+                  card.innerHTML = card1HTML;
+                  cardsWrapper10Mobile.appendChild(card);
+              }
+
+              prevButton10Mobile.disabled = currentPage10Mobile === 0;
+              nextButton10Mobile.disabled = endIndex >= endProductIndex10Mobile + 1;
+          }
+
+          prevButton10Mobile.addEventListener("click", () => {
+              if (currentPage10Mobile > 0) {
+                  currentPage10Mobile--;
+                  renderCards10Mobile();
+              }
+          });
+
+          nextButton10Mobile.addEventListener("click", () => {
+              const startIndex = currentPage10Mobile * cardsPerPage10Mobile + startProductIndex10Mobile;
+              const endIndex = Math.min(startIndex + cardsPerPage10Mobile, endProductIndex10Mobile + 1);
+
+              if (endIndex < endProductIndex10Mobile + 1) {
+                  currentPage10Mobile++;
+                  renderCards10Mobile();
+              }
+          });
+
+          // Inicialização
+          renderCards10Mobile();
+
+                    
+
           const htmlContent = `
-              <div class="Whey_Body_Action">
-                <div id="toppp" style="display: flex; flex-direction: column; gap: 1rem">
-                  <div class="t2">
-                    <h4 id="product-title">${product.title}</h4>
-                  </div>
-                  <div id="topLow" style="display: flex; align-itens: center; gap: 8rem">
-                    <span style="font-size: 12px">Código: ${product.id}</span>
-                    <div id="rating">
-                          <i class="fa-solid fa-star fa-sm" style="color: #e6d200;"></i>
-                          <i class="fa-solid fa-star fa-sm" style="color: #e6d200;"></i>
-                          <i class="fa-solid fa-star fa-sm" style="color: #e6d200;"></i>
-                          <i class="fa-solid fa-star fa-sm" style="color: #e6d200;"></i>
-                          <i class="fa-solid fa-star fa-sm" style="color: #e6d200 ;"></i>
+          <div id="detaislProd" style="display: flex; flex-direction: column; gap: 1rem">
+                    <div id="caminho" style="color: gray; font-size: 10px; padding: 5px; text-align: center;">
+                      <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > ${product.title}
                     </div>
-                  </div>
-                </div>
-                  <img id="product-image" src="${product.poster}" style="width: 240px; height: 270px;">
-                  <div class="preco" style="display: flex; gap: 1rem">
-                    <div id="superior">
-                      <div class="t3">
-                        <h1 id="product-price">R$ ${product.price}</h1>
-                        <div class="t3">(Cada)</div>
+                    <div id="contentt" style="display: flex; flex-direction: column; gap: 4rem; justify-content: center; background-color: #fff; border-radius: 8px; padding: 30px; ">
+                      <div id="left" style="display: flex; flex-direction: column;">
+                        <img id="product-image" src="${product.poster}" onclick="foto1()" style="width: 280px; height: 280px;">
+                        <div style="display: flex; gap: 1rem; justify-content: center;">
+                          <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px; display: flex; justify-content: center; ">
+                             <img class="poster" src="${product.poster}" onclick="foto1()" style="width: 45px; height: 50px; ">
+                           </div>
+                           <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px; display: flex; justify-content: center; ">
+                             <img class="poster" src="${product.poster2}" onclick="foto2()" style="width: 50px; height: 50px; ">
+                           </div>
+                           <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px;">
+                            <img class="poster" src="${product.poster3}" onclick="foto3()" style="width: 50px; height: 60px;">
+                           </div>
+                        </div>
                       </div>
-                      <label for="size">Tamanho: <span id="product-size">${product.size}</span></label>
-                      <button id="size" style="background-color: black; padding: 10px"><strong>${product.size}</strong></button>
-                    </div>
-                    <div id="right" style="">  
-                      <div id="estoque">
-                        Item em estoque <br>
-                        <b>Comprar agora</b>
+                      <div id="right" style="display: flex; flex-direction: column; gap: 1.5rem">
+                        <div id="topp">
+                          <span style="font-size: 24px; color: black">${product.title}</span>
+                          <span style="font-size: 12px; display: flex; gap: 3px; color: #4b4b4b"><b>Código:</b> ${product.id} </span>
+                        </div>
+                        <div id="pricee" style="display: flex; flex-direction: column; gap: 1rem; ">
+                           <div style="display: flex; flex-direction: column; justify-content: center;">
+                              <span style="font-size: 14px; text-decoration: line-through">R$ ${product.oldPrice},00</span>
+                              <span style="font-size: 29px">R$ ${product.price},00 <span style="font-size: 14px; color: #4b4b4b">no PIX</span></span>
+                              <span style="font-size: 16px">${product.payment}</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-itens: center; justify-content: center; gap: .5rem">
+                          <div>
+                            <i class="fa-solid fa-truck-fast fa-lg" style="color: #616161;"></i>
+                            <span style="font-size: 14px; color: gray">${product.type}</span>
+                          </div>
+                            <div style="margin-left: 5px; align-itens: center;">
+                              <i class="fa-solid fa-sd-card fa-lg" style="color: #626364;"></i>
+                              <span style="font-size: 14px; color: gray; margin-left: 5px">${product.size}</span>
+                            </div>
+                            <div>
+                              <i class="fa-solid fa-tag fa-flip-horizontal fa-lg" style="color: #666666;"></i>
+                              <span style="font-size: 14px; color: gray; margin-left: 5px"> ${product.condition}</span>
+                            </div>
+                        </div>
+                        <div >
+                          <a href="/src/assets/html/carrinho.html?id=${product.id}" style="display: flex; flex-direction: column; align-itens: center; justify-content: center; padding: 15px; background-color: black; text-align: center; border-radius: 16px; color: white; text-decoration: none;">
+                            <span>Comprar</span>
+                        </a>  
+                        </div>
                       </div>
-                      <a href="/src/assets/html/carrinho.html?id=${product.id}"><p class="comprass" >ADICIONAR AO CARRINHO</p></a>
-                      <a href="/src/assets/html/carrinho.html?id=${product.id}"><p class="compras2" style="background-color: black;" > COMPRAR AGORA</p></a>
                     </div>
-                  </div> 
-                </div>
+                  </div>
         `;
         productDetailsContainer.innerHTML = htmlContent;
         }
