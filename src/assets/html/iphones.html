@@ -75,6 +75,9 @@
         <div id="produtos8">
   
         </div>
+        <div id="produtos9">
+  
+        </div>
        </div>
   </div>
   <div id="produtos">
@@ -484,6 +487,47 @@
           productsContainer8.style.marginTop = '10px';
         });
 
+         // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+         const productsContainer9 = document.getElementById('produtos9');
+
+            // Obtém os três primeiros produtos do vetor products
+            const produtosArray9 = products.slice(32, 36);
+
+            // Itera sobre os produtos e cria os cards na div productsContainer
+            produtosArray9.forEach(produto => {
+              const cardHTML1 = `
+              <div class="cards" style="width: 14rem;">
+                      <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                      <div class="card-body" style="display: flex; flex-direction: column;">
+                        <h6 class="card-text">${produto.title}</h6>
+                        <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                          <div style="display: flex; gap: .3rem">
+                            ${produto.star}
+                          </div>
+                          <div style="display: flex; flex-direction: column; ">
+                            <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
+                            <span>R$${produto.price.toFixed(2)}</span>
+                          </div>
+                          </div>
+                          <span style="font-size: 14px">${produto.payment}</span> 
+                        </div>
+                        <!-- Adicione o ID do produto na URL do link -->
+                        <a href="/src/assets/html/details.html?id=${produto.id}" style="text-decoration: none">
+                          <p class="compras">COMPRAR</p>
+                        </a>
+                      </div>
+                    </div>
+              `;
+
+              productsContainer9.innerHTML += cardHTML1;
+              productsContainer9.style.display = 'flex';
+              productsContainer9.style.gap = '.5rem';
+              productsContainer9.style.justifyContent = 'center';
+              productsContainer9.style.marginTop = '10px';
+            });
+
+
         const justPc = document.getElementById('justPc');
             justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 490px;">
       <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
@@ -492,7 +536,7 @@
       <div id="topFiltro"  style="display: flex; flex-direction: column; width: 65.5%; border-radius: 8px; padding: 30px; background-color: white;">
         <b style="color: gray; font-size: 24px;">iPhones</b>
         <hr></hr>
-        <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">32</b> produtos</span>
+        <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">36</b> produtos</span>
         <hr size="10px"></hr>
         <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
       </div>
@@ -508,14 +552,14 @@
                                   <div id="topFiltro"  style="display: flex; flex-direction: column; width: 95%; border-radius: 8px; padding: 30px; background-color: #f1f1f1;">
                                     <b style="color: gray; font-size: 24px;">iPhones</b>
                                     <hr></hr>
-                                    <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">32</b> produtos</span>
+                                    <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">36</b> produtos</span>
                                     <hr size="10px"></hr>
                                     <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
                                 </div>`
 
             const proteinasMobile10 = document.getElementById('firstP');
 
-            const suplementosProteinasMobile10 = products.slice(0, 16);
+            const suplementosProteinasMobile10 = products.slice(0, 18);
             suplementosProteinasMobile10.forEach((products) => {
               const cardmobileHTML = `<div class="menu-sessao-bloco-card" >
                           <div class="cardM" style="width: 24.3rem;">
@@ -537,7 +581,7 @@
 
             const proteinasMobile2 = document.getElementById('secondP');
 
-            const suplementosProteinasMobile2 = products.slice(16, 32);
+            const suplementosProteinasMobile2 = products.slice(18, 36);
             suplementosProteinasMobile2.forEach((products) => {
               const cardmobileHTML = `<div class="menu-sessao-bloco-card" >
                           <div class="cardM" style="width: 24.3rem;">
