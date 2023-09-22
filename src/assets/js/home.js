@@ -51,7 +51,7 @@ if (width <= 500) {
   </nav>
   </header>
   <div id="searchbar">
-    <input class="search_input"  id="barraPesquisa" onclick="searchh()" type="text" name="" placeholder="Qual dispositivo apple você precisa?">
+    <input class="search_input"  id="barraPesquisa"  type="text" name="" placeholder="Qual dispositivo apple você precisa?">
     <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
     </div>`;
       cabecalho.style.display = "flex";
@@ -105,7 +105,7 @@ function mobile() {
     </div>
     <div id="superiorMid">
       <div class="searchbar">
-            <input class="search_input" onclick="searchh()"
+            <input class="search_input" style="margin-top: 30px;">
              id="barraPesquisa" type="text" name="" placeholder="Qual dispositivo você precisa?">
             <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
       </div>
