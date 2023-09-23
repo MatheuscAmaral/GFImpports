@@ -23,11 +23,7 @@
     position: relative;
 }
 
-.cards- {
-    display: flex;
-    gap: .5rem;
-    transition: transform 0.3s ease; /* Adicione a transição para o transform */
-}
+
 
 /* Adicione estilos de transição */
 #topnav a {
@@ -137,27 +133,23 @@
           <div id="iphones">
               <a href="/src/assets/html/iphones.html"><img src="/src/images/wallp1.png" width="320px"></a>
           </div>
-          <div id="produtosAp2" style="display: flex; gap: .5rem;">
+          <div id="produtosAp2" style="display: flex; gap: .5rem; align-items: center;">
               <button class="botaoP" id="prevButton"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-              <div class="slider-container">
-                  <div class="cards-" id="cardsWrapper" style="display: flex; gap: .5rem;">
+                  <div class="cards" id="cardsWrapper" style="display: flex; gap: .5rem;">
                       <!-- Os cartões serão adicionados aqui pelo JavaScript -->
                   </div>
-              </div>
               <button class="botaoP" id="nextButton"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
           </div>
       </div>
-  </div>
+    </div>
 
 
       <div style="display: flex; gap: 5rem; align-items: center; justify-content: center; margin-bottom: 100px;">
         <div id="produtosAp2Mobile" style="display: none; gap: 0rem; align-items: center;">
             <button class="botaoPMobile" id="prevButtonMobile"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
-            <div class="slider-container">
-                <div class="cards-" id="cardsWrapperMobile" style="display: flex; gap: .2rem;">
+                <div class="cards" id="cardsWrapperMobile" style="display: flex; gap: .2rem;">
                     <!-- Os cartões serão adicionados aqui pelo JavaScript -->
                 </div>
-            </div>
             <button class="botaoPMobile" id="nextButtonMobile"><i class="fa-solid fa-angle-right fa-lg" style="color: #000000; "></i></button>
         </div>
     </div>
@@ -167,11 +159,9 @@
         <div id="macbooksProdutos" style="margin-bottom: 0px; display: flex; gap: 10rem;">
           <div id="produtosAp22" style="display: flex; gap: .5rem; align-items: center;">
             <button class="botaoP" id="prevButton2"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-              <div class="slider-container">
-                <div class="cards-" id="cardsWrapper2"  style="display: flex; gap: .5rem;">
+                <div class="cards" id="cardsWrapper2"  style="display: flex; gap: .5rem;">
 
                 </div>
-              </div>
               <button class="botaoP" id="nextButton2"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
           </div>
           <div id="macbooks">
@@ -182,42 +172,37 @@
         <div style="display: flex; gap: 5rem; align-items: center; justify-content: center; margin-bottom: 100px;">
           <div id="produtosAp2Mobile2" style="display: none; gap: 0rem; align-items: center;">
               <button class="botaoPMobile" id="prevButtonMobile2"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000; "></i></button>
-              <div class="slider-container">
-                  <div class="cards-" id="cardsWrapperMobile2" style="display: flex; gap: .2rem;">
+                  <div class="cards" id="cardsWrapperMobile2" style="display: flex; gap: .2rem;">
                       <!-- Os cartões serão adicionados aqui pelo JavaScript -->
                   </div>
-              </div>
               <button class="botaoPMobile" id="nextButtonMobile2"><i class="fa-solid fa-angle-right fa-lg" style="color: #000000;"></i></button>
           </div>
       </div>
 
         <h3 id="IpadsImp" style="text-align: center; margin-bottom: 60px;">Ipads Importados</h3>
-        <div id="IpadsProdutos" style="display: flex; gap: 10rem;">
-          <div id="ipads">
-            <a href="/src/assets/html/ipads.html"><img src="/src/images/wallp3.png" width="320px"></a>
-          </div>
-          <div id="produtosAp23" style="display: flex; gap: .5rem;">
-            <div id="produtosAp2" style="display: flex; gap: .5rem;">
-              <button class="botaoP" id="prevButton3"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-          <div class="slider-container">
-            <div class="cards-" id="cardsWrapper3"  style="display: flex; gap: .5rem;">
-
-            </div>
-          </div>
-          <button class="botaoP" id="nextButton3"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
-            </div>
+        <div id="IpadsProdutos" style="margin-bottom: 0px; display: flex; gap: 5rem; align-items: center;">
+          <div style="display: flex; gap: 10rem;">
+              <div id="ipads">
+                  <a href="/src/assets/html/ipads.html"><img src="/src/images/wallp3.png" width="320px"></a>
+              </div>
+              <div id="produtosAp23" style="display: flex; gap: .5rem; align-items: center;">
+                  <button class="botaoP" id="prevButton3"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+                      <div class="cards" id="cardsWrapper3" style="display: flex; gap: .5rem;">
+                          <!-- Os cartões serão adicionados aqui pelo JavaScript -->
+                      </div>
+                  <button class="botaoP" id="nextButton3"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
+              </div>
           </div>
         </div>
+
         </div>
 
         <div style="display: flex; gap: 5rem; align-items: center; justify-content: center; margin-bottom: 70px;">
           <div id="produtosAp2Mobile3" style="display: none; gap: 0rem; align-items: center;">
               <button class="botaoPMobile" id="prevButtonMobile3"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
-              <div class="slider-container">
-                  <div class="cards-" id="cardsWrapperMobile3" style="display: flex; gap: .2rem;">
+                  <div class="cards" id="cardsWrapperMobile3" style="display: flex; gap: .2rem;">
                       <!-- Os cartões serão adicionados aqui pelo JavaScript -->
                   </div>
-              </div>
               <button class="botaoPMobile" id="nextButtonMobile3"><i class="fa-solid fa-angle-right fa-lg" style="color: #000000;"></i></button>
           </div>
       </div>

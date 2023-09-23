@@ -1445,8 +1445,8 @@ const cardsPerPageMobile3 = 2; // Quantidade de cartões exibidos por página
 let currentPageMobile3 = 0;
 
 // Escolha os índices dos produtos que você deseja exibir
-const startProductIndex1Mobile3 = 55; // Índice do primeiro produto desejado
-const endProductIndex1Mobile3 = 62;   // Índice do último produto desejado (excluído)
+const startProductIndex1Mobile3 = 0; // Índice do primeiro produto desejado
+const endProductIndex1Mobile3 = 36;   // Índice do último produto desejado (excluído)
 
 function renderCardsMobile3() {
     cardsWrapperMobile3.innerHTML = "";
@@ -1488,7 +1488,6 @@ function renderCardsMobile3() {
         
         card.innerHTML = cardHTML;
         cardsWrapperMobile3.appendChild(card);
-        
 
         // Adiciona um pequeno atraso para que a transição seja visível
         setTimeout(() => {

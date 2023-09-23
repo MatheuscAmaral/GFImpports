@@ -152,11 +152,14 @@ function mobile() {
               <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
         </div>
         <div id="enter">
+          <div class="deslogar">
+            <a  href="home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
+          </div>
         </div>
       </div>
       <div id="low">
       <div class="mobileCard" style="color: #fff;">
-      <a style="color: #fff;"  href="/src/assets/html/iphones.html">iPhones</a>
+      <a style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
       </div>
       <div class="mobileCard">
         <a href="/src/assets/html/macbooks.html">MacBooks</a>
@@ -179,10 +182,6 @@ function mobile() {
     main.innerHTML = ''
   }
 
-  function sair() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("userLogado");
-  }
 }
 
 function mobile() {
@@ -200,7 +199,7 @@ function mobile() {
       </div>
       <div id="enter">
         <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000;"></i>
-        <a href="/assets/html/login.html">Entrar/Cadastrar</a>
+        <a href="/src/assets/html/login.html">Entrar/Cadastrar</a>
       </div>
     </div>
     <div id="low">
@@ -234,13 +233,18 @@ function mobile() {
     <div id="superior">
       <div id="superiorTop">
         <div id="user"><strong> Olá, ${userLogado.nome}</strong></div>
-        <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
+        <a href="#"> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
       </div>
       <div id="superiorMid">
         <div class="searchbar">
               <input class="search_input" type="text" onclick="searchh()" name="" placeholder="Qual dispositivo você precisa?">
               <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
         </div>
+        <div id="enter">
+        <div class="deslogar">
+          <a href="/home.html" id="botao" onclick="sair()" style="display: flex; gap: .5rem"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i>Sair</a>
+        </div>
+      </div>
         
       </div>
       <div id="low">
@@ -279,4 +283,10 @@ function goBack() {
 
 function searchh() {
   window.location.href = '/src/assets/html/search.html'
+}
+
+
+function sair() {
+  localStorage.removeItem("token");
+  localStorage.removeItem("userLogado");
 }
