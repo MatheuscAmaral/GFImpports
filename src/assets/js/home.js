@@ -22,7 +22,11 @@ if (width <= 500) {
         </div>
       </div>
     </nav>
-</nav>
+  </nav>
+  <div id="searchbar">
+    <input class="search_input"  id="barraPesquisa"  type="text" name="" placeholder="Qual dispositivo apple você precisa?">
+    <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
+  </div>
 </header>
 `;
     cabecalho.style.display = "flex";
@@ -53,7 +57,7 @@ if (width <= 500) {
   <div id="searchbar">
     <input class="search_input"  id="barraPesquisa"  type="text" name="" placeholder="Qual dispositivo apple você precisa?">
     <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
-    </div>`;
+  </div>`;
       cabecalho.style.display = "flex";
       cabecalho.style.flexDirection = "column";
       cabecalho.style.gap = '0rem'
@@ -104,11 +108,6 @@ function mobile() {
       <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
     </div>
     <div id="superiorMid">
-      <div class="searchbar">
-            <input class="search_input" style="margin-top: 30px;">
-             id="barraPesquisa" type="text" name="" placeholder="Qual dispositivo você precisa?">
-            <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
-      </div>
       <div id="enter">
         <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000;"></i>
         <a href="/src/assets/html/login.html">Entrar/Cadastrar</a>
@@ -147,10 +146,6 @@ function mobile() {
         <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
       </div>
       <div id="superiorMid">
-        <div class="searchbar">
-              <input class="search_input"  onclick="searchh()" id="barraPesquisa" type="text" name="" placeholder="Qual dispositivo você precisa?">
-              <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
-        </div>
         <div id="enter">
           <div class="deslogar">
             <a  href="home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
@@ -193,10 +188,6 @@ function mobile() {
       <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
     </div>
     <div id="superiorMid">
-      <div class="searchbar">
-            <input class="search_input" onclick="searchh()" type="text" name="" placeholder="Qual dispositivo você precisa?">
-            <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-      </div>
       <div id="enter">
         <i class="fa-solid fa-right-to-bracket fa-xl" style="color: #000000;"></i>
         <a href="/src/assets/html/login.html">Entrar/Cadastrar</a>
@@ -236,10 +227,6 @@ function mobile() {
         <a href="#"> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
       </div>
       <div id="superiorMid">
-        <div class="searchbar">
-              <input class="search_input" type="text" onclick="searchh()" name="" placeholder="Qual dispositivo você precisa?">
-              <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-        </div>
         <div id="enter">
         <div class="deslogar">
           <a href="/home.html" id="botao" onclick="sair()" style="display: flex; gap: .5rem"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i>Sair</a>
