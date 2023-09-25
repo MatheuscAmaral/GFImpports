@@ -23,11 +23,11 @@ if (width <= 500) {
       </div>
     </nav>
   </nav>
-  <div id="searchbar">
+</header>
+<div id="searchbar">
     <input class="search_input"  id="barraPesquisa"  type="text" name="" placeholder="Qual dispositivo apple você precisa?">
     <a href="#" class="search_icon"><i class="fas fa-search" pesquisarProdutos(termo)></i></a>
   </div>
-</header>
 `;
     cabecalho.style.display = "flex";
     cabecalho.style.flexDirection = "column";
