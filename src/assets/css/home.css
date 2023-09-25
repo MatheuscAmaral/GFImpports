@@ -29,6 +29,23 @@ body {
 }
 
 
+#categories img {
+ transition: 0.3s;
+}
+
+#categories img:hover {
+  transform: scale(1.1);
+}
+
+
+.cards img {
+  transition: 0.3s;
+ }
+ 
+ .cards img:hover {
+   transform: scale(1.1);
+ }
+ 
 
 
 button {
@@ -69,6 +86,7 @@ button {
 .cards {
   border-radius: 8px;
   background-color: white;
+  transition: 0.3s;
 }
 
 #lowheader a:hover {

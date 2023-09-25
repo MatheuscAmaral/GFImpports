@@ -1057,7 +1057,7 @@ const products = [
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         size: '',
         payment: 'ou até 18x de R$ ',
-        title2: 'AirPods 2ª geração',
+        title2: 'AirPods 2',
         condition: 'Lacrado',
         type: 'Importado',
         category: 'Pods'
@@ -1073,7 +1073,7 @@ const products = [
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         size: '',
         payment: 'ou até 18x de R$ ',
-        title2: 'AirPods 2ª geração',
+        title2: 'AirPods Pro 2',
         condition: 'Lacrado',
         type: 'Importado',
         category: 'Pods'
@@ -1172,26 +1172,26 @@ function renderProducts(products) {
   
         divProducts.innerHTML = `
         <div class="cards" style="width: 14rem;">
-        <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-        <div class="card-body" style="display: flex; flex-direction: column;">
-          <h6 class="card-text">${product.title}</h6>
-          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; align-items: center;">
-           <div style="display: flex; flex-direction: column; gap: 1rem"> 
-            <div style="display: flex; gap: .3rem">
-              ${product.star}
+            <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+            <div class="card-body" style="display: flex; flex-direction: column;">
+            <h6 class="card-text">${product.title}</h6>
+            <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; align-items: center;">
+            <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                <div style="display: flex; gap: .3rem">
+                ${product.star}
+                </div>
+                <div style="display: flex; flex-direction: column; ">
+                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                <span>R$${product.price.toFixed(2)}</span>
+                </div>
+                </div>
+                <span style="font-size: 14px">${product.payment}</span> 
             </div>
-            <div style="display: flex; flex-direction: column; ">
-              <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-              <span>R$${product.price.toFixed(2)}</span>
+            <!-- Adicione o ID do produto na URL do link -->
+            <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                <p class="compras">COMPRAR</p>
+            </a>
             </div>
-            </div>
-            <span style="font-size: 14px">${product.payment}</span> 
-          </div>
-          <!-- Adicione o ID do produto na URL do link -->
-          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
-            <p class="compras">COMPRAR</p>
-          </a>
-        </div>
       </div>`;
 
 
