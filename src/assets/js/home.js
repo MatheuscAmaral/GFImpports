@@ -153,26 +153,25 @@ function mobile() {
         </div>
       </div>
       <div id="low">
-      <div class="mobileCard" style="color: #fff;">
-      <a style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
+      <div class="mobileCard" style="background-color: #1e1d1d;">
+        <a style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
       </div>
-      <div class="mobileCard">
-        <a href="/src/assets/html/macbooks.html">MacBooks</a>
+      <div class="mobileCard" style="background-color: #1e1d1d;">
+        <a style="color: #fff;"  href="/src/assets/html/macbooks.html">MacBooks</a>
       </div>
-      <div class="mobileCard">
-        <a href="/src/assets/html/ipads.html">iPads</a>
+      <div class="mobileCard" style="background-color: #1e1d1d;">
+        <a style="color: #fff;" href="/src/assets/html/ipads.html">iPads</a>
       </div>
-      <div class="mobileCard">
-      <a href="/src/assets/html/applewatch.html">Apple Watch</a>
+      <div class="mobileCard" style="background-color: #1e1d1d;">
+      <a style="color: #fff;" href="/src/assets/html/applewatch.html">Apple Watch</a>
       </div>
-      <div class="mobileCard">
-      <a href="/src/assets/html/airpods.html">AirPods</a>
+      <div class="mobileCard" style="background-color: #1e1d1d;">
+      <a style="color: #fff;" href="/src/assets/html/airpods.html">AirPods</a>
       </div>
-      <div class="mobileCard">
-      <div class="mobileCard">
-      <a href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+      <div class="mobileCard" style="background-color: #1e1d1d;">
+      <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
       </div>
-      </div>
+  </div>
     </div>`
     main.innerHTML = ''
   }
@@ -194,26 +193,25 @@ function mobile() {
       </div>
     </div>
     <div id="low">
-    <div class="mobileCard" style="color: #fff;">
-    <a  style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
-  </div>
-  <div class="mobileCard">
-    <a href="/src/assets/html/macbooks.html">MacBooks</a>
-  </div>
-  <div class="mobileCard">
-    <a href="/src/assets/html/ipads.html">iPads</a>
-  </div>
-  <div class="mobileCard">
-   <a href="/src/assets/html/applewatch.html">Apple Watch</a>
-  </div>
-  <div class="mobileCard">
-   <a href="/src/assets/html/airpods.html">AirPods</a>
-  </div>
-  <div class="mobileCard">
-   <a href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
-  </div>
-
-    </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+            <a style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+            <a style="color: #fff;"  href="/src/assets/html/macbooks.html">MacBooks</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+            <a style="color: #fff;" href="/src/assets/html/ipads.html">iPads</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+          <a style="color: #fff;" href="/src/assets/html/applewatch.html">Apple Watch</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+          <a style="color: #fff;" href="/src/assets/html/airpods.html">AirPods</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+          <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+          </div>
+      </div>
   </div>`
   main.innerHTML = ''
   }
@@ -235,25 +233,24 @@ function mobile() {
         
       </div>
       <div id="low">
-      <div class="mobileCard" style="background-color: #1e1d1d;">
-      <a style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
-    </div>
-    <div class="mobileCard" style="background-color: #1e1d1d;">
-      <a style="color: #fff;"  href="/src/assets/html/macbooks.html">MacBooks</a>
-    </div>
-    <div class="mobileCard" style="background-color: #1e1d1d;">
-      <a style="color: #fff;" href="/src/assets/html/ipads.html">iPads</a>
-    </div>
-    <div class="mobileCard" style="background-color: #1e1d1d;">
-     <a style="color: #fff;" href="/src/assets/html/applewatch.html">Apple Watch</a>
-    </div>
-    <div class="mobileCard" style="background-color: #1e1d1d;">
-     <a style="color: #fff;" href="/src/assets/html/airpods.html">AirPods</a>
-    </div>
-    <div class="mobileCard" style="background-color: #1e1d1d;">
-     <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
-    </div>
-
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+            <a style="color: #fff;" href="/src/assets/html/iphones.html">iPhones</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+            <a style="color: #fff;"  href="/src/assets/html/macbooks.html">MacBooks</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+            <a style="color: #fff;" href="/src/assets/html/ipads.html">iPads</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+          <a style="color: #fff;" href="/src/assets/html/applewatch.html">Apple Watch</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+          <a style="color: #fff;" href="/src/assets/html/airpods.html">AirPods</a>
+          </div>
+          <div class="mobileCard" style="background-color: #1e1d1d;">
+          <a style="color: #fff;"href="https://api.whatsapp.com/send/?phone=5531997066818&text=ola&type=phone_number&app_absent=0"> Entre em contato conosco</a>
+          </div>
       </div>
     </div>`
     main.innerHTML = ''
