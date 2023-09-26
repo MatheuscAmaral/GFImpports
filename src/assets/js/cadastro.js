@@ -9,7 +9,7 @@ function goBack() {
 
  if(width <= 500) {
   container.innerHTML = `         
-   <div style="display: flex;  box-shadow: 0px 0px 1.5px 0px black; border-radius: 16px; width: 380px; justify-content: center; padding-bottom: 0px">
+   <div style="display: flex; border-radius: 16px; width: 380px; justify-content: center; padding-bottom: 0px">
     <section id="enter1">
       <a href="/home.html"><img src="/src/images/logo.png" width="135px"></a>
       <div id="top">
