@@ -1202,7 +1202,7 @@ function renderProducts(products) {
     <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
       <b style="color: gray; font-size: 24px;">Ver Todos</b>
       <hr></hr>
-      <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">${product.length}</b> produtos</span>
+      <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
       <hr size="10px"></hr>
       <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
   </div>`

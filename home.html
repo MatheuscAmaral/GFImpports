@@ -23,10 +23,20 @@
     position: relative;
 }
 
+@media (min-width: 550px) and (max-width: 1400px) {
+  #topnav a {
+            color: black;
+            transition: color 0.3s ease-in-out;
+            font-size: 12px;
+        }
 
+        #barraPesquisa {
+          width: 400px;
+        }
+}
 
 /* Adicione estilos de transição */
-#topnav a {
+        #topnav a {
             color: black;
             transition: color 0.3s ease-in-out;
         }
@@ -320,6 +330,189 @@
                                         </div>`
           }
 
+          else if(width > 500 && width <= 1400) {
+              categoriasss.innerHTML = `<h4 style="text-align: center; margin-bottom: 30px;">Categorias</h4>
+                                          <div id="categories" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 30px;">
+                                            <div style="display: flex; flex-direction: column; align-items: center; gap: .5rem;  margin-bottom: 50px;">
+                                              <a href="/src/assets/html/iphones.html">
+                                                <button style="padding-top: 17px; padding-bottom: 17px; padding-left: 22px; padding-right: 22px; border-radius: 50%; border: none;"><img src="/src//images/iphoIcon.png"  width="30px"></button>
+                                              </a>
+                                              <span style="font-size: 13px;">Celulares</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column;gap: .5rem; align-items: center;">
+                                              <a href="/src/assets/html/macbooks.html">
+                                                <button style="padding-top: 18px; padding-bottom: 18px; padding-left: 20px; padding-right: 20px; border-radius: 50%; border: none;"><img src="/src//images/macbIcon.png"  width="40px"></button>
+                                              </a>
+                                              <span style="font-size: 13px;">Notebooks</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column;gap: .5rem; align-items: center;">
+                                              <a href="/src/assets/html/ipads.html">
+                                                <button style="padding-top: 18px; padding-bottom: 18px; padding-left: 20px; padding-right: 20px; border-radius: 50%; border: none;"><img src="/src/images/ipadIcon.png" width="40px"></button>
+                                              </a>
+                                              <span style="font-size: 13px;">Tablets</span>
+                                            </div>
+                                            <div style="display: flex; flex-direction: column; gap: .5rem;  align-items: center;">
+                                              <a href="/src/assets/html/applewatch.html">
+                                                <button style="padding-top: 18px; padding-bottom: 18px; padding-left: 20px; padding-right: 20px; border-radius: 50%; border: none;"><img src="/src/images/watchIcon.png" width="40px"></button>
+                                              </a>
+                                              <span style="font-size: 13px;">Relogios</span>
+                                            </div>  
+                                          </div>`
+                categoriasss.style.marginBottom = '80px'
+
+                function iphoness() {
+
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                <div class="overlay-content todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-right: 100px">
+                  <a href="/src/assets/html/iphones.html"><img src="/src/images/iphone11128.png" width="75px" style="display: flex; flex-direction: column; gap: 3rem"></a>
+                  <p style="font-size: 12px">Ver todos</p>
+                </div>`;
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(0, 3);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="75px"></a>
+                        <p style="font-size: 12px">${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+
+              function macbooks() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/macbooks.html"><img src="/src/images/macbooksa.png" width="95px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p style="font-size: 12px">Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(36, 39);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="75px"></a>
+                        <p style="font-size: 12px">${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+              function iPads() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-right: 100px">
+                        <a href="/src/assets/html/ipads.html"><img src="/src/images/ipad10256.png" width="70px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p  style="font-size: 12px">Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(54 , 57);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="75px"></a>
+                        <p style="font-size: 12px">${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+              function AppleWatchs() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/applewatch.html"><img src="/src/images/applewatch.png" width="70px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p style="font-size: 12px">Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(41, 44);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="75px"></a>
+                        <p style="font-size: 12px">${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+
+              function airpodss() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/airpods.html"><img src="/src/images/airpodssssss.png" width="75px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p style="font-size: 12px">Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(62, 65);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="75px"></a>
+                        <p style="font-size: 12px">${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+            }
+          }
+
           else {
             categoriasss.innerHTML = `<h4 style="text-align: center; text-decoration: underline; margin-bottom: 30px;">Categorias</h4>
                                         <div id="categories" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 30px;">
@@ -349,6 +542,158 @@
                                           </div>  
                                         </div>`
               categoriasss.style.marginBottom = '80px'
+
+              function iphoness() {
+
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                <div class="overlay-content todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-right: 100px">
+                  <a href="/src/assets/html/iphones.html"><img src="/src/images/iphone11128.png" width="115px" style="display: flex; flex-direction: column; gap: 3rem"></a>
+                  <p>Ver todos</p>
+                </div>`;
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(0, 3);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="110px"></a>
+                        <p>${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+
+              function macbooks() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/macbooks.html"><img src="/src/images/macbooksa.png" width="155px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p>Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(36, 39);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
+                        <p>${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+              function iPads() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/ipads.html"><img src="/src/images/ipad10256.png" width="110px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p>Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(54 , 57);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
+                        <p>${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+              function AppleWatchs() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/applewatch.html"><img src="/src/images/applewatch.png" width="110px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p>Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(41, 44);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
+                        <p>${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
+
+
+              function airpodss() {
+              const productsContainerIpadss = document.getElementById('navbarr');
+              productsContainerIpadss.innerHTML = `
+                  <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
+                        <a href="/src/assets/html/airpods.html"><img src="/src/images/airpodssssss.png" width="110px" style="display: flex; flex-direction: column; gap: 1rem"></a>
+                        <p>Ver todos</p>
+                  </div>`
+
+              // Obtém os três primeiros produtos do vetor products
+              const produtosArrayIpadss = products.slice(62, 65);
+
+              // Itera sobre os produtos e cria os cards na div productsContainer
+              produtosArrayIpadss
+              .forEach(produto => {
+                const cardHTML4 = `
+                <div class="navIp" style="display: flex; gap: 1rem;">
+                    <div id="iphonesss" style="display: flex; gap: 1rem;">
+                      <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                        <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
+                        <p>${produto.title2}</p>
+                      </div>
+                    </div>
+                  </div>
+                `;
+
+                productsContainerIpadss.innerHTML += cardHTML4;
+                  
+              });
+              }
           }
 
         let hideNavTimeout;
@@ -376,157 +721,7 @@
             navbarrHovered = false;
         }
 
-        function iphoness() {
-
-        const productsContainerIpadss = document.getElementById('navbarr');
-        productsContainerIpadss.innerHTML = `
-          <div class="overlay-content todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem; margin-right: 100px">
-            <a href="/src/assets/html/iphones.html"><img src="/src/images/iphone11128.png" width="115px" style="display: flex; flex-direction: column; gap: 3rem"></a>
-            <p>Ver todos</p>
-          </div>`;
-        // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = products.slice(0, 3);
-
-        // Itera sobre os produtos e cria os cards na div productsContainer
-        produtosArrayIpadss
-        .forEach(produto => {
-          const cardHTML4 = `
-          <div class="navIp" style="display: flex; gap: 1rem;">
-              <div id="iphonesss" style="display: flex; gap: 1rem;">
-                <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="110px"></a>
-                  <p>${produto.title2}</p>
-                </div>
-              </div>
-            </div>
-          `;
-
-          productsContainerIpadss.innerHTML += cardHTML4;
-            
-        });
-      }
-
-      
-      function macbooks() {
-        const productsContainerIpadss = document.getElementById('navbarr');
-        productsContainerIpadss.innerHTML = `
-            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
-                  <a href="/src/assets/html/macbooks.html"><img src="/src/images/macbooksa.png" width="155px" style="display: flex; flex-direction: column; gap: 1rem"></a>
-                  <p>Ver todos</p>
-            </div>`
-
-        // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = products.slice(36, 39);
-
-        // Itera sobre os produtos e cria os cards na div productsContainer
-        produtosArrayIpadss
-        .forEach(produto => {
-          const cardHTML4 = `
-          <div class="navIp" style="display: flex; gap: 1rem;">
-              <div id="iphonesss" style="display: flex; gap: 1rem;">
-                <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
-                  <p>${produto.title2}</p>
-                </div>
-              </div>
-            </div>
-          `;
-
-          productsContainerIpadss.innerHTML += cardHTML4;
-            
-        });
-      }
-
-      function iPads() {
-        const productsContainerIpadss = document.getElementById('navbarr');
-        productsContainerIpadss.innerHTML = `
-            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
-                  <a href="/src/assets/html/ipads.html"><img src="/src/images/ipad10256.png" width="110px" style="display: flex; flex-direction: column; gap: 1rem"></a>
-                  <p>Ver todos</p>
-            </div>`
-
-        // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = products.slice(54 , 57);
-
-        // Itera sobre os produtos e cria os cards na div productsContainer
-        produtosArrayIpadss
-        .forEach(produto => {
-          const cardHTML4 = `
-          <div class="navIp" style="display: flex; gap: 1rem;">
-              <div id="iphonesss" style="display: flex; gap: 1rem;">
-                <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
-                  <p>${produto.title2}</p>
-                </div>
-              </div>
-            </div>
-          `;
-
-          productsContainerIpadss.innerHTML += cardHTML4;
-            
-        });
-      }
-
-      function AppleWatchs() {
-        const productsContainerIpadss = document.getElementById('navbarr');
-        productsContainerIpadss.innerHTML = `
-            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
-                  <a href="/src/assets/html/applewatch.html"><img src="/src/images/applewatch.png" width="110px" style="display: flex; flex-direction: column; gap: 1rem"></a>
-                  <p>Ver todos</p>
-            </div>`
-
-        // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = products.slice(41, 44);
-
-        // Itera sobre os produtos e cria os cards na div productsContainer
-        produtosArrayIpadss
-        .forEach(produto => {
-          const cardHTML4 = `
-          <div class="navIp" style="display: flex; gap: 1rem;">
-              <div id="iphonesss" style="display: flex; gap: 1rem;">
-                <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
-                  <p>${produto.title2}</p>
-                </div>
-              </div>
-            </div>
-          `;
-
-          productsContainerIpadss.innerHTML += cardHTML4;
-            
-        });
-      }
-
-
-      function airpodss() {
-        const productsContainerIpadss = document.getElementById('navbarr');
-        productsContainerIpadss.innerHTML = `
-            <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 2rem; margin-right: 100px">
-                  <a href="/src/assets/html/airpods.html"><img src="/src/images/airpodssssss.png" width="110px" style="display: flex; flex-direction: column; gap: 1rem"></a>
-                  <p>Ver todos</p>
-            </div>`
-
-        // Obtém os três primeiros produtos do vetor products
-        const produtosArrayIpadss = products.slice(62, 65);
-
-        // Itera sobre os produtos e cria os cards na div productsContainer
-        produtosArrayIpadss
-        .forEach(produto => {
-          const cardHTML4 = `
-          <div class="navIp" style="display: flex; gap: 1rem;">
-              <div id="iphonesss" style="display: flex; gap: 1rem;">
-                <div class="todos" style="display: flex; flex-direction: column; align-items: center; gap: 1rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" width="115px"></a>
-                  <p>${produto.title2}</p>
-                </div>
-              </div>
-            </div>
-          `;
-
-          productsContainerIpadss.innerHTML += cardHTML4;
-            
-        });
-      }
+    
 
 
 

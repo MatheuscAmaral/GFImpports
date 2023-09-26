@@ -73,7 +73,7 @@ else {
     icon.innerHTML = `
         <a><i class="fa-solid fa-user fa-lg" style="color: #000000;"></i></a>
         <div class="name_user">
-          Olá, ${userLogado.nome}
+           <span style="font-size: 13px"> Olá, ${userLogado.nome}</span>
         </div>
         <div class="deslogar">
           <a  href="home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
