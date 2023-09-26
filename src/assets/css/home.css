@@ -760,11 +760,37 @@ margin-bottom: 20px;
   transition: 0.4s;
 }
 
+#iphonesNote img{
+  border-radius: 16px;
+  transition: 0.4s;
+}
+
+#macbooksNote img{
+  border-radius: 16px;
+  transition: 0.4s;
+}
+
+
+#ipadsNote img{
+  border-radius: 16px;
+  transition: 0.4s;
+}
+
 #iphones img:hover{
   transform: scale(1.1);
 }
 
+#iphonesNote img:hover{
+  transform: scale(1.1);
+}
 
+#macbooksNote img:hover{
+  transform: scale(1.1);
+}
+
+#ipadsNote img:hover{
+  transform: scale(1.1);
+}
 
 /* Media Querys */
 

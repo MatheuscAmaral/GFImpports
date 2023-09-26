@@ -1626,6 +1626,347 @@ nextButton.addEventListener("click", () => {
 renderCards();
 
 
+if (width > 500 && width <= 1400) {
+    const iphones = document.getElementById('iphones')
+    iphones.innerHTML = ''
+    
+    const macbookss = document.getElementById('macbooks')
+    macbookss.innerHTML = ''
+    
+    const ipadss = document.getElementById('ipads')
+    ipadss.innerHTML = ''
+    
+    
+    const produtosAp2 = document.getElementById('produtosAp2')
+    produtosAp2.innerHTML = ''
+
+    const produtosAp22 = document.getElementById('produtosAp22')
+    produtosAp22.innerHTML = ''
+
+    const produtosAp23 = document.getElementById('produtosAp23')
+    produtosAp23.innerHTML = ''
+}
+
+
+const cardsWrapperNote = document.getElementById("cardsWrapperNote");
+const prevButtonNote = document.getElementById("prevButtonNote");
+const nextButtonNote = document.getElementById("nextButtonNote");
+
+const cardWidthNote = 320; // Largura de cada card
+const cardsPerPageNote = 3; // Quantidade de cartões exibidos por página
+let currentPageNote = 0;
+
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1Note = 0; // Índice do primeiro produto desejado
+const endProductIndex1Note = 35;   // Índice do último produto desejado (excluído)
+
+function renderCardsNote() {
+    cardsWrapperNote.innerHTML = "";
+
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPageNote * cardsPerPageNote + startProductIndex1Note;
+    const endIndex = Math.min(startIndex + cardsPerPageNote, endProductIndex1Note + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
+
+
+            const cardHTML = `
+            <div class="cards" style="width: 11rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
+        `;
+        const width = innerWidth
+
+        if (width <= 500) {
+          const iphones = document.getElementById('iphones')
+          iphones.innerHTML = ''
+          
+          const macbookss = document.getElementById('macbooks')
+          macbookss.innerHTML = ''
+          
+          const ipadss = document.getElementById('ipads')
+          ipadss.innerHTML = ''
+          
+          const produtosAp2 = document.getElementById('produtosAp2')
+          produtosAp2.innerHTML = ''
+
+        }
+
+
+       
+        
+        
+        card.innerHTML = cardHTML;
+        cardsWrapperNote.appendChild(card);
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
+    }
+
+    prevButtonNote.disabled = currentPageNote === 0;
+    nextButtonNote.disabled = endIndex >= endProductIndex1Note + 1;
+}
+
+prevButtonNote.addEventListener("click", () => {
+    if (currentPageNote > 0) {
+        currentPageNote--;
+        renderCardsNote();
+    }
+});
+
+nextButtonNote.addEventListener("click", () => {
+    const startIndex = currentPageNote * cardsPerPageNote + startProductIndex1Note;
+    const endIndex = Math.min(startIndex + cardsPerPageNote, endProductIndex1Note + 1);
+
+    if (endIndex < endProductIndex1 + 1) {
+        currentPage++;
+        renderCardsNote();
+    }
+});
+
+// Inicialização
+renderCardsNote();
+
+
+
+const cardsWrapperNote2 = document.getElementById("cardsWrapperNote2");
+const prevButtonNote2 = document.getElementById("prevButtonNote2");
+const nextButtonNote2 = document.getElementById("nextButtonNote2");
+
+const cardWidthNote2 = 320; // Largura de cada card
+const cardsPerPageNote2 = 3; // Quantidade de cartões exibidos por página
+let currentPageNote2 = 0;
+
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1Note2 = 36; // Índice do primeiro produto desejado
+const endProductIndex1Note2 = 40;   // Índice do último produto desejado (excluído)
+
+function renderCardsNote2() {
+    cardsWrapperNote2.innerHTML = "";
+
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPageNote2 * cardsPerPageNote2 + startProductIndex1Note2;
+    const endIndex = Math.min(startIndex + cardsPerPageNote2, endProductIndex1Note2 + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
+
+
+            const cardHTML = `
+            <div class="cards" style="width: 11rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
+        `;
+        const width = innerWidth
+
+        if (width <= 500) {
+          const iphones = document.getElementById('iphones')
+          iphones.innerHTML = ''
+          
+          const macbookss = document.getElementById('macbooks')
+          macbookss.innerHTML = ''
+          
+          const ipadss = document.getElementById('ipads')
+          ipadss.innerHTML = ''
+          
+          const produtosAp2 = document.getElementById('produtosAp2')
+          produtosAp2.innerHTML = ''
+
+        }
+
+
+       
+        
+        
+        card.innerHTML = cardHTML;
+        cardsWrapperNote2.appendChild(card);
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
+    }
+
+    prevButtonNote2.disabled = currentPageNote2 === 0;
+    nextButtonNote2.disabled = endIndex >= endProductIndex1Note2 + 1;
+}
+
+prevButtonNote2.addEventListener("click", () => {
+    if (currentPageNote2 > 0) {
+        currentPageNote2--;
+        renderCardsNote2();
+    }
+});
+
+nextButtonNote2.addEventListener("click", () => {
+    const startIndex = currentPageNote2 * cardsPerPageNote2 + startProductIndex1Note2;
+    const endIndex = Math.min(startIndex + cardsPerPageNote2, endProductIndex1Note2 + 1);
+
+    if (endIndex < endProductIndex1Note2 + 1) {
+        currentPageNote2++;
+        renderCardsNote2();
+    }
+});
+
+// Inicialização
+renderCardsNote2();
+
+
+
+
+const cardsWrapperNote23 = document.getElementById("cardsWrapperNote3");
+const prevButtonNote23 = document.getElementById("prevButtonNote3");
+const nextButtonNote23 = document.getElementById("nextButtonNote3");
+
+const cardWidthNote23 = 320; // Largura de cada card
+const cardsPerPageNote23 = 3; // Quantidade de cartões exibidos por página
+let currentPageNote23 = 0;
+
+// Escolha os índices dos produtos que você deseja exibir
+const startProductIndex1Note23 = 54; // Índice do primeiro produto desejado
+const endProductIndex1Note23 = 61;   // Índice do último produto desejado (excluído)
+
+function renderCardsNote23() {
+    cardsWrapperNote23.innerHTML = "";
+
+    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
+    const startIndex = currentPageNote23 * cardsPerPageNote23 + startProductIndex1Note23;
+    const endIndex = Math.min(startIndex + cardsPerPageNote23, endProductIndex1Note23 + 1);
+
+    for (let i = startIndex; i < endIndex; i++) {
+        const product = products[i];
+
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.style.opacity = 0; // Começa com opacidade zero
+
+
+            const cardHTML = `
+            <div class="cards" style="width: 11rem;">
+                <a href="#"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                <div class="card-body" style="display: flex; flex-direction: column;">
+                    <h6 class="card-text">${product.title}</h6>
+                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                            <div style="display: flex; gap: .3rem">
+                                ${product.star}
+                            </div>
+                            <div style="display: flex; flex-direction: column; ">
+                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                                <span>R$${product.price.toFixed(2)}</span>
+                            </div>
+                        </div>
+                        <span style="font-size: 14px">${product.payment}</span> 
+                    </div>
+                    <!-- Adicione o ID do produto na URL do link -->
+                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                        <p class="compras">COMPRAR</p>
+                    </a>
+                </div>
+            </div>
+        `;
+        const width = innerWidth
+
+        if (width <= 500) {
+          const iphones = document.getElementById('iphones')
+          iphones.innerHTML = ''
+          
+          const macbookss = document.getElementById('macbooks')
+          macbookss.innerHTML = ''
+          
+          const ipadss = document.getElementById('ipads')
+          ipadss.innerHTML = ''
+          
+          const produtosAp2 = document.getElementById('produtosAp2')
+          produtosAp2.innerHTML = ''
+
+        }
+
+
+       
+        
+        
+        card.innerHTML = cardHTML;
+        cardsWrapperNote23.appendChild(card);
+
+        // Adiciona um pequeno atraso para que a transição seja visível
+        setTimeout(() => {
+            card.style.opacity = 1;
+        }, 50 * (i - startIndex));
+    }
+
+    prevButtonNote23.disabled = currentPageNote23 === 0;
+    nextButtonNote23.disabled = endIndex >= endProductIndex1Note23 + 1;
+}
+
+prevButtonNote23.addEventListener("click", () => {
+    if (currentPageNote23 > 0) {
+        currentPageNote23--;
+        renderCardsNote23();
+    }
+});
+
+nextButtonNote23.addEventListener("click", () => {
+    const startIndex = currentPageNote23 * cardsPerPageNote23 + startProductIndex1Note23;
+    const endIndex = Math.min(startIndex + cardsPerPageNote23, endProductIndex1Note23 + 1);
+
+    if (endIndex < endProductIndex1Note23 + 1) {
+        currentPageNote23++;
+        renderCardsNote23();
+    }
+});
+
+// Inicialização
+renderCardsNote23();
 
 
 
