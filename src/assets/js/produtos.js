@@ -1635,6 +1635,9 @@ function renderCards() {
           const produtosAp2 = document.getElementById('produtosAp2')
           produtosAp2.innerHTML = ''
 
+          const produtosAp22Note = document.getElementById('produtosAp22Note')
+          produtosAp22Note.innerHTML = ''
+
         }
 
 
@@ -1749,25 +1752,6 @@ function renderCardsNote() {
             </div>
         `;
         const width = innerWidth
-
-        if (width <= 500) {
-          const iphones = document.getElementById('iphones')
-          iphones.innerHTML = ''
-          
-          const macbookss = document.getElementById('macbooks')
-          macbookss.innerHTML = ''
-          
-          const ipadss = document.getElementById('ipads')
-          ipadss.innerHTML = ''
-          
-          const produtosAp2 = document.getElementById('produtosAp2')
-          produtosAp2.innerHTML = ''
-
-        }
-
-
-       
-        
         
         card.innerHTML = cardHTML;
         cardsWrapperNote.appendChild(card);
@@ -1856,24 +1840,6 @@ function renderCardsNote2() {
             </div>
         `;
         const width = innerWidth
-
-        if (width <= 500) {
-          const iphones = document.getElementById('iphones')
-          iphones.innerHTML = ''
-          
-          const macbookss = document.getElementById('macbooks')
-          macbookss.innerHTML = ''
-          
-          const ipadss = document.getElementById('ipads')
-          ipadss.innerHTML = ''
-          
-          const produtosAp2 = document.getElementById('produtosAp2')
-          produtosAp2.innerHTML = ''
-
-        }
-
-
-       
         
         
         card.innerHTML = cardHTML;
@@ -1965,25 +1931,7 @@ function renderCardsNote23() {
         `;
         const width = innerWidth
 
-        if (width <= 500) {
-          const iphones = document.getElementById('iphones')
-          iphones.innerHTML = ''
-          
-          const macbookss = document.getElementById('macbooks')
-          macbookss.innerHTML = ''
-          
-          const ipadss = document.getElementById('ipads')
-          ipadss.innerHTML = ''
-          
-          const produtosAp2 = document.getElementById('produtosAp2')
-          produtosAp2.innerHTML = ''
-
-        }
-
-
-       
-        
-        
+    
         card.innerHTML = cardHTML;
         cardsWrapperNote23.appendChild(card);
 
@@ -2073,20 +2021,7 @@ function renderCards2() {
         card.innerHTML = cardHTML;
         cardsWrapper2.appendChild(card);
 
-        if (width <= 500) {
-            const iphones = document.getElementById('iphones')
-            iphones.innerHTML = ''
-            
-            const macbookss = document.getElementById('macbooks')
-            macbookss.innerHTML = ''
-            
-            const ipadss = document.getElementById('ipads')
-            ipadss.innerHTML = ''
-            
-            const produtosAp2 = document.getElementById('produtosAp22')
-            produtosAp2.innerHTML = ''
-  
-          }
+       
     }
 
     prevButton2.disabled = currentPage2 === 0;
@@ -2160,20 +2095,6 @@ function renderCards3() {
         card.innerHTML = cardHTML;
         cardsWrapper3.appendChild(card);
 
-        if (width <= 500) {
-            const iphones = document.getElementById('iphones')
-            iphones.innerHTML = ''
-            
-            const macbookss = document.getElementById('macbooks')
-            macbookss.innerHTML = ''
-            
-            const ipadss = document.getElementById('ipads')
-            ipadss.innerHTML = ''
-            
-            const produtosAp2 = document.getElementById('produtosAp23')
-            produtosAp2.innerHTML = ''
-  
-          }
     }
 
     prevButton3.disabled = currentPage3 === 0;
