@@ -163,22 +163,40 @@
         <script src="/src/assets/js/search.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script> 
-            if (width > 500) {
+            if (width > 1400 && width <= 2200) {
 
                 // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
                 const justPc = document.getElementById('justPc');
                 justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 465px;">
-      <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
-        <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a>  > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > Pesquisa
-      </div>
-      <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
-        <b style="color: gray; font-size: 24px;">Ver Todos</b>
-        <hr></hr>
-        <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
-        <hr size="10px"></hr>
-        <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
-      </div>
-    </div>`
+                <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
+                  <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a>  > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > Pesquisa
+                </div>
+                <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
+                  <b style="color: gray; font-size: 24px;">Ver Todos</b>
+                  <hr></hr>
+                  <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
+                  <hr size="10px"></hr>
+                  <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
+                </div>
+              </div>`
+        }
+
+        if (width > 500 && width <= 1400) {
+
+        // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
+            const justPc = document.getElementById('justPc');
+            justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 295px;">
+            <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
+            <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a>  > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > Pesquisa
+            </div>
+            <div id="topFiltro"  style="display: flex; flex-direction: column; width: 70.5%; border-radius: 8px; padding: 30px; background-color: white;">
+            <b style="color: gray; font-size: 24px;">Ver Todos</b>
+            <hr></hr>
+            <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
+            <hr size="10px"></hr>
+            <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
+            </div>
+            </div>`
         }
           
                 else {

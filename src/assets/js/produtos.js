@@ -1160,7 +1160,7 @@ function renderProducts(products) {
     products.forEach((product) => {
       const divProducts = document.createElement('div');
   
-      if (width > 500) {
+      if (width > 1400 && width <= 2200) {
 
         divProducts.style.display = 'flex';
         divProducts.style.justifyContent = 'center';
@@ -1208,6 +1208,55 @@ function renderProducts(products) {
   </div>`
       } 
       
+      if (width > 500 && width <= 1400) {
+
+        divProducts.style.display = 'flex';
+        divProducts.style.marginTop = '10px';  
+        cardsContainer.style.marginLeft = '225px';
+        cardsContainer.style.display = 'flex';
+        cardsContainer.style.gap = '.5rem';
+        cardsContainer.style.justifyContent = 'center';
+        cardsContainer.style.marginTop = '10px';
+
+  
+        divProducts.innerHTML = `
+        <div class="cards" style="width: 10.5rem;">
+            <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+            <div class="card-body" style="display: flex; flex-direction: column;">
+            <h6 class="card-text">${product.title}</h6>
+            <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; align-items: center;">
+            <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                <div style="display: flex; gap: .3rem">
+                ${product.star}
+                </div>
+                <div style="display: flex; flex-direction: column; ">
+                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                <span>R$${product.price.toFixed(2)}</span>
+                </div>
+                </div>
+                <span style="font-size: 14px">${product.payment}</span> 
+            </div>
+            <!-- Adicione o ID do produto na URL do link -->
+            <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+                <p class="compras">COMPRAR</p>
+            </a>
+            </div>
+      </div>`;
+
+
+        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 295px;">
+    <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
+      <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray"></a> Pesquisa
+    </div>
+    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 70.5%; border-radius: 8px; padding: 30px; background-color: white;">
+      <b style="color: gray; font-size: 24px;">Ver Todos</b>
+      <hr></hr>
+      <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
+      <hr size="10px"></hr>
+      <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
+  </div>`
+      } 
+
       else {
 
         const justPc = document.getElementById('justPc');
