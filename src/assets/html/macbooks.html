@@ -136,7 +136,7 @@
   <script src="/src/assets/js/search.js"></script>
   <script src="/src/assets/js/produtos.js"></script>
         <script>
-           if (width > 1400 && width <= 2200) {
+           if (width > 500) {
           // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
          const productsContainer = document.getElementById('produtos1');
 
@@ -233,104 +233,7 @@
                                 </div>`
         
     }
-     
-    if (width > 500 && width <= 1400) {
-          // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-         const productsContainer = document.getElementById('produtos1');
-
-            // Obtém os três primeiros produtos do vetor products
-            const produtosArray = products.slice(36, 40);
-
-            // Itera sobre os produtos e cria os cards na div productsContainer
-            produtosArray.forEach(produto => {
-              const cardHTML1 = `
-              <div class="cards" style="width: 10.5rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                  <div class="card-body" style="display: flex; flex-direction: column;">
-                    <h6 class="card-text">${produto.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
-                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
-                      <div style="display: flex; gap: .3rem">
-                        ${produto.star}
-                      </div>
-                      <div style="display: flex; flex-direction: column; ">
-                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
-                        <span>R$${produto.price.toFixed(2)}</span>
-                      </div>
-                      </div>
-                      <span style="font-size: 14px">${produto.payment}</span> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${produto.id}" style="text-decoration: none">
-                      <p class="compras">COMPRAR</p>
-                    </a>
-                  </div>
-                </div>
-              `;
-
-              productsContainer.innerHTML += cardHTML1;
-              productsContainer.style.display = 'flex';
-              productsContainer.style.gap = '.5rem';    
-              productsContainer.style.justifyContent = 'center';
-              productsContainer.style.marginTop = '10px';
-            });
-            // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-            const productsContainer2 = document.getElementById('produtos2');
-
-            // Obtém os três primeiros produtos do vetor products
-            const produtosArray2 = products.slice(40, 41);
-
-            // Itera sobre os produtos e cria os cards na div productsContainer
-            produtosArray2.forEach(produto => {
-              const cardHTML1 = `
-              <div class="cards" style="width: 10.5rem;">
-                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                  <div class="card-body" style="display: flex; flex-direction: column;">
-                    <h6 class="card-text">${produto.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
-                     <div style="display: flex; flex-direction: column; gap: 1rem"> 
-                      <div style="display: flex; gap: .3rem">
-                        ${produto.star}
-                      </div>
-                      <div style="display: flex; flex-direction: column; ">
-                        <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${produto.oldPrice},00</span>
-                        <span>R$${produto.price.toFixed(2)}</span>
-                      </div>
-                      </div>
-                      <span style="font-size: 14px">${produto.payment}</span> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${produto.id}" style="text-decoration: none">
-                      <p class="compras">COMPRAR</p>
-                    </a>
-                  </div>
-                </div>
-              `
-
-              productsContainer2.innerHTML += cardHTML1;
-              productsContainer2.style.display = 'flex';
-              productsContainer2.style.gap = '.5rem';
-              productsContainer2.style.marginLeft = '292px';
-              productsContainer2.style.marginTop = '10px';
-            });
-            // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
-
-
-            const justPc = document.getElementById('justPc');
-            justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 290px;">
-                                  <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
-                                    <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/macbooks.html" style="text-decoration: none; color: gray">MacBooks</a> > <a href="/src/assets/html/mackbooks.html" style="text-decoration: none; color: gray">Ver Todos</a>
-                                  </div>
-                                  <div id="topFiltro"  style="display: flex; flex-direction: column; width: 70.5%; border-radius: 8px; padding: 30px; background-color: white;">
-                                    <b style="color: gray; font-size: 24px;">MacBoks</b>
-                                    <hr></hr>
-                                    <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">5</b> produtos</span>
-                                    <hr size="10px"></hr>
-                                    <i class="fa-solid fa-grip fa-xl" style="color: #000000;"></i>
-                                  </div>
-                                </div>`
-        
-    }
+      
             else {
               const justPc = document.getElementById('justPc');
               justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 20px;">
