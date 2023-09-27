@@ -146,7 +146,7 @@
             // Itera sobre os produtos e cria os cards na div productsContainer
             produtosArray.forEach(produto => {
               const cardHTML1 = `
-              <div class="cards" style="width: 14rem;">
+              <div class="cards" style="width: 12.5rem;">
                   <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${produto.title}</h6>
@@ -179,11 +179,11 @@
 
             // Obtém a referência da div que será o contêiner dos cards na seção suplementosproteinas
             const justPc = document.getElementById('justPc');
-            justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 465px;">
+            justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 265px;">
       <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
           <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/airpods.html" style="text-decoration: none; color: gray">AirPods</a> > <a href="/src/assets/html/airpods.html" style="text-decoration: none; color: gray">Ver Todos</a>
         </div>
-        <div id="topFiltro"  style="display: flex; flex-direction: column; width: 66.5%; border-radius: 8px; padding: 30px; background-color: white;">
+        <div id="topFiltro"  style="display: flex; flex-direction: column; width: 76%; border-radius: 8px; padding: 30px; background-color: white;">
           <b style="color: gray; font-size: 24px;">AirPods</b>
           <hr></hr>
           <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">4</b> produtos</span>
