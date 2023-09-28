@@ -161,6 +161,14 @@ body {
 
 }
 
+#left img {
+    transition: 0.3s;
+}
+
+#left img:hover {
+    transform: scale(1.1);
+}
+
 #search-container {
   position: relative;
 }

@@ -159,7 +159,7 @@
             produtosArray.forEach(produto => {
               const cardHTML1 = `
               <div class="cards" style="width: 12.5rem;">
-                  <a href="#"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+                  <a href="/src/assets/html/details.html?id=${produto.id}"><img src="${produto.poster}" class="card-img-top" alt="Imagem do Produto"></a>
                   <div class="card-body" style="display: flex; flex-direction: column;">
                     <h6 class="card-text">${produto.title}</h6>
                     <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
