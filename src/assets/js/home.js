@@ -4,6 +4,7 @@ const searchbar = document.getElementById("searchbar");
 const mobilee = document.getElementById('mobile');
 const main = document.getElementById('main');
 const proteinas = document.getElementById('proteinas');
+const princ = document.getElementById('princ')
 
 if (width <= 500) {
   if (localStorage.getItem("token") == null) {
@@ -137,6 +138,7 @@ function mobile() {
     </div>
   </div>`
   main.innerHTML = ''
+  princ.style.display = 'none'
   }
   else {
     const userLogado = JSON.parse(localStorage.getItem("userLogado"));
@@ -148,8 +150,8 @@ function mobile() {
         <a href=""> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
       </div>
       <div id="superiorMid">
-        <div id="enter">
-          <div class="deslogar">
+        <div id="enter" style="display: flex; flex-direction: column; margin-left: 10px">
+          <div class="deslogar" style="display: flex; flex-direction: column;">
             <a  href="home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
           </div>
         </div>
@@ -176,6 +178,7 @@ function mobile() {
   </div>
     </div>`
     main.innerHTML = ''
+    princ.style.display = 'none'
   }
 
 }
@@ -216,6 +219,7 @@ function mobile() {
       </div>
   </div>`
   main.innerHTML = ''
+  princ.style.display = 'none'
   }
   else {
     const userLogado = JSON.parse(localStorage.getItem("userLogado"));
@@ -226,13 +230,10 @@ function mobile() {
         <div id="user"><strong> Olá, ${userLogado.nome}</strong></div>
         <a href="#"> <i class="fa-solid fa-xmark fa-xl" style="color: #171616;"></i></a>
       </div>
-      <div id="superiorMid">
-        <div id="enter">
-        <div class="deslogar">
+      <div id="superiorMid" style="display: flex; flex-direction: column; margin-left: 10px; justify-content: none">
+      <div id="enter" style="display: flex; flex-direction: column; margin-left: 10px">
           <a href="/home.html" id="botao" onclick="sair()" style="display: flex; gap: .5rem"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i>Sair</a>
-        </div>
       </div>
-        
       </div>
       <div id="low">
           <div class="mobileCard" style="background-color: #1e1d1d;">
@@ -256,6 +257,7 @@ function mobile() {
       </div>
     </div>`
     main.innerHTML = ''
+    princ.style.display = 'none'
   }
 }
 
