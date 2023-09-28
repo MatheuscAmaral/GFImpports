@@ -1149,7 +1149,15 @@ function renderProducts(products) {
     const cardsContainer = document.createElement('div');
     cardsContainer.style.display = 'flex';
     cardsContainer.style.flexWrap = 'wrap';
-    cardsContainer.style.paddingRight = '400px';
+    cardsContainer.style.marginLeft = '520px'
+    cardsContainer.style.marginRight = '520px'
+
+    if(width > 500 && width <= 1400) {
+        cardsContainer.style.marginLeft = '200px'
+        cardsContainer.style.marginRight = '200px'
+
+        
+    }
 
 
 
@@ -1160,14 +1168,14 @@ function renderProducts(products) {
     products.forEach((product) => {
       const divProducts = document.createElement('div');
   
-      if (width > 500) {
+      if (width > 500 ) {
 
         divProducts.style.display = 'flex';
         divProducts.style.justifyContent = 'center';
         divProducts.style.marginTop = '10px';  
         divProducts.style.marginRight = '.5rem'
-        cardsContainer.style.paddingLeft = '200px';
-        cardsContainer.style.marginLeft = '65px';
+        cardsContainer.style.justifyContent = 'center';
+        cardsContainer.style.alignItems = 'center';
 
   
         divProducts.innerHTML = `
@@ -1195,11 +1203,11 @@ function renderProducts(products) {
       </div>`;
 
 
-        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 265px;">
+        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; ">
     <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
       <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray"></a> Pesquisa
     </div>
-    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 76%; border-radius: 8px; padding: 30px; background-color: white;">
+    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 820px; border-radius: 8px; padding: 30px; background-color: white;">
       <b style="color: gray; font-size: 24px;">Ver Todos</b>
       <hr></hr>
       <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
@@ -1212,7 +1220,7 @@ function renderProducts(products) {
 
         const justPc = document.getElementById('justPc');
 
-        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-left: 20px; margin-bottom: 40px;">
+        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-bottom: 40px;">
     <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
       <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray"></a> Pesquisa
     </div>
