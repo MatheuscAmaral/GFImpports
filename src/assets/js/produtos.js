@@ -1281,81 +1281,94 @@ const nextButtonMobile = document.getElementById("nextButtonMobile");
 const cardWidthMobile = 320; // Largura de cada card
 const cardsPerPageMobile = 2; // Quantidade de cartões exibidos por página
 let currentPageMobile = 0;
+let dataMobile = []; // Esta variável irá armazenar os dados do JSON
 
-// Escolha os índices dos produtos que você deseja exibir
-const startProductIndex1Mobile = 0; // Índice do primeiro produto desejado
-const endProductIndex1Mobile = 36;   // Índice do último produto desejado (excluído)
+// Caminho para o arquivo JSON local
+const jsonPathMobile = '/src/assets/produtos.json';
 
+// Função para carregar o JSON
+async function loadJSONMobile() {
+  try {
+    const response = await fetch(jsonPathMobile);
+    dataMobile = await response.json();
+    renderCardsMobile();
+  } catch (error) {
+    console.error('Erro ao carregar JSON:', error);
+  }
+}
+
+// Índices para limitar quais produtos serão exibidos
+let startProductIndexMobile = 0;
+let endProductIndexMobile = 10; // Ajuste conforme necessário
+
+// Função para renderizar os cards
 function renderCardsMobile() {
-    cardsWrapperMobile.innerHTML = "";
+  cardsWrapperMobile.innerHTML = "";
 
-    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
-    const startIndex = currentPageMobile * cardsPerPageMobile + startProductIndex1Mobile;
-    const endIndex = Math.min(startIndex + cardsPerPageMobile, endProductIndex1Mobile + 1);
+  const startIndex = currentPageMobile * cardsPerPageMobile + startProductIndexMobile;
+  const endIndex = Math.min(startIndex + cardsPerPageMobile, endProductIndexMobile);
 
-    for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
+  for (let i = startIndex; i < endIndex; i++) {
+    const product = dataMobile[i];
 
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.style.opacity = 0; // Começa com opacidade zero
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.style.opacity = 0;
 
-
-            const cardHTML = `
-            <div class="cards" style="width: 9.5rem;">
-                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
-                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
-                            <div style="display: flex; gap: .3rem; font-size: 14px">
-                                ${product.star}
-                            </div>
-                            <div style="display: flex; flex-direction: column; ">
-                                <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-                                <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
-                            </div>
-                        </div>
-                        <span style="font-size: 12px">${product.payment}</span> 
-                    </div>
-                </div>
+    const cardHTML = `
+      <div class="cards" style="width: 9.5rem;">
+        <a href="/src/assets/html/details.html?id=${product.id}">
+          <img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto">
+        </a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <h6 class="card-text">${product.title}</h6>
+          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 1rem"> 
+              <div style="display: flex; gap: .3rem; font-size: 14px">
+              <i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>
+              </div>
+              <div style="display: flex; flex-direction: column; ">
+                <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
+              </div>
             </div>
-        `;
-        const width = innerWidth
+            <span style="font-size: 12px">${product.payment}</span> 
+          </div>
+        </div>
+      </div>
+    `;
 
-        
-        card.innerHTML = cardHTML;
-        cardsWrapperMobile.appendChild(card);
+    card.innerHTML = cardHTML;
+    cardsWrapperMobile.appendChild(card);
 
-        // Adiciona um pequeno atraso para que a transição seja visível
-        setTimeout(() => {
-            card.style.opacity = 1;
-        }, 50 * (i - startIndex));
-    }
+    setTimeout(() => {
+      card.style.opacity = 1;
+    }, 50 * (i - startIndex));
+  }
 
-    prevButtonMobile.disabled = currentPageMobile === 0;
-    nextButtonMobile.disabled = endIndex >= endProductIndex1Mobile + 1;
+  prevButtonMobile.disabled = currentPageMobile === 0;
+  nextButtonMobile.disabled = endIndex >= dataMobile.length;
 }
 
 prevButtonMobile.addEventListener("click", () => {
-    if (currentPageMobile > 0) {
-        currentPageMobile--;
-        renderCardsMobile();
-    }
+  if (currentPageMobile > 0) {
+    currentPageMobile--;
+    renderCardsMobile();
+  }
 });
 
 nextButtonMobile.addEventListener("click", () => {
-    const startIndex = currentPageMobile * cardsPerPageMobile + startProductIndex1Mobile;
-    const endIndex = Math.min(startIndex + cardsPerPageMobile, endProductIndex1Mobile + 1);
+  const startIndex = currentPageMobile * cardsPerPageMobile + startProductIndexMobile;
+  const endIndex = Math.min(startIndex + cardsPerPageMobile, endProductIndexMobile);
 
-    if (endIndex < endProductIndex1Mobile + 1) {
-        currentPageMobile++;
-        renderCardsMobile();
-    }
+  if (endIndex < dataMobile.length) {
+    currentPageMobile++;
+    renderCardsMobile();
+  }
 });
 
-// Inicialização
-renderCardsMobile();
+// Inicialização: carregue o JSON e renderize os cards
+loadJSONMobile();
 
 
 
@@ -1367,428 +1380,491 @@ const nextButtonMobile2 = document.getElementById("nextButtonMobile2");
 const cardWidthMobile2 = 320; // Largura de cada card
 const cardsPerPageMobile2 = 2; // Quantidade de cartões exibidos por página
 let currentPageMobile2 = 0;
+let dataMobile2 = []; 
 
-// Escolha os índices dos produtos que você deseja exibir
-const startProductIndex1Mobile2 = 36; // Índice do primeiro produto desejado
-const endProductIndex1Mobile2 = 41;   // Índice do último produto desejado (excluído)
+// Caminho para o arquivo JSON local
+const jsonPathMobile2 = '/src/assets/produtos.json';
+
+// Função para carregar o JSON
+async function loadJSONMobile2() {
+  try {
+    const response = await fetch(jsonPathMobile2);
+    dataMobile2 = await response.json();
+    renderCardsMobile2();
+  } catch (error) {
+    console.error('Erro ao carregar JSON:', error);
+  }
+}
+
+// Índices para limitar quais produtos serão exibidos
+let startProductIndexMobile2 = 36;
+let endProductIndexMobile2 = 41; // Ajuste conforme necessário
+
 
 function renderCardsMobile2() {
     cardsWrapperMobile2.innerHTML = "";
-
-    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
-    const startIndex = currentPageMobile2 * cardsPerPageMobile2 + startProductIndex1Mobile2;
-    const endIndex = Math.min(startIndex + cardsPerPageMobile2, endProductIndex1Mobile2 + 1);
-
+  
+    const startIndex = currentPageMobile2 * cardsPerPageMobile2 + startProductIndexMobile2;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile2, endProductIndexMobile2);
+  
     for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
-
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.style.opacity = 0; // Começa com opacidade zero
-
-
-            const cardHTML = `
-            <div class="cards" style="width: 9.5rem;">
-                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
-                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
-                            <div style="display: flex; gap: .3rem; font-size: 14px">
-                                ${product.star}
-                            </div>
-                            <div style="display: flex; flex-direction: column; ">
-                                <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-                                <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
-                            </div>
-                        </div>
-                        <span style="font-size: 12px">${product.payment}</span> 
-                    </div>
+      const product = dataMobile[i];
+  
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.style.opacity = 0;
+  
+      const cardHTML = `
+        <div class="cards" style="width: 9.5rem;">
+          <a href="/src/assets/html/details.html?id=${product.id}">
+            <img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto">
+          </a>
+          <div class="card-body" style="display: flex; flex-direction: column;">
+            <h6 class="card-text">${product.title}</h6>
+            <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
+              <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                <div style="display: flex; gap: .3rem; font-size: 14px">
+                <i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>
                 </div>
+                <div style="display: flex; flex-direction: column; ">
+                  <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                  <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
+                </div>
+              </div>
+              <span style="font-size: 12px">${product.payment}</span> 
             </div>
-        `;
-        const width = innerWidth
-
-        
-        card.innerHTML = cardHTML;
-        cardsWrapperMobile2.appendChild(card);
-
-        // Adiciona um pequeno atraso para que a transição seja visível
-        setTimeout(() => {
-            card.style.opacity = 1;
-        }, 50 * (i - startIndex));
+          </div>
+        </div>
+      `;
+  
+      card.innerHTML = cardHTML;
+      cardsWrapperMobile2.appendChild(card);
+  
+      setTimeout(() => {
+        card.style.opacity = 1;
+      }, 50 * (i - startIndex));
     }
-
+  
     prevButtonMobile2.disabled = currentPageMobile2 === 0;
-    nextButtonMobile2.disabled = endIndex >= endProductIndex1Mobile2 + 1;
-}
-
-prevButtonMobile2.addEventListener("click", () => {
+    nextButtonMobile2.disabled = endIndex >= dataMobile2.length;
+  }
+  
+  prevButtonMobile2.addEventListener("click", () => {
     if (currentPageMobile2 > 0) {
-        currentPageMobile2--;
-        renderCardsMobile2();
+      currentPageMobile2--;
+      renderCardsMobile2();
     }
-});
-
-nextButtonMobile2.addEventListener("click", () => {
-    const startIndex = currentPageMobile2 * cardsPerPageMobile2 + startProductIndex1Mobile2;
-    const endIndex = Math.min(startIndex + cardsPerPageMobile2, endProductIndex1Mobile2 + 1);
-
-    if (endIndex < endProductIndex1Mobile2 + 1) {
-        currentPageMobile2++;
-        renderCardsMobile2();
+  });
+  
+  nextButtonMobile2.addEventListener("click", () => {
+    const startIndex = currentPageMobile2 * cardsPerPageMobile2 + startProductIndexMobile2;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile2, endProductIndexMobile2);
+  
+    if (endIndex < dataMobile2.length) {
+      currentPageMobile2++;
+      renderCardsMobile2();
     }
-});
+  });
+  
+  // Inicialização: carregue o JSON e renderize os cards
+  loadJSONMobile2();
+  
 
-// Inicialização
-renderCardsMobile2();
-
-
-const cardsWrapperMobile3 = document.getElementById("cardsWrapperMobile3");
-const prevButtonMobile3 = document.getElementById("prevButtonMobile3");
-const nextButtonMobile3 = document.getElementById("nextButtonMobile3");
-
-const cardWidthMobile3 = 320; // Largura de cada card
-const cardsPerPageMobile3 = 2; // Quantidade de cartões exibidos por página
-let currentPageMobile3 = 0;
-
-// Escolha os índices dos produtos que você deseja exibir
-const startProductIndex1Mobile3 = 54; // Índice do primeiro produto desejado
-const endProductIndex1Mobile3 = 61;   // Índice do último produto desejado (excluído)
-
-function renderCardsMobile3() {
+  const cardsWrapperMobile3 = document.getElementById("cardsWrapperMobile3");
+  const prevButtonMobile3 = document.getElementById("prevButtonMobile3");
+  const nextButtonMobile3 = document.getElementById("nextButtonMobile3");
+  
+  const cardWidthMobile3 = 320; // Largura de cada card
+  const cardsPerPageMobile3 = 2; // Quantidade de cartões exibidos por página
+  let currentPageMobile3 = 0;
+  let dataMobile3 = []; // Esta variável irá armazenar os dados do JSON
+  
+  // Caminho para o arquivo JSON local
+  const jsonPathMobile3 = '/src/assets/produtos.json';
+  
+  // Função para carregar o JSON
+  async function loadJSONMobile3() {
+    try {
+      const response = await fetch(jsonPathMobile3);
+      dataMobile3 = await response.json();
+      renderCardsMobile3();
+    } catch (error) {
+      console.error('Erro ao carregar JSON:', error);
+    }
+  }
+  
+  // Índices para limitar quais produtos serão exibidos
+  let startProductIndexMobile3 = 54;
+  let endProductIndexMobile3 = 62; // Ajuste conforme necessário
+  
+  // Função para renderizar os cards
+  function renderCardsMobile3() {
     cardsWrapperMobile3.innerHTML = "";
-
-    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
-    const startIndex = currentPageMobile3 * cardsPerPageMobile3 + startProductIndex1Mobile3;
-    const endIndex = Math.min(startIndex + cardsPerPageMobile3, endProductIndex1Mobile3 + 1);
-
+  
+    const startIndex = currentPageMobile3 * cardsPerPageMobile3 + startProductIndexMobile3;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile3, endProductIndexMobile3);
+  
     for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
-
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.style.opacity = 0; // Começa com opacidade zero
-
-
-            const cardHTML = `
-            <div class="cards" style="width: 9.5rem;">
-                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
-                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
-                            <div style="display: flex; gap: .3rem; font-size: 14px">
-                                ${product.star}
-                            </div>
-                            <div style="display: flex; flex-direction: column; ">
-                                <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-                                <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
-                            </div>
-                        </div>
-                        <span style="font-size: 12px">${product.payment}</span> 
-                    </div>
+      const product = dataMobile3[i];
+  
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.style.opacity = 0;
+  
+      const cardHTML = `
+        <div class="cards" style="width: 9.5rem;">
+          <a href="/src/assets/html/details.html?id=${product.id}">
+            <img src="${product.poster}" style="width: 150px" class="card-img-top" alt="Imagem do Produto">
+          </a>
+          <div class="card-body" style="display: flex; flex-direction: column;">
+            <h6 class="card-text">${product.title}</h6>
+            <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem; margin-bottom: 20px;">
+              <div style="display: flex; flex-direction: column; gap: 1rem"> 
+                <div style="display: flex; gap: .3rem; font-size: 14px">
+                <i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>
                 </div>
+                <div style="display: flex; flex-direction: column; ">
+                  <span style="font-size: 11.5px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                  <span style="font-size: 17px;"><b> R$ ${product.price.toFixed(2)}</b></span>
+                </div>
+              </div>
+              <span style="font-size: 12px">${product.payment}</span> 
             </div>
-        `;
-        const width = innerWidth
-
-        
-        card.innerHTML = cardHTML;
-        cardsWrapperMobile3.appendChild(card);
-
-        // Adiciona um pequeno atraso para que a transição seja visível
-        setTimeout(() => {
-            card.style.opacity = 1;
-        }, 50 * (i - startIndex));
+          </div>
+        </div>
+      `;
+  
+      card.innerHTML = cardHTML;
+      cardsWrapperMobile3.appendChild(card);
+  
+      setTimeout(() => {
+        card.style.opacity = 1;
+      }, 50 * (i - startIndex));
     }
-
+  
     prevButtonMobile3.disabled = currentPageMobile3 === 0;
-    nextButtonMobile3.disabled = endIndex >= endProductIndex1Mobile3 + 1;
-}
-
-prevButtonMobile3.addEventListener("click", () => {
+    nextButtonMobile3.disabled = endIndex >= dataMobile3.length;
+  }
+  
+  prevButtonMobile3.addEventListener("click", () => {
     if (currentPageMobile3 > 0) {
-        currentPageMobile3--;
-        renderCardsMobile3();
+      currentPageMobile3--;
+      renderCardsMobile3();
     }
-});
-
-nextButtonMobile3.addEventListener("click", () => {
-    const startIndex = currentPageMobile3 * cardsPerPageMobile3 + startProductIndex1Mobile3;
-    const endIndex = Math.min(startIndex + cardsPerPageMobile3, endProductIndex1Mobile3 + 1);
-
-    if (endIndex < endProductIndex1Mobile3 + 1) {
-        currentPageMobile3++;
-        renderCardsMobile3();
+  });
+  
+  nextButtonMobile3.addEventListener("click", () => {
+    const startIndex = currentPageMobile3 * cardsPerPageMobile3 + startProductIndexMobile3;
+    const endIndex = Math.min(startIndex + cardsPerPageMobile3, endProductIndexMobile3);
+  
+    if (endIndex < dataMobile3.length) {
+      currentPageMobile3++;
+      renderCardsMobile3();
     }
-});
-
-// Inicialização
-renderCardsMobile3();
-
+  });
+  
+  // Inicialização: carregue o JSON e renderize os cards
+  loadJSONMobile3();
 
 const cardsWrapper = document.getElementById("cardsWrapper");
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 
-const cardWidth = 320; // Largura de cada card
-const cardsPerPage = 3; // Quantidade de cartões exibidos por página
+const cardWidth = 320;
+const cardsPerPage = 3;
 let currentPage = 0;
+let data = []; // Esta variável irá armazenar os dados do JSON
 
-// Escolha os índices dos produtos que você deseja exibir
-const startProductIndex1 = 0; // Índice do primeiro produto desejado
-const endProductIndex1 = 35;   // Índice do último produto desejado (excluído)
+// Caminho para o arquivo JSON local
+const jsonPath = '/src/assets/produtos.json';
 
+// Função para carregar o JSON
+async function loadJSON() {
+  try {
+    const response = await fetch(jsonPath);
+    data = await response.json();
+    renderCards();
+  } catch (error) {
+    console.error('Erro ao carregar JSON:', error);
+  }
+}
+
+// Índices para limitar quais produtos serão exibidos
+let startProductIndex = 0;
+let endProductIndex = 35; // Ajuste conforme necessário
+
+// Função para renderizar os cards
 function renderCards() {
-    cardsWrapper.innerHTML = "";
+  cardsWrapper.innerHTML = "";
 
-    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
-    const startIndex = currentPage * cardsPerPage + startProductIndex1;
-    const endIndex = Math.min(startIndex + cardsPerPage, endProductIndex1 + 1);
+  const startIndex = currentPage * cardsPerPage + startProductIndex;
+  const endIndex = Math.min(startIndex + cardsPerPage, endProductIndex);
 
-    for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
+  for (let i = startIndex; i < endIndex; i++) {
+    const product = data[i];
 
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.style.opacity = 0; // Começa com opacidade zero
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.style.opacity = 0;
 
-
-            const cardHTML = `
-            <div class="cards" style="width: 12.5rem;">
-                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <h6 class="card-text">${product.title}</h6>
-                    <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
-                        <div style="display: flex; flex-direction: column; gap: 1rem"> 
-                            <div style="display: flex; gap: .3rem">
-                                ${product.star}
-                            </div>
-                            <div style="display: flex; flex-direction: column; ">
-                                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-                                <span>R$${product.price.toFixed(2)}</span>
-                            </div>
-                        </div>
-                        <span style="font-size: 14px">${product.payment}</span> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
-                        <p class="compras">COMPRAR</p>
-                    </a>
-                </div>
+    const cardHTML = `
+      <div class="cards" style="width: 12.5rem;">
+        <a href="/src/assets/html/details.html?id=${product.id}">
+          <img src="${product.poster}" class="card-img-top" alt="Imagem do Produto">
+        </a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <h6 class="card-text">${product.title}</h6>
+          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+            <div style="display: flex; flex-direction: column; gap: 1rem"> 
+              <div style="display: flex; gap: .3rem">
+              <i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>
+              </div>
+              <div style="display: flex; flex-direction: column; ">
+                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                <span>R$${product.price.toFixed(2)}</span>
+              </div>
             </div>
-        `;
-        const width = innerWidth
+            <span style="font-size: 14px">${product.payment}</span> 
+          </div>
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
+    `;
 
-        if (width <= 500) {
-          const iphones = document.getElementById('iphones')
-          iphones.innerHTML = ''
-          
-          const macbookss = document.getElementById('macbooks')
-          macbookss.innerHTML = ''
-          
-          const ipadss = document.getElementById('ipads')
-          ipadss.innerHTML = ''
-          
-          const produtosAp2 = document.getElementById('produtosAp2')
-          produtosAp2.innerHTML = ''
+    card.innerHTML = cardHTML;
+    cardsWrapper.appendChild(card);
 
-          const produtosAp22Note = document.getElementById('produtosAp22Note')
-          produtosAp22Note.innerHTML = ''
+    setTimeout(() => {
+      card.style.opacity = 1;
+    }, 50 * (i - startIndex));
+  }
 
-        }
-
-
-       
-        
-        
-        card.innerHTML = cardHTML;
-        cardsWrapper.appendChild(card);
-
-        // Adiciona um pequeno atraso para que a transição seja visível
-        setTimeout(() => {
-            card.style.opacity = 1;
-        }, 50 * (i - startIndex));
-    }
-
-    prevButton.disabled = currentPage === 0;
-    nextButton.disabled = endIndex >= endProductIndex1 + 1;
+  prevButton.disabled = currentPage === 0;
+  nextButton.disabled = endIndex >= data.length;
 }
 
 prevButton.addEventListener("click", () => {
-    if (currentPage > 0) {
-        currentPage--;
-        renderCards();
-    }
+  if (currentPage > 0) {
+    currentPage--;
+    renderCards();
+  }
 });
 
 nextButton.addEventListener("click", () => {
-    const startIndex = currentPage * cardsPerPage + startProductIndex1;
-    const endIndex = Math.min(startIndex + cardsPerPage, endProductIndex1 + 1);
+  const startIndex = currentPage * cardsPerPage + startProductIndex;
+  const endIndex = Math.min(startIndex + cardsPerPage, endProductIndex);
 
-    if (endIndex < endProductIndex1 + 1) {
-        currentPage++;
-        renderCards();
-    }
+  if (endIndex < data.length) {
+    currentPage++;
+    renderCards();
+  }
 });
 
-// Inicialização
-renderCards();
+// Inicialização: carregue o JSON e renderize os cards
+loadJSON();
 
 
 const cardsWrapper2 = document.getElementById("cardsWrapper2");
 const prevButton2 = document.getElementById("prevButton2");
 const nextButton2 = document.getElementById("nextButton2");
 
-const cardWidth2 = 320; // Largura de cada card
-const cardsPerPage2 = 3; // Quantidade de cards exibidos por página
+const cardWidth2 = 320;
+const cardsPerPage2 = 3;
 let currentPage2 = 0;
+let data2 = []; // Esta variável irá armazenar os dados do JSON
 
-// Escolha os índices dos produtos que você deseja exibir
-const startProductIndex = 36; // Índice do primeiro produto desejado
-const endProductIndex = 40;   // Índice do último produto desejado (excluído)
+// Caminho para o arquivo JSON local
+const jsonPath2 = '/src/assets/produtos.json';
 
+// Função para carregar o JSON
+async function loadJSON2() {
+  try {
+    const response = await fetch(jsonPath2);
+    data2 = await response.json();
+    renderCards2();
+  } catch (error) {
+    console.error('Erro ao carregar JSON:', error);
+  }
+}
+
+// Índices para limitar quais produtos serão exibidos
+let startProductIndex2 = 36;
+let endProductIndex2 = 41; // Ajuste conforme necessário
+
+// Função para renderizar os cards
 function renderCards2() {
-    cardsWrapper2.innerHTML = "";
+  cardsWrapper2.innerHTML = "";
 
-    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
-    const startIndex = currentPage2 * cardsPerPage2 + startProductIndex;
-    const endIndex = Math.min(startIndex + cardsPerPage2, endProductIndex + 1);
+  const startIndex = currentPage2 * cardsPerPage2 + startProductIndex2;
+  const endIndex = Math.min(startIndex + cardsPerPage2, endProductIndex2);
 
-    for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
+  for (let i = startIndex; i < endIndex; i++) {
+    const product = data[i];
 
-        const card = document.createElement("div");
-        card.classList.add("card");
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.style.opacity = 0;
 
-        const cardHTML = `
-        <div class="cards" style="width: 12.5rem;">
-        <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
+    const cardHTML = `
+      <div class="cards" style="width: 12.5rem;">
+        <a href="/src/assets/html/details.html?id=${product.id}">
+          <img src="${product.poster}" class="card-img-top" alt="Imagem do Produto">
+        </a>
         <div class="card-body" style="display: flex; flex-direction: column;">
           <h6 class="card-text">${product.title}</h6>
           <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
-           <div style="display: flex; flex-direction: column; gap: 1rem"> 
-            <div style="display: flex; gap: .3rem">
-              ${product.star}
-            </div>
-            <div style="display: flex; flex-direction: column; ">
-              <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
-              <span>R$${product.price.toFixed(2)}</span>
-            </div>
+            <div style="display: flex; flex-direction: column; gap: 1rem"> 
+              <div style="display: flex; gap: .3rem">
+              <i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>
+              </div>
+              <div style="display: flex; flex-direction: column; ">
+                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                <span>R$${product.price.toFixed(2)}</span>
+              </div>
             </div>
             <span style="font-size: 14px">${product.payment}</span> 
           </div>
-          <!-- Adicione o ID do produto na URL do link -->
           <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
             <p class="compras">COMPRAR</p>
           </a>
         </div>
       </div>
-        `;
+    `;
 
-        card.innerHTML = cardHTML;
-        cardsWrapper2.appendChild(card);
+    card.innerHTML = cardHTML;
+    cardsWrapper2.appendChild(card);
 
-       
-    }
+    setTimeout(() => {
+      card.style.opacity = 1;
+    }, 50 * (i - startIndex));
+  }
 
-    prevButton2.disabled = currentPage2 === 0;
-    nextButton2.disabled = endIndex >= endProductIndex + 1;
+  prevButton2.disabled = currentPage2 === 0;
+  nextButton2.disabled = endIndex >= data2.length;
 }
 
 prevButton2.addEventListener("click", () => {
-    if (currentPage2 > 0) {
-        currentPage2--;
-        renderCards2();
-    }
+  if (currentPage2 > 0) {
+    currentPage2--;
+    renderCards2();
+  }
 });
 
 nextButton2.addEventListener("click", () => {
-    const startIndex = currentPage2 * cardsPerPage2 + startProductIndex;
-    const endIndex = Math.min(startIndex + cardsPerPage2, endProductIndex + 1);
+  const startIndex = currentPage2 * cardsPerPage2 + startProductIndex2;
+  const endIndex = Math.min(startIndex + cardsPerPage2, endProductIndex2);
 
-    if (endIndex < endProductIndex + 1) {
-        currentPage2++;
-        renderCards2();
-    }
+  if (endIndex < data2.length) {
+    currentPage2++;
+    renderCards2();
+  }
 });
 
-// Inicialização
-renderCards2();
+// Inicialização: carregue o JSON e renderize os cards
+loadJSON2();
 
 
 const cardsWrapper3 = document.getElementById("cardsWrapper3");
 const prevButton3 = document.getElementById("prevButton3");
 const nextButton3 = document.getElementById("nextButton3");
 
-const cardWidth3 = 320; // Largura de cada card
-const cardsPerPage3 = 3; // Quantidade de cards exibidos por página
+const cardWidth3 = 320;
+const cardsPerPage3 = 3;
 let currentPage3 = 0;
+let data3 = []; // Esta variável irá armazenar os dados do JSON
 
-// Escolha os índices dos produtos que você deseja exibir
-const startProductIndex3 = 54; // Índice do primeiro produto desejado
-const endProductIndex3 = 61;   // Índice do último produto desejado (excluído)
+// Caminho para o arquivo JSON local
+const jsonPath3 = '/src/assets/produtos.json';
 
+// Função para carregar o JSON
+async function loadJSON3() {
+  try {
+    const response = await fetch(jsonPath3);
+    data3 = await response.json();
+    renderCards3();
+  } catch (error) {
+    console.error('Erro ao carregar JSON:', error);
+  }
+}
+
+// Índices para limitar quais produtos serão exibidos
+let startProductIndex3 = 54;
+let endProductIndex3 = 62; // Ajuste conforme necessário
+
+// Função para renderizar os cards
 function renderCards3() {
-    cardsWrapper3.innerHTML = "";
+  cardsWrapper3.innerHTML = "";
 
-    // Calcule os índices reais com base na página atual e na quantidade de cartões por página
-    const startIndex = currentPage3 * cardsPerPage3 + startProductIndex3;
-    const endIndex = Math.min(startIndex + cardsPerPage3, endProductIndex3 + 1);
+  const startIndex = currentPage3 * cardsPerPage3 + startProductIndex3;
+  const endIndex = Math.min(startIndex + cardsPerPage3, endProductIndex3);
 
-    for (let i = startIndex; i < endIndex; i++) {
-        const product = products[i];
+  for (let i = startIndex; i < endIndex; i++) {
+    const product = data3[i];
 
-        const card = document.createElement("div");
-        card.classList.add("card");
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.style.opacity = 0;
 
-        const cardHTML = `
-            <div class="card" style="width: 12.5rem;">
-                <a href="/src/assets/html/details.html?id=${product.id}"><img src="${product.poster}" class="card-img-top" alt="Imagem do Produto"></a>
-                <div class="card-body" style="display: flex; flex-direction: column;">
-                    <p class="card-text">${product.title}</p>
-                    <div class="preco">
-                        ${product.star}
-                        <h5>R$${product.price.toFixed(2)}</h5>
-                        <p style="font-size: 14px">${product.payment}</p> 
-                    </div>
-                    <!-- Adicione o ID do produto na URL do link -->
-                    <a href="/src/assets/html/details.html?id=${product.id}">
-                        <p class="compras">COMPRAR</p>
-                    </a>
-                </div>
+    const cardHTML = `
+      <div class="cards" style="width: 12.5rem;">
+        <a href="/src/assets/html/details.html?id=${product.id}">
+          <img src="${product.poster}" class="card-img-top" alt="Imagem do Produto">
+        </a>
+        <div class="card-body" style="display: flex; flex-direction: column;">
+          <h6 class="card-text">${product.title}</h6>
+          <div class="preco" style="font-size: 20px; display: flex; flex-direction: column; gap: 0rem">
+            <div style="display: flex; flex-direction: column; gap: 1rem"> 
+              <div style="display: flex; gap: .3rem">
+              <i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>
+              </div>
+              <div style="display: flex; flex-direction: column; ">
+                <span style="font-size: 13px; text-decoration: line-through; color: gray">R$ ${product.oldPrice},00</span>
+                <span>R$${product.price.toFixed(2)}</span>
+              </div>
             </div>
-        `;
+            <span style="font-size: 14px">${product.payment}</span> 
+          </div>
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoration: none">
+            <p class="compras">COMPRAR</p>
+          </a>
+        </div>
+      </div>
+    `;
 
-        card.innerHTML = cardHTML;
-        cardsWrapper3.appendChild(card);
+    card.innerHTML = cardHTML;
+    cardsWrapper3.appendChild(card);
 
-    }
+    setTimeout(() => {
+      card.style.opacity = 1;
+    }, 50 * (i - startIndex));
+  }
 
-    prevButton3.disabled = currentPage3 === 0;
-    nextButton3.disabled = endIndex >= endProductIndex3 + 1;
+  prevButton3.disabled = currentPage3 === 0;
+  nextButton3.disabled = endIndex >= data3.length;
 }
 
 prevButton3.addEventListener("click", () => {
-    if (currentPage3 > 0) {
-        currentPage3--;
-        renderCards3();
-    }
+  if (currentPage3 > 0) {
+    currentPage3--;
+    renderCards3();
+  }
 });
 
 nextButton3.addEventListener("click", () => {
-    const startIndex = currentPage3 * cardsPerPage3 + startProductIndex3;
-    const endIndex = Math.min(startIndex + cardsPerPage3, endProductIndex3 + 1);
+  const startIndex = currentPage3 * cardsPerPage3 + startProductIndex3;
+  const endIndex = Math.min(startIndex + cardsPerPage3, endProductIndex3);
 
-    if (endIndex < endProductIndex3 + 1) {
-        currentPage3++;
-        renderCards3();
-    }
+  if (endIndex < data3.length) {
+    currentPage3++;
+    renderCards3();
+  }
 });
 
-// Inicialização
-renderCards3();
+// Inicialização: carregue o JSON e renderize os cards
+loadJSON3();
+
 
 
 

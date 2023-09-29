@@ -1080,7 +1080,7 @@ margin-bottom: 20px;
 
 
 /* 0 -- 480 celular */
-@media (max-width: 450px) {
+@media (max-width: 500px) {
 
   #cabecalho {
     box-shadow: 0px 0px 0px 0px black;
