@@ -360,6 +360,8 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
         const width = innerWidth;
 
         if(width > 500) {
+          
+          maisVendidosMobile.innerHTML = ''
 
           maisVendidosMobile.style.display = 'none'
           // Construir o conteúdo HTML com os detalhes do produto
@@ -431,8 +433,9 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
         
 
         else {
-
-                      
+         
+          
+          iphonesProdutos.innerHTML = ''    
           const cardsWrapper10 = document.getElementById("cardsWrapper10Mobile");
           const prevButton10 = document.getElementById("prevButton10Mobile");
           const nextButton10 = document.getElementById("nextButton10Mobile");
