@@ -1258,11 +1258,11 @@ function renderProducts(products) {
 
         const justPc = document.getElementById('justPc');
 
-        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-bottom: 40px;">
+        justPc.innerHTML = `<div id="justPc" style="display: flex; flex-direction: column; gap: .5rem; padding-top: 20px; justify-content: center; margin-bottom: 20px;">
     <div id="caminho" style="color: gray; font-size: 12px; display: flex; align-items: center; gap:.3rem;">
       <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray"></a> Pesquisa
     </div>
-    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 95%; border-radius: 8px; padding: 30px; background-color: #f1f1f1;">
+    <div id="topFiltro"  style="display: flex; flex-direction: column; width: 350px; border-radius: 8px; padding: 30px; background-color: #f1f1f1;">
       <b style="color: gray; font-size: 24px;">Ver Todos</b>
       <hr></hr>
       <span style="font-size: 13px; color: gray;">Foram encontrados <b style="color: black">66</b> produtos</span>
@@ -1273,7 +1273,7 @@ function renderProducts(products) {
   
         divProducts.innerHTML = `<div class="menu-sessao-bloco-card">
           <div class="cardM" style="width: 24.3rem; display: flex; box-shadow: 0px 0px 1.2px 0px rgb(182, 182, 182); align-items: center; gap: 0rem;">
-          <a href="/assets/html/details.html?id=${product.id}" style="text-decoratio: none; color: black"><img src=${product.poster} style="width: 110px; height: 110px" class="card-img-top" alt="..."></a>
+          <a href="/src/assets/html/details.html?id=${product.id}" style="text-decoratio: none; color: black"><img src=${product.poster} style="width: 110px; height: 110px" class="card-img-top" alt="..."></a>
             <div class="card-body">
             <a href="/assets/html/details.html?id=${product.id}"><p><strong>${product.title}</strong></p></a>
               <div id="rating" style="display: flex; gap: .5rem; font-size: 18px; justify-content: center; ">
