@@ -161,13 +161,7 @@
     <div id="result" style="display: flex; flex-direction: column; margin-top: 100px; align-items: center; gap: 2rem;">
       <h5>Mais Vendidos</h5>
       <div id="maisVendidosMobile" style="margin-bottom: 250px; display: flex; gap: 0rem; align-items: center;">
-        <button class="botaoPMobile" id="prevButton10Mobile"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
-        <div class="slider-container">
-          <div  id="cardsWrapper10Mobile" style="display: flex; gap: .5rem;">
-
-          </div>
-        </div>
-        <button class="botaoPMobile" id="nextButton10Mobile"><i class="fa-solid fa-angle-right fa-lg" style="color: #040404;"></i></button>
+        
     </div>
 
       <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
@@ -361,8 +355,6 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
 
         if(width > 500) {
           
-          maisVendidosMobile.innerHTML = ''
-
           maisVendidosMobile.style.display = 'none'
           // Construir o conteúdo HTML com os detalhes do produto
         const htmlContent = `
@@ -433,9 +425,16 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
         
 
         else {
-         
-          
-          iphonesProdutos.innerHTML = ''    
+            
+          maisVendidosMobile.innerHTML = 
+          `<button class="botaoPMobile" id="prevButton10Mobile"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
+            <div class="slider-container">
+              <div  id="cardsWrapper10Mobile" style="display: flex; gap: .5rem;">
+
+              </div>
+            </div>
+            <button class="botaoPMobile" id="nextButton10Mobile"><i class="fa-solid fa-angle-right fa-lg" style="color: #040404;"></i></button>`
+            
           const cardsWrapper10 = document.getElementById("cardsWrapper10Mobile");
           const prevButton10 = document.getElementById("prevButton10Mobile");
           const nextButton10 = document.getElementById("nextButton10Mobile");
