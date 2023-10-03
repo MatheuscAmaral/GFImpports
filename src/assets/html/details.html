@@ -161,11 +161,17 @@
     <div id="result" style="display: flex; flex-direction: column; margin-top: 100px; align-items: center; gap: 2rem;">
       <h5>Mais Vendidos</h5>
       <div id="maisVendidosMobile" style="margin-bottom: 250px; display: flex; gap: 0rem; align-items: center;">
-        
+       
     </div>
 
       <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
-          
+          <button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+          <div class="slider-container">
+            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
+
+            </div>
+          </div>
+          <button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
       </div>
 
     </div>
@@ -243,13 +249,7 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
-iphonesProdutos.innerHTML = `<button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-          <div class="slider-container">
-            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
 
-            </div>
-          </div>
-          <button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>`
           
   
 const cardsWrapper10 = document.getElementById("cardsWrapper10");
@@ -354,7 +354,7 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
         const width = innerWidth;
 
         if(width > 500) {
-          
+
           maisVendidosMobile.style.display = 'none'
           // Construir o conteúdo HTML com os detalhes do produto
         const htmlContent = `
@@ -425,16 +425,14 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
         
 
         else {
-            
-          maisVendidosMobile.innerHTML = 
-          `<button class="botaoPMobile" id="prevButton10Mobile"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
-            <div class="slider-container">
-              <div  id="cardsWrapper10Mobile" style="display: flex; gap: .5rem;">
 
-              </div>
-            </div>
-            <button class="botaoPMobile" id="nextButton10Mobile"><i class="fa-solid fa-angle-right fa-lg" style="color: #040404;"></i></button>`
-            
+                     maisVendidosMobile.innerHTML = ` <button class="botaoPMobile" id="prevButton10Mobile"><i class="fa-solid fa-angle-left fa-lg" style="color: #000000;"></i></button>
+        <div class="slider-container">
+          <div  id="cardsWrapper10Mobile" style="display: flex; gap: .5rem;">
+
+          </div>
+        </div>
+        <button class="botaoPMobile" id="nextButton10Mobile"><i class="fa-solid fa-angle-right fa-lg" style="color: #040404;"></i></button>` 
           const cardsWrapper10 = document.getElementById("cardsWrapper10Mobile");
           const prevButton10 = document.getElementById("prevButton10Mobile");
           const nextButton10 = document.getElementById("nextButton10Mobile");
@@ -513,8 +511,7 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
           // Inicialização
           renderCards10Mobile();
 
-                    
-
+             
           const htmlContent = `
           <div id="detaislProd" style="display: flex; flex-direction: column; gap: 1rem">
                     <div id="caminho" style="color: gray; font-size: 10px; padding: 5px; text-align: center;">
@@ -569,8 +566,11 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
                       </div>
                     </div>
                   </div>
+        
         `;
+        
         productDetailsContainer.innerHTML = htmlContent;
+
         }
       }
     
