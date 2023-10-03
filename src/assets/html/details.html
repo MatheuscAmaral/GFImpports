@@ -165,13 +165,8 @@
     </div>
 
       <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
-          <button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-          <div class="slider-container">
-            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
-
-            </div>
-          </div>
-          <button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
+         
+          
       </div>
 
     </div>
@@ -249,9 +244,27 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
+          const width2 = innerWidth
 
+        if (width2 <= 500) {
+          iphonesProdutos.innerHTML = `<button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+<div class="slider-container">
+            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
+
+            </div>
+          </div>
+<button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>`
+        }
+        else {
+          iphonesProdutos.innerHTML = `<button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+<div class="slider-container">
+            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
+
+            </div>
+          </div>
+<button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>`
+        }
           
-  
 const cardsWrapper10 = document.getElementById("cardsWrapper10");
 const prevButton10 = document.getElementById("prevButton10");
 const nextButton10 = document.getElementById("nextButton10");
@@ -355,6 +368,7 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
 
         if(width > 500) {
 
+          
           maisVendidosMobile.style.display = 'none'
           // Construir o conteúdo HTML com os detalhes do produto
         const htmlContent = `
