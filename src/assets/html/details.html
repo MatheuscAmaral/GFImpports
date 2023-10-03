@@ -165,13 +165,7 @@
     </div>
 
       <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
-          <button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
-          <div class="slider-container">
-            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
-
-            </div>
-          </div>
-          <button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>
+          
       </div>
 
     </div>
@@ -249,7 +243,13 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
+iphonesProdutos.innerHTML = `<button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
+          <div class="slider-container">
+            <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
 
+            </div>
+          </div>
+          <button class="botaoP" id="nextButton10"><i class="fa-solid fa-angle-right fa-lg" style="color: #ffffff;"></i></button>`
           
   
 const cardsWrapper10 = document.getElementById("cardsWrapper10");
