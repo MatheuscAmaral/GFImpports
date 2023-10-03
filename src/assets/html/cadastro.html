@@ -54,7 +54,8 @@
                         <div class="justify-center">
                           <input type="submit" id="cadastrar" value="Cadastrar" onclick="cadastrar()" style="width: 290px; padding: 12px; background-color: black; color: white; border: none;transition: 0.4s; border-radius: 6px;"></input>
                         </div>
-                    </div>
+                        <span style="font-size: 13px;">Já tem uma conta? <a href="/src/assets/html/login.html" style="text-decoration: none;">Entrar</a></span>
+                      </div>
                 </section>
                 </div>
                 </div>
@@ -64,6 +65,14 @@
 
     <script src="/src/assets/js/login.js"></script>
     <script src="/src/assets/js/cadastro.js"></script>
+    <script>
+      const width = innerWidth;
+      const register1 = document.getElementById('register1')
+
+      if (width <= 500) {
+        register1.style.display = 'none'
+      }
+    </script>
 </body>
 
 </html>
