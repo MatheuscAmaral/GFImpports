@@ -159,17 +159,17 @@
     </div>
 
     <div id="result" style="display: flex; flex-direction: column; margin-top: 100px; align-items: center; gap: 2rem;">
-      <h5>Mais Vendidos</h5>
-      <div id="maisVendidosMobile" style="margin-bottom: 250px; display: flex; gap: 0rem; align-items: center;">
-       
-    </div>
+        <h5>Mais Vendidos</h5>
+        <div id="maisVendidosMobile" style="margin-bottom: 250px; display: flex; gap: 0rem; align-items: center;">
+        
+        </div>
 
-      <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
-         
-          
-      </div>
-
+        <div id="iphonesProdutos" style="margin-bottom: 250px; display: flex; gap: 0rem;">
+            
+              
+        </div>
     </div>
+    
 </div>
       <footer class="text-center text-lg-start text-white" style="background-color: #ffffff; box-shadow: 0px 0px 2px 0px gray;">
         <div class="row">
@@ -244,9 +244,10 @@
         <script src="/src/assets/js/home.js"></script>
         <script src="/src/assets/js/produtos.js"></script>
         <script>
-          const width2 = innerWidth
+          const width2 = innerWidth;
+          
 
-        if (width2 <= 500) {
+        if (width2 > 500) {
           iphonesProdutos.innerHTML = `<button class="botaoP" id="prevButton10"><i class="fa-solid fa-angle-left fa-lg" style="color: #ffffff;"></i></button>
 <div class="slider-container">
             <div  id="cardsWrapper10" style="display: flex; gap: .5rem;">
@@ -364,13 +365,77 @@ const maisVendidosMobile = document.getElementById('maisVendidosMobile')
       function showProductDetails(product) {
         const productDetailsContainer = document.getElementById('details');
     
-        const width = innerWidth;
+        
 
         if(width > 500) {
-
           
           maisVendidosMobile.style.display = 'none'
-                 }
+          // Construir o conteúdo HTML com os detalhes do produto
+        const htmlContent = `
+                  <div id="detaislProd" style="display: flex; flex-direction: column; gap: 1rem">
+                    <div id="caminho" style="color: gray; font-size: 12px;">
+                      <i class="fa-solid fa-house-chimney fa-lg" style="color: #787878;"></i> > <a href="/home.html" style="text-decoration: none; color: gray"> Home </a> > <a href="/src/assets/html/iphones.html" style="text-decoration: none; color: gray">Ver Todos</a> > ${product.title}
+                    </div>
+                    <div id="contentt" style="display: flex; gap: 4rem; justify-content: center; background-color: #fff; border-radius: 8px; padding: 100px; ">
+                      <div id="left" style="display: flex">
+                        <div style="display: flex; flex-direction: column; gap: 1rem">
+                          <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px; display: flex; justify-content: center; ">
+                             <img class="poster" src="${product.poster}" onclick="foto1()" style="width: 45px; height: 50px; ">
+                           </div>
+                           <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px; display: flex; justify-content: center; ">
+                             <img class="poster" src="${product.poster2}" onclick="foto2()" style="width: 50px; height: 50px; ">
+                           </div>
+                           <div style=" border: 1px solid gray; padding: 15px; border-radius: 8px;">
+                            <img class="poster" src="${product.poster3}" onclick="foto3()" style="width: 50px; height: 60px;">
+                           </div>
+                        </div>
+                        <img id="product-image" src="${product.poster}" onclick="foto1()" style="width: 320px; height: 320px;">
+                      </div>
+                      <div id="right" style="display: flex; flex-direction: column; gap: 1.5rem">
+                        <div id="topp">
+                          <span style="font-size: 24px; color: black">${product.title}</span>
+                          <span style="font-size: 12px; display: flex; gap: 3px; color: #4b4b4b"><b>Código:</b> ${product.id} </span>
+                        </div>
+                        <div id="pricee" style="display: flex; flex-direction: column; gap: 1rem">
+                           <div style="display: flex; flex-direction: column;">
+                              <span style="font-size: 12px; text-decoration: line-through">R$ ${product.oldPrice},00</span>
+                              <span style="font-size: 24px">R$ ${product.price},00 <span style="font-size: 13px; color: #4b4b4b">no PIX</span></span>
+                              <span style="font-size: 13px">${product.payment}</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; flex-direction: column; align-itens: center; justify-content: center; gap: .5rem">
+                          <div>
+                            <i class="fa-solid fa-truck-fast fa-lg" style="color: #616161;"></i>
+                            <span style="font-size: 14px; color: gray">${product.type}</span>
+                          </div>
+                            <div style="margin-left: 5px; align-itens: center;">
+                              <i class="fa-solid fa-sd-card fa-lg" style="color: #626364;"></i>
+                              <span style="font-size: 14px; color: gray; margin-left: 5px">${product.size}</span>
+                            </div>
+                            <div>
+                              <i class="fa-solid fa-tag fa-flip-horizontal fa-lg" style="color: #666666;"></i>
+                              <span style="font-size: 14px; color: gray; margin-left: 5px"> ${product.condition}</span>
+                            </div>
+                        </div>
+                        <a href="/src/assets/html/carrinho.html?id=${product.id}">
+                            <div data-tooltip="Carrinho" class="button">
+                            <div class="button-wrapper">
+                              <div class="text">Comprar</div>
+                                <span class="icon">
+                                  <svg viewBox="0 0 16 16" class="bi bi-cart2" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"></path>
+                            </svg>
+                                </span>
+                              </div>
+                            </div>
+                            </a>
+                      </div>
+                    </div>
+                  </div>
+        `;
+        
+        productDetailsContainer.innerHTML = htmlContent;
+        }
         
 
         else {
