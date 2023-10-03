@@ -65,48 +65,7 @@
 
     <script src="/src/assets/js/login.js"></script>
     <script src="/src/assets/js/cadastro.js"></script>
-    <script>
-       const width = innerWidth
-        const container = document.getElementById('container')
-
-       if(width <= 500) {
-        container.innerHTML = ` 
-        <div style="display: flex; border-radius: 16px; width: 380px; justify-content: center; padding-bottom: 60px">
-          <section id="enter" style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center;">
-            <a href="/home.html"><img src="/src/images/logo.png" width="135px"></a>
-            <div id="top">
-                <div class="title">
-                    <h1>Entrar com</h1>
-                </div>
-            </div>
-            <div class="container">
-                <div class="card" style="display: flex; flex-direction: column; gap: 1rem; justify-content: center; align-items: center;">
-          
-                  <div id="msgError"></div>
-          
-                  <div class="label-float">
-                    <input type="text" id="usuario" placeholder="Usuário" required style="width: 260px; padding: 12px;"/>
-                    <label id="userLabel" for="usuario"></label>
-                  </div>
-          
-                  <div class="label-float">
-                    <input type="password" id="senha" placeholder="Sua senha" required style="width: 260px; padding: 12px;"/>
-                    <label id="senhaLabel" for="senha"></label>
-                    
-                  </div>
-          
-                  <div class="justify-center">
-                    <input type="submit" id="entrar" onclick="entrar()" value="Entrar" style="width: 290px; padding: 12px; background-color: black; color: white; border: none; transition: 0.4s; border-radius: 6px;"></input>
-                  </div>
-                  <a href="/src/assets/html/cadastro.html" style="font-size: 13px; text-decoration: none; color: black;">Ainda não tem uma conta? <span style="color: blue"> Criar Conta</span></a>
-            </div>
-          
-        </section>
-        </div>`
-
-       }
-
-    </script>
+  
 </body>
 
 </html>
