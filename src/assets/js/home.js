@@ -79,7 +79,7 @@ else {
         <span style="font-size: 13px"> Olá, ${userLogado.nome}</span>
         </div>
         <div class="deslogar">
-          <a  href="home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
+          <a  href="/home.html" id="botao" onclick="sair()"><i class="fa-solid fa-right-from-bracket fa-lg" style="color: #000000;" ></i></a>
         </div>
         <a href="/src/assets/html/carrinho.html"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #000000;"></i></a>`;
 
