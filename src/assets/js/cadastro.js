@@ -27,7 +27,7 @@ function goBack() {
                   <div id="msgError"></div>
                   <div id="msgSuccess"></div>
                     <div class="label-float"  style="display: flex; flex-direction: column; font-size: 13px;" >
-                      <input type="text" id="nome" placeholder="Nome"  style="width: 260px; padding: 12px;" required />
+                        <input type="text" id="nome" placeholder="Nome"  style="width: 260px; padding: 12px;" required />                 
                       <label id="labelNome" for="nome"></label>
                     </div>
             
@@ -131,16 +131,17 @@ function goBack() {
   
   let msgError = document.querySelector('#msgError')
   let msgSuccess = document.querySelector('#msgSuccess')
+  const check = document.getElementById('check')
   
   nome.addEventListener('keyup', () => {
     if(nome.value.length <= 2){
-      labelNome.setAttribute('style', 'color: red')
+      labelNome.setAttribute('style', 'color: red;  font-size: 12px')
       labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
       nome.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validNome = false
     } else {
-      labelNome.setAttribute('style', 'color: green')
-      labelNome.innerHTML = 'Nome'
+      labelNome.setAttribute('style', 'color: green;  font-size: 12px')
+      labelNome.innerHTML = ''
       nome.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validNome = true
     }
@@ -148,13 +149,13 @@ function goBack() {
   
   usuario.addEventListener('keyup', () => {
     if(usuario.value.length <= 4){
-      labelUsuario.setAttribute('style', 'color: red')
+      labelUsuario.setAttribute('style', 'color: red;  font-size: 12px')
       labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
       usuario.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validUsuario = false
     } else {
-      labelUsuario.setAttribute('style', 'color: green')
-      labelUsuario.innerHTML = 'Usuário'
+      labelUsuario.setAttribute('style', 'color: green;  font-size: 12px')
+      labelUsuario.innerHTML = ''
       usuario.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validUsuario = true
     }
@@ -162,13 +163,13 @@ function goBack() {
   
   senha.addEventListener('keyup', () => {
     if(senha.value.length <= 5){
-      labelSenha.setAttribute('style', 'color: red')
+      labelSenha.setAttribute('style', 'color: red;  font-size: 12px')
       labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
       senha.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validSenha = false
     } else {
-      labelSenha.setAttribute('style', 'color: green')
-      labelSenha.innerHTML = 'Senha'
+      labelSenha.setAttribute('style', 'color: green;  font-size: 12px')
+      labelSenha.innerHTML = ''
       senha.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validSenha = true
     }
@@ -176,13 +177,13 @@ function goBack() {
   
   confirmSenha.addEventListener('keyup', () => {
     if(senha.value != confirmSenha.value){
-      labelConfirmSenha.setAttribute('style', 'color: red')
+      labelConfirmSenha.setAttribute('style', 'color: red;  font-size: 12px')
       labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não conferem'
       confirmSenha.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validConfirmSenha = false
     } else {
-      labelConfirmSenha.setAttribute('style', 'color: green;')
-      labelConfirmSenha.innerHTML = 'Confirmar Senha'
+      labelConfirmSenha.setAttribute('style', 'color: green; font-size: 12px')
+      labelConfirmSenha.innerHTML = ''
       confirmSenha.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validConfirmSenha = true
     }
@@ -204,7 +205,7 @@ function goBack() {
       
      
       msgSuccess.setAttribute('style', 'display: block')
-      msgSuccess.innerHTML = '<strong>Cadastrando usuário...</strong>'
+      msgSuccess.innerHTML = '<strong style="font-size: 14px;">Cadastrando usuário...</strong>'
       msgError.setAttribute('style', 'display: none')
       msgError.innerHTML = ''
       
@@ -213,7 +214,7 @@ function goBack() {
       
     } else {
       msgError.setAttribute('style', 'display: block')
-      msgError.innerHTML = '<strong>Preencha todos os campos corretamente antes de cadastrar</strong>'
+      msgError.innerHTML = '<strong style="font-size: 12px; color: red">Preencha os campos corretamente antes de cadastrar</strong>'
       msgSuccess.innerHTML = ''
       msgSuccess.setAttribute('style', 'display: none')
     }
