@@ -65,9 +65,9 @@ function goBack() {
     else 
     {
       userLabel.setAttribute('style', 'color: red')
-      usuario.setAttribute('style', 'border-color: red')
+      usuario.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       senhaLabel.setAttribute('style', 'color: red')
-      senha.setAttribute('style', 'border-color: red')
+      senha.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       msgError.setAttribute('style', 'display: block')
       msgError.innerHTML = 'Usuário ou senha incorretos'
       usuario.focus()

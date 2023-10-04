@@ -136,12 +136,12 @@ function goBack() {
     if(nome.value.length <= 2){
       labelNome.setAttribute('style', 'color: red')
       labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
-      nome.setAttribute('style', 'border-color: red')
+      nome.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validNome = false
     } else {
       labelNome.setAttribute('style', 'color: green')
       labelNome.innerHTML = 'Nome'
-      nome.setAttribute('style', 'border-color: green')
+      nome.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validNome = true
     }
   })
@@ -150,12 +150,12 @@ function goBack() {
     if(usuario.value.length <= 4){
       labelUsuario.setAttribute('style', 'color: red')
       labelUsuario.innerHTML = 'Usuário *Insira no minimo 5 caracteres'
-      usuario.setAttribute('style', 'border-color: red')
+      usuario.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validUsuario = false
     } else {
       labelUsuario.setAttribute('style', 'color: green')
       labelUsuario.innerHTML = 'Usuário'
-      usuario.setAttribute('style', 'border-color: green')
+      usuario.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validUsuario = true
     }
   })
@@ -164,12 +164,12 @@ function goBack() {
     if(senha.value.length <= 5){
       labelSenha.setAttribute('style', 'color: red')
       labelSenha.innerHTML = 'Senha *Insira no minimo 6 caracteres'
-      senha.setAttribute('style', 'border-color: red')
+      senha.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validSenha = false
     } else {
       labelSenha.setAttribute('style', 'color: green')
       labelSenha.innerHTML = 'Senha'
-      senha.setAttribute('style', 'border-color: green')
+      senha.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validSenha = true
     }
   })
@@ -178,12 +178,12 @@ function goBack() {
     if(senha.value != confirmSenha.value){
       labelConfirmSenha.setAttribute('style', 'color: red')
       labelConfirmSenha.innerHTML = 'Confirmar Senha *As senhas não conferem'
-      confirmSenha.setAttribute('style', 'border-color: red')
+      confirmSenha.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validConfirmSenha = false
     } else {
-      labelConfirmSenha.setAttribute('style', 'color: green')
+      labelConfirmSenha.setAttribute('style', 'color: green;')
       labelConfirmSenha.innerHTML = 'Confirmar Senha'
-      confirmSenha.setAttribute('style', 'border-color: green')
+      confirmSenha.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validConfirmSenha = true
     }
   })

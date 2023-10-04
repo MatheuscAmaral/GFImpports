@@ -70,7 +70,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 50px;
-    height: 600px;
+    height: 650px;
     text-align: center;
     box-shadow: 0px 0px 0px 1px rgb(187, 187, 187);
     gap: 0rem;
@@ -182,7 +182,7 @@ form a {
     color: white;
     text-align: center;
     padding: 60px;
-    height: 580px;
+    height: 631px;
     align-items: center;
     gap: 3rem;
     justify-content: center;
