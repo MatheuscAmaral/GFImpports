@@ -143,7 +143,7 @@ function goBack() {
     
     if(nome.value.length >= 17) {
       labelNome.setAttribute('style', 'color: red;  font-size: 12px')
-      labelNome.innerHTML = 'Nome *Insira no máximo 15 caracteres'
+      labelNome.innerHTML = 'Nome *Insira no máximo 20 caracteres'
       nome.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validNome = false
     }
