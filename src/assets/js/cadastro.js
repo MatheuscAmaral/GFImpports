@@ -138,15 +138,24 @@ function goBack() {
       labelNome.setAttribute('style', 'color: red;  font-size: 12px')
       labelNome.innerHTML = 'Nome *Insira no minimo 3 caracteres'
       nome.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
+      validNome = false 
+    }
+    
+    if(nome.value.length >= 15) {
+      labelNome.setAttribute('style', 'color: red;  font-size: 12px')
+      labelNome.innerHTML = 'Nome *Insira no máximo 15 caracteres'
+      nome.setAttribute('style', 'border-color: red; width: 260px; padding: 12px;')
       validNome = false
-    } else {
+    }
+
+    else {
       labelNome.setAttribute('style', 'color: green;  font-size: 12px')
       labelNome.innerHTML = ''
       nome.setAttribute('style', 'border-color: green; width: 260px; padding: 12px;')
       validNome = true
     }
   })
-  
+
   usuario.addEventListener('keyup', () => {
     if(usuario.value.length <= 4){
       labelUsuario.setAttribute('style', 'color: red;  font-size: 12px')

@@ -478,37 +478,40 @@ const products = [
         type: 'Importado',
         category: 'iPhones'
     },
-    { 
+    {
         id: 30,
-        title: 'iPhone 14 128GB',
-        price: 3350.0,
-        poster: '/src/images/iphone144.png',
-        oldPrice: 4500.0,
+        title: 'iPhone 15 Pro 128GB ',
+        price: 5300.0,
+        poster: '/src/images/iphone15pro.png',
+        oldPrice: 7300.0,
         poster2: '/src/images/i152img.png',
         poster3 : '/src/images/i153img.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado',
+        payment: 'ou até 18x de R$',
+        condition: 'Semi Novo',
         type: 'Importado',
+        title2: 'iPhone 15 ',
         category: 'iPhones'
-    },{
+    },
+    {
         id: 31,
-        title: 'iPhone 14 Pro 256GB',
-        price: 4319.0,
-        poster: '/src/images/iphone144.png',
-        oldPrice: 5300.0,
+        title: 'iPhone 15 128GB ',
+        price: 4300.0,
+        poster: '/src/images/i15.png',
+        oldPrice: 6200.0,
         poster2: '/src/images/i152img.png',
         poster3 : '/src/images/i153img.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         color: '',
-        size: '256GB',
-        payment: 'ou até 12x de R$',
-        condition: 'Lacrado',
+        size: '128GB',
+        payment: 'ou até 18x de R$',
+        condition: 'Semi Novo',
         type: 'Importado',
+        title2: 'iPhone 15 ',
         category: 'iPhones'
     },
     { 
@@ -1096,40 +1099,38 @@ const products = [
         type: 'Importado',
         category: 'Pods'
     },
-    {
+    { 
         id: 67,
-        title: 'iPhone 15 128GB ',
-        price: 4300.0,
-        poster: '/src/images/i15.png',
-        oldPrice: 6200.0,
+        title: 'iPhone 14 128GB',
+        price: 3350.0,
+        poster: '/src/images/iphone144.png',
+        oldPrice: 4500.0,
         poster2: '/src/images/i152img.png',
         poster3 : '/src/images/i153img.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         color: '',
         size: '128GB',
-        payment: 'ou até 18x de R$',
-        condition: 'Semi Novo',
+        payment: 'ou até 12x de R$',
+        condition: 'Lacrado',
         type: 'Importado',
-        title2: 'iPhone 15 ',
         category: 'iPhones'
     },
     {
         id: 68,
-        title: 'iPhone 15 Pro 128GB ',
-        price: 5300.0,
-        poster: '/src/images/iphone15pro.png',
-        oldPrice: 7300.0,
+        title: 'iPhone 14 Pro 256GB',
+        price: 4319.0,
+        poster: '/src/images/iphone144.png',
+        oldPrice: 5300.0,
         poster2: '/src/images/i152img.png',
         poster3 : '/src/images/i153img.png',
         star: '<i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i><i class="fa-solid fa-star" style="color: #e6d200;"></i>',
         link: '',
         color: '',
-        size: '128GB',
-        payment: 'ou até 18x de R$',
-        condition: 'Semi Novo',
+        size: '256GB',
+        payment: 'ou até 12x de R$',
+        condition: 'Lacrado',
         type: 'Importado',
-        title2: 'iPhone 15 ',
         category: 'iPhones'
     },
 ]
@@ -1637,10 +1638,6 @@ function renderCards() {
 
         }
 
-
-       
-        
-        
         card.innerHTML = cardHTML;
         cardsWrapper.appendChild(card);
 
