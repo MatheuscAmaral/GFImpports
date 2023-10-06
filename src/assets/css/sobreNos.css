@@ -38,11 +38,10 @@
 
 #diagonal-image {
     background-image: url('/src/images/gfImpportsPC.jpg');
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 800px;   
     background-size: cover; 
-    filter: blur(2px);
   
 }
 
