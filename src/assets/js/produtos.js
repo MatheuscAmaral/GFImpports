@@ -1409,7 +1409,7 @@ let currentPageMobile2 = 0;
 
 // Escolha os índices dos produtos que você deseja exibir
 const startProductIndex1Mobile2 = 36; // Índice do primeiro produto desejado
-const endProductIndex1Mobile2 = 41;   // Índice do último produto desejado (excluído)
+const endProductIndex1Mobile2 = 40;   // Índice do último produto desejado (excluído)
 
 function renderCardsMobile2() {
     cardsWrapperMobile2.innerHTML = "";
